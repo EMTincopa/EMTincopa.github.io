@@ -1,0 +1,92 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "EMT'S Data Stories"
+copyright = "&copy; 2018 EMT'S Data stories"
+EnableEmoji = true
+footnotereturnlinkcontents = "<sup>^<sup>"
+ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_caches$"]
+preserveTaxonomyNames = true
+paginate = 5 #frontpage pagination
+hasCJKLanguage = true
+publishDir = "../EMTincopa.github.io"
+
+
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+# Enable analytics by entering your Google Analytics tracking ID
+googleAnalytics = ""
+
+
+[outputs]
+home = ["HTML", "RSS", "Algolia"]
+
+
+[params]
+  header_image = "img/bubbles.jpg"
+  SEOTitle = "My blog for share practical Storytelling and Data Visualization projects | EMT Blog"
+  description = "El blog de un entusiasta de los datos | Storytelling and Data Visualization"
+  keyword = "DataViz, El blog de EMTincopa, Storytelling, Health and Data Visualization, Web, Freelancer"
+  slogan = "La visualización de datos como medio expresivo para narrar lo que descubrimos."
+
+  image_404 = "img/headupdating.gif"
+  title_404 = "Estás lejos de casa :("
+  
+  
+  # leancloud storage for page view counter
+  page_view_conter = false
+  leancloud_app_id = ""
+  leancloud_app_key = ""
+  
+  # algolia site search
+  algolia_search = false 
+  algolia_appId = ""
+  algolia_indexName = ""
+  algolia_apiKey = ""
+  
+  
+  # Sidebar settings
+  sidebar_about_description = "Entusiasta de los datos, el DataViz, la Investigación Operativa y de cada cosa que lo emociona."
+  sidebar_avatar = "img/emt-profile.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
+
+  featured_tags = true
+  featured_condition_size = 2
+
+  [params.social]
+  rss            = true 
+  email          = "emtincopa@gmail.com"
+  facebook      = "https://www.facebook.com/enrique.tincopa"
+  twitter       = "https://twitter.com/EMTincopa"
+  linkedin       = "https://www.linkedin.com/in/enrique-mendoza-tincopa-4b2a14173/"
+  instagram     = "https://www.instagram.com/emtincopa/"
+  github         = "https://github.com/EMTincopa"
+  
+  
+  [[params.bookmark_link]]
+  title =  "Flourish"
+  href =  "https://flourish.studio/"
+  [[params.bookmark_link]]
+  title = "Quick-R"
+  href =  "https://www.statmethods.net/"
+  [[params.bookmark_link]]
+  title = "Inzight"
+  href = "https://www.stat.auckland.ac.nz/~wild/iNZight/"
+  [[params.bookmark_link]]
+  title =  "Visualization Analysis and Design - 1st Edition"
+  href = "https://www.amazon.com/gp/product/1466508914/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1466508914&linkCode=as2&tag=allitorban-20&linkId=0a80e447ed9152522d53b29a55aa6f60"
+  [[params.bookmark_link]]
+  title = "Dear Data"
+  href = "https://www.amazon.com/Dear-Data-Giorgia-Lupi/dp/1616895322/ref=sr_1_1?s=books&ie=UTF8&qid=1545032077&sr=1-1&keywords=dear+data"
+  [[params.bookmark_link]]
+  title = "R for Data Science - 1st Edition"
+  href = "https://www.amazon.com/Data-Science-Transform-Visualize-Model/dp/1491910399/ref=sr_1_1?s=books&ie=UTF8&qid=1545032123&sr=1-1&keywords=R"
+
+
+[outputFormats.Algolia]
+baseName = "algolia"
+isPlainText = true
+mediaType = "application/json"
+notAlternative = true
+
+[params.algolia]
+vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
+params = ["categories", "tags"] 
