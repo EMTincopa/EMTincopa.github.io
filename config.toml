@@ -57,7 +57,7 @@ home = ["HTML", "RSS", "Algolia"]
   facebook      = "https://www.facebook.com/enrique.tincopa"
   twitter       = "https://twitter.com/EMTincopa"
   linkedin       = "https://www.linkedin.com/in/enrique-mendoza-tincopa-4b2a14173/"
-  instagram     = "https://www.instagram.com/emtincopa/"
+  #instagram     = "https://www.instagram.com/emtincopa/"
   github         = "https://github.com/EMTincopa"
   
   
