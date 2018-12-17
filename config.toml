@@ -61,6 +61,8 @@ home = ["HTML", "RSS", "Algolia"]
   github         = "https://github.com/EMTincopa"
   
   
+  bookmarks = true
+  
   [[params.bookmark_link]]
   title =  "Flourish"
   href =  "https://flourish.studio/"
