@@ -1,8 +1,8 @@
-baseURL = "http://example.org/"
+baseURL = "/"
 languageCode = "en-us"
 title = "EMT'S Data Stories"
 copyright = "&copy; 2018 EMT'S Data stories"
-EnableEmoji = true
+enableEmoji = true
 footnotereturnlinkcontents = "<sup>^<sup>"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_caches$"]
 preserveTaxonomyNames = true
@@ -12,7 +12,7 @@ publishDir = "../EMTincopa.github.io"
 
 
 # Enable comments by entering your Disqus shortname
-disqusShortname = ""
+disqusShortname = "EMTincopa"
 # Enable analytics by entering your Google Analytics tracking ID
 googleAnalytics = ""
 
@@ -60,7 +60,6 @@ home = ["HTML", "RSS", "Algolia"]
   #instagram     = "https://www.instagram.com/emtincopa/"
   github         = "https://github.com/EMTincopa"
   
-  friends = true
 
   bookmarks = true
   
@@ -73,6 +72,16 @@ home = ["HTML", "RSS", "Algolia"]
   [[params.bookmark_link]]
   title = "Inzight"
   href = "https://www.stat.auckland.ac.nz/~wild/iNZight/"
+  [[params.bookmark_link]]
+  title =  "Visualization Analysis and Design - 1st Edition"
+  href = "https://www.amazon.com/gp/product/1466508914/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1466508914&linkCode=as2&tag=allitorban-20&linkId=0a80e447ed9152522d53b29a55aa6f60"
+  [[params.bookmark_link]]
+  title = "Dear Data"
+  href = "https://www.amazon.com/Dear-Data-Giorgia-Lupi/dp/1616895322/ref=sr_1_1?s=books&ie=UTF8&qid=1545032077&sr=1-1&keywords=dear+data"
+  [[params.bookmark_link]]
+  title = "R for Data Science - 1st Edition"
+  href = "https://www.amazon.com/Data-Science-Transform-Visualize-Model/dp/1491910399/ref=sr_1_1?s=books&ie=UTF8&qid=1545032123&sr=1-1&keywords=R"
+
 
 [outputFormats.Algolia]
 baseName = "algolia"
