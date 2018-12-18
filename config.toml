@@ -60,7 +60,6 @@ home = ["HTML", "RSS", "Algolia"]
   #instagram     = "https://www.instagram.com/emtincopa/"
   github         = "https://github.com/EMTincopa"
   
-
   bookmarks = true
   
   [[params.bookmark_link]]
