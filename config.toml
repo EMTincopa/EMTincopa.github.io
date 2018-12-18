@@ -14,7 +14,7 @@ publishDir = "../EMTincopa.github.io"
 # Enable comments by entering your Disqus shortname
 disqusShortname = "https-emtincopa-github-io"
 # Enable analytics by entering your Google Analytics tracking ID
-googleAnalytics = ""
+googleAnalytics = "UA-131186631-1"
 
 
 [outputs]
