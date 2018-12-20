@@ -11,6 +11,7 @@ hasCJKLanguage = true
 publishDir = "../EMTincopa.github.io"
 
 
+
 # Enable comments by entering your Disqus shortname
 disqusShortname = "https-emtincopa-github-io"
 # Enable analytics by entering your Google Analytics tracking ID
@@ -61,7 +62,6 @@ home = ["HTML", "RSS", "Algolia"]
   github        = "https://github.com/EMTincopa"
   
   bookmarks = true
-  
   [[params.bookmark_link]]
   title =  "Flourish"
   href =  "https://flourish.studio/"
