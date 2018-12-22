@@ -10,8 +10,6 @@ paginate = 5 #frontpage pagination
 hasCJKLanguage = true
 publishDir = "../EMTincopa.github.io"
 
-
-
 # Enable comments by entering your Disqus shortname
 disqusShortname = "https-emtincopa-github-io"
 # Enable analytics by entering your Google Analytics tracking ID
