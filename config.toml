@@ -22,8 +22,7 @@ home = ["HTML", "RSS", "Algolia"]
 
 [params.favicon]
   enable    = true
-  path      = "img/emticon.png"
-
+  path      = "img/emticon.ico"
 
 
 [params]
