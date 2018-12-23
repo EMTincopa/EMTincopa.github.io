@@ -49,10 +49,7 @@ home = ["HTML", "RSS", "Algolia"]
 
   featured_tags = true
   featured_condition_size = 2
-  
-  [params.favicon]
-  enable = true
-  imgPath = "img/favicon.ico"
+
 
   [params.social]
   rss           = true 
