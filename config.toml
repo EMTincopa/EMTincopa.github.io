@@ -20,11 +20,6 @@ googleAnalytics = "UA-131186631-1"
 home = ["HTML", "RSS", "Algolia"]
 
 
-[params.favicon]
-  enable    = true
-  path      = "img/emticon.ico"
-
-
 [params]
   header_image = "img/ideashead.jpg"
   SEOTitle = "My blog for share practical Storytelling and Data Visualization projects"
