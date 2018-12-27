@@ -68,15 +68,15 @@ pie(
 
 R no solo genera visualizaciones estáticas, actualmente gracias a la R API de Plotly (una librería de código abierto de JavaScript) podemos crear gráficos interactivos basados en nuestros códigos en R.
 
-<iframe width="450" height="400" frameborder="0" scrolling="no" src="//plot.ly/~EMTincopa/5.embed"></iframe>
+<iframe width="900" height="400" frameborder="0" scrolling="no" src="//plot.ly/~EMTincopa/5.embed"></iframe>
 
 Desde gráficos para de burbujas como el anterior, hasta gráficos de dispersión.
 
-<iframe width="450" height="400" frameborder="0" scrolling="no" src="//plot.ly/~EMTincopa/2.embed"></iframe>
+<iframe width="900" height="400" frameborder="0" scrolling="no" src="//plot.ly/~EMTincopa/2.embed"></iframe>
 
 E incluso mapas interactivos
 
-<iframe width="450" height="400" frameborder="0" scrolling="no" src="//plot.ly/~EMTincopa/4.embed"></iframe>
+<iframe width="900" height="400" frameborder="0" scrolling="no" src="//plot.ly/~EMTincopa/4.embed"></iframe>
 
 
 
