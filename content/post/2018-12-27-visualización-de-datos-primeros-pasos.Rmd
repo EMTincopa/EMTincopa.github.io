@@ -87,6 +87,7 @@ R no solo genera visualizaciones estáticas, actualmente gracias a la R API de P
 * [Why you should start by learning data visualization and manipulation](https://www.r-bloggers.com/why-you-should-start-by-learning-data-visualization-and-manipulation/)
 * [Plotly](https://plot.ly/#/)
 * [What's the most popular language for data visualization?](https://www.quora.com/Whats-the-most-popular-language-for-data-visualization)
-* 
+* [Five Interactive R Visualizations With D3, ggplot2, & RStudio] (https://moderndata.plot.ly/interactive-r-visualizations-with-d3-ggplot2-rstudio/)
+* [Getting into data visualization — where should I start?](https://medium.com/datavisualization/where-should-i-start-c53acdf04a1c)
 
 
