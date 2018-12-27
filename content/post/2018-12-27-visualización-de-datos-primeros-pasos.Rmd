@@ -12,7 +12,7 @@ tags: ["DataViz", "Data", "Power BI", "Tableau","R","Plot", "Tools"]
 showtoc: false
 ---
 
-# Un vistazo
+
 
 Hola! 
 De seguro te habrás preguntado de que va todo esto de la visualización de datos y si es necesario aprender algún lenguaje de programación y cuál sería el más apropiado para comenzar. En mi experiencia puedo decirte que lenguajes de programación para visualizar datos hay varios, siendo R el que yo utilizo hasta el momento. Pero veamos algunas cosas que debes tener en cuenta sobre la visualización de datos y otras opciones a las que podrías recurrir.
