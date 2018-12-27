@@ -41,6 +41,10 @@ También, si eres de los que solo reciben los datos y necesitas una herramienta 
 
 Otra opción es Power BI, la cual es, desde mi punto de vista, la mejor herramienta para el análisis de negocios creada por Microsoft. Power BI te permite visualizar los datos de tu empresa, subirlos a una nube y compartirlos con todas las unidades funcionales de tu negocio, así como también descargar tus visualizaciones en formatos estáticos como los PDFs (Bueno, Tableau no es tan diferente en ese sentido) para editarlos a tu gusto con otras herramientas. Si eres un Excel boy creo que Power BI, a pesar de ser algo distinto, tiene un poco del mismo espíritu (Sobre todo cuando trabajes con la opción de tablas Fact y Dim). En resumen, Power BI te brinda una ventana donde podrás visualizar gráficos impactantes y crear Dashboards y reportes dinámicos. 
 
+
+![Población mundial 1950-2100 - Power BI](\content\post\2018-12-27-visualización-de-datos-primeros-pasos\population_example.gif)
+
+
 Regresando a R, primero que nada, es gratis, tiene un séquito gigantesco de desarrolladores que constantemente crean y agregan nuevos paquetes, puede manejar grandes volúmenes de datos, lo retroalimenta una comunidad muy activa, brinda una amplia gama de herramientas estadísticas y, hay grandes recursos gratuitos para aprenderlo, como es el caso de Coursera, DataCamp, Udemy, entre otros.  
 Si tu matriz de datos en Excel te está dando problemas al ser muy grande, no es lo suficientemente flexible y las visualizaciones no son lo que esperas, R es la solución, siendo muy útil para explorar rápidamente tus datos y tener visualizaciones muy personalizadas.
 
@@ -53,4 +57,4 @@ En general las visualizaciones que parecían extremadamente difíciles terminar�
 
 
 
-![Esta es una imagen](EMTincopa.github.io\img\ideashead.jpg)
+
