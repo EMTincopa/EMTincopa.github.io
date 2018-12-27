@@ -45,8 +45,7 @@ Otra opción es Power BI, la cual es, desde mi punto de vista, la mejor herramie
 ![Población mundial 1950-2100 - Power BI](\content\post\2018-12-27-visualización-de-datos-primeros-pasos\population_example.gif)
 
 
-Regresando a R, primero que nada, es gratis, tiene un séquito gigantesco de desarrolladores que constantemente crean y agregan nuevos paquetes, puede manejar grandes volúmenes de datos, lo retroalimenta una comunidad muy activa, brinda una amplia gama de herramientas estadísticas y, hay grandes recursos gratuitos para aprenderlo, como es el caso de Coursera, DataCamp, Udemy, entre otros.  
-Si tu matriz de datos en Excel te está dando problemas al ser muy grande, no es lo suficientemente flexible y las visualizaciones no son lo que esperas, R es la solución, siendo muy útil para explorar rápidamente tus datos y tener visualizaciones muy personalizadas.
+Regresando a R, primero que nada, es gratis, tiene un séquito gigantesco de desarrolladores que constantemente crean y agregan nuevos paquetes, puede manejar grandes volúmenes de datos, lo retroalimenta una comunidad muy activa, brinda una amplia gama de herramientas estadísticas y, hay grandes recursos gratuitos para aprenderlo, como es el caso de Coursera, DataCamp, Udemy, entre otros. Si tu matriz de datos en Excel te está dando problemas al ser muy grande, no es lo suficientemente flexible y las visualizaciones no son lo que esperas, R es la solución, siendo muy útil para explorar rápidamente tus datos y tener visualizaciones muy personalizadas.
 
 Por desgracia, lograr visualizaciones tan grandiosas como las que podemos encontrar en los principales periódicos estadounidenses no es una tarea fácil y necesitarás mucha determinación y ganas para lograr que tus primeros trabajos tengan esos diseños de gran impacto. Tal vez tengas que aprender algo de Adobe Illustrator para retocar tus gráficos o crear infografías.
 
@@ -56,5 +55,14 @@ En general las visualizaciones que parecían extremadamente difíciles terminar�
 
 
 
+**Aprende más en:**
+
+* [Data visualization](https://searchbusinessanalytics.techtarget.com/definition/data-visualization)
+* [Data visualization beginner's guide: a definition, examples, and learning resources](https://www.tableau.com/learn/articles/data-visualization)
+* [Coding for Data Visualization](https://codinginthewild.com/coding-in-data-visualization-bc04732d3207)
+* [Why Power BI?](https://www.activebs.com/en/power-bi/why-power-bi)
+* [¿Qué es Power BI?](https://powerbi.microsoft.com/es-es/what-is-power-bi/)
+* [Why you should start by learning data visualization and manipulation](https://www.r-bloggers.com/why-you-should-start-by-learning-data-visualization-and-manipulation/)
+* 
 
 
