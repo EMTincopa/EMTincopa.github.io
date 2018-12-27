@@ -19,7 +19,7 @@ De seguro te habrás preguntado de que va todo esto de la visualización de dato
 
 **LA VISUALIZACIÓN DE DATOS**
 
-La visualización de datos se expresa como cualquier esfuerzo, en términos generales, para ayudar a las personas a comprender la información almacenada en grandes volúmenes de datos, que pueden parecer inabarcables. Para lograr esto, tienes que mirar tus datos. Unos gráficos iniciales y tablas te permiten explorar y conocer la estructura de la información recopilada, en otras palabras, puedes extraer significados de tu propia información.
+La visualización de datos se expresa como cualquier esfuerzo, en términos generales, para ayudar a las personas a comprender la información almacenada en grandes volúmenes de datos que pueden parecer inabarcables. Para lograr esto, tienes que mirar tus datos. Unos gráficos iniciales y tablas te permiten explorar y conocer la estructura de la información recopilada, en otras palabras, puedes extraer significados de tu propia información.
 
 Desde mi punto de vista no creo que haya buenas o malas visualizaciones, pero sí mejores o peores según el tipo de información con la cual se esté trabajando. Las visualizaciones acertadas facilitan la comunicación de tus ideas y hallazgos a otras personas. Al mismo tiempo, producir gráficos efectivos a partir de tus propios datos es la mejor manera de desarrollar un buen ojo crítico para no solo tus gráficos sino también los de los demás, como los que encuentras en los periódicos, páginas web, artículos de investigación, slides de negocios, etc.
 
@@ -51,7 +51,22 @@ Por desgracia, lograr visualizaciones tan grandiosas como las que podemos encont
 
 En cualquier caso, si finalmente te has decidido aprender R para sumergirte en la visualización de datos, te recomiendo que revises los paquetes ggplot2 y dplyr (si eres disciplinado podrás aprender la sintaxis de R en menos de un mes). Una vez aprendas la sintaxis, los gráficos de dispersión, barras y de burbujas, entre otros, serán muy fáciles. 
 
-En general las visualizaciones que parecían extremadamente difíciles terminarán siendo más sencillas de lo que esperabas. A partir de ahí tienes que hacer explotar tu creatividad, domina ggplot2 y dplyr porque serán tus principales herramientas para más adelante encontrar historias entre tus datos.
+En general las visualizaciones que parecían extremadamente difíciles terminarán siendo más sencillas de lo que esperabas. Es a partir de este momento en el que tienes que hacer explotar tu creatividad, domina ggplot2 y dplyr porque serán tus principales herramientas para más adelante encontrar historias entre tus datos.
+
+
+A continuación algunos gráficos hechos con R. See Figure \@ref(fig:pie) for example:
+
+```{r pie, fig.cap='A fancy pie chart.', tidy=FALSE}
+par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),
+  col = c('#0292D8', '#F7EA39', '#C4B632'),
+  init.angle = -50, border = NA
+)
+```
+
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plot.ly/~EMTincopa/0.embed"></iframe>
 
 
 
