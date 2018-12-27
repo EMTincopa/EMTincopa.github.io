@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 EMT&#39;S Data stories</copyright>
-    <lastBuildDate>Tue, 18 Dec 2018 15:58:07 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 27 Dec 2018 00:58:19 -0500</lastBuildDate>
     
 	<atom:link href="/tags/data/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Visualización de Datos, Primeros Pasos</title>
+      <link>/post/2018-12-27-visualizaci%C3%B3n-de-datos-primeros-pasos/</link>
+      <pubDate>Thu, 27 Dec 2018 00:58:19 -0500</pubDate>
+      
+      <guid>/post/2018-12-27-visualizaci%C3%B3n-de-datos-primeros-pasos/</guid>
+      <description>Un vistazoHola! De seguro te habrás preguntado de que va todo esto de la visualización de datos y si es necesario aprender algún lenguaje de programación y cuál sería el más apropiado para comenzar. En mi experiencia puedo decirte que lenguajes de programación para visualizar datos hay varios, siendo R el que yo utilizo hasta el momento. Pero veamos algunas cosas que debes tener en cuenta sobre la visualización de datos y otras opciones a las que podrías recurrir.</description>
+    </item>
     
     <item>
       <title>About Me</title>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DataViz on EMT&#39;S Data Stories</title>
-    <link>/tags/dataviz/</link>
-    <description>Recent content in DataViz on EMT&#39;S Data Stories</description>
+    <title>Power BI on EMT&#39;S Data Stories</title>
+    <link>/tags/power-bi/</link>
+    <description>Recent content in Power BI on EMT&#39;S Data Stories</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 EMT&#39;S Data stories</copyright>
     <lastBuildDate>Thu, 27 Dec 2018 00:58:19 -0500</lastBuildDate>
     
-	<atom:link href="/tags/dataviz/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/tags/power-bi/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -19,17 +19,6 @@
       
       <guid>/post/2018-12-27-visualizaci%C3%B3n-de-datos-primeros-pasos/</guid>
       <description>Un vistazoHola! De seguro te habrás preguntado de que va todo esto de la visualización de datos y si es necesario aprender algún lenguaje de programación y cuál sería el más apropiado para comenzar. En mi experiencia puedo decirte que lenguajes de programación para visualizar datos hay varios, siendo R el que yo utilizo hasta el momento. Pero veamos algunas cosas que debes tener en cuenta sobre la visualización de datos y otras opciones a las que podrías recurrir.</description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>/post/2018-12-17-about-me/</link>
-      <pubDate>Tue, 18 Dec 2018 15:58:07 -0500</pubDate>
-      
-      <guid>/post/2018-12-17-about-me/</guid>
-      <description>Acerca de mi - Hola, soy EMTincopa! Un entusiasta de los temas en Salud, el DataViz, la Investigación de Operaciones y de cada cosa que lo emociona.
-Actualmente me encuentro en el constante autoaprendizaje de la gestión de data y visualización de la misma, por medio de lenguajes de programación como R y otras herramientas de diseño (Flourish, Power BI, Tableau, etc.).
-Puedes seguirme en mis redes sociales para estar al tanto de mis últimos proyectos con data pública o de cualquier otra publicación que se me haya ocurrido hacer 😄</description>
     </item>
     
   </channel>

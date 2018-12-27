@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/2018-12-27-visualizaci%C3%B3n-de-datos-primeros-pasos/</loc>
+    <lastmod>2018-12-27T00:58:19-05:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/2018-12-17-about-me/</loc>
     <lastmod>2018-12-18T15:58:07-05:00</lastmod>
   </url>
@@ -26,19 +31,19 @@
   
   <url>
     <loc>/tags/data/</loc>
-    <lastmod>2018-12-18T15:58:07-05:00</lastmod>
+    <lastmod>2018-12-27T00:58:19-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/tags/dataviz/</loc>
-    <lastmod>2018-12-18T15:58:07-05:00</lastmod>
+    <lastmod>2018-12-27T00:58:19-05:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-12-18T15:58:07-05:00</lastmod>
+    <lastmod>2018-12-27T00:58:19-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -55,8 +60,26 @@
   </url>
   
   <url>
+    <loc>/tags/plot/</loc>
+    <lastmod>2018-12-27T00:58:19-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/post/</loc>
-    <lastmod>2018-12-18T15:58:07-05:00</lastmod>
+    <lastmod>2018-12-27T00:58:19-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/power-bi/</loc>
+    <lastmod>2018-12-27T00:58:19-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/r/</loc>
+    <lastmod>2018-12-27T00:58:19-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -73,8 +96,20 @@
   </url>
   
   <url>
+    <loc>/categories/tips/</loc>
+    <lastmod>2018-12-27T00:58:19-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/tableau/</loc>
+    <lastmod>2018-12-27T00:58:19-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/</loc>
-    <lastmod>2018-12-18T15:58:07-05:00</lastmod>
+    <lastmod>2018-12-27T00:58:19-05:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -86,7 +121,7 @@
   
   <url>
     <loc>/tags/tools/</loc>
-    <lastmod>2018-12-18T15:58:07-05:00</lastmod>
+    <lastmod>2018-12-27T00:58:19-05:00</lastmod>
     <priority>0</priority>
   </url>
   
