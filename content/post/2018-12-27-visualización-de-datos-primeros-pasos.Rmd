@@ -4,7 +4,7 @@ subtitle: "Cosas a tener en cuenta"
 description: De seguro te habrás preguntado de que va todo esto de la visualización de datos y si es necesario aprender algún lenguaje de programación y cuál sería el más apropiado para comenzar. Aquí algunas cosas que debes tener en cuenta antes de emprender ese viaje.
 author: EMTincopa
 published: true
-image: ""
+image: "/content/post/2018-12-27-visualización-de-datos-primeros-pasos/headataviz.jpg"
 date: 2018-12-27T00:58:19-05:00
 categories: ["Tips"]
 tags: ["DataViz", "Data", "Power BI", "Tableau","R","Plot", "Tools"]
@@ -90,7 +90,7 @@ R no solo genera visualizaciones estáticas, actualmente gracias a la R API de [
 
 Finalmente, tengo que decirte que R no es el único lenguaje con el cual podrás crear visualizaciones impactantes. Python, por ejemplo, tiene muchas librerías dedicadas a la visualización de datos ([Seaborn](https://seaborn.pydata.org/) y [Bokeh](https://bokeh.pydata.org/en/latest/)) y JavaScript con su librería D3 es la elección indicada si quieres publicar en la web gráficos interactivos.
 
-Y con un poco de suerte hacer magia como [Shirley Wu](https://twitter.com/sxywu)
+Y con un poco de suerte hacer "magia" como [Shirley Wu](https://twitter.com/sxywu)
 `r htmltools::HTML("{{< tweet 1077661611765096449 >}}")`
 
 Ufff, hay mucho por ver pero esto es todo por hoy, espero este artículo te haya sido de ayuda y si terminas creando una visualización genial no olvides compartirlo conmigo por Twitter ([EMTincopa](https://twitter.com/EMTincopa)). 
