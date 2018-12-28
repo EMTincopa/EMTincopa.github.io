@@ -209,25 +209,46 @@
 <img src="\content\post\2018-12-27-visualización-de-datos-primeros-pasos\diabetes_mellitus.png" alt="Infografía hecha con R y Adobe Illustrator" />
 <p class="caption">Infografía hecha con R y Adobe Illustrator</p>
 </div>
-<p>En cualquier caso, si finalmente te has decidido aprender R para sumergirte en la visualización de datos, te recomiendo que revises los paquetes ggplot2 y dplyr (si eres disciplinado podrás aprender la sintaxis de R en menos de un mes). Una vez aprendas la sintaxis, los gráficos de dispersión, barras y de burbujas, entre otros, serán muy fáciles.</p>
+<p>En cualquier caso, si finalmente te has decidido aprender R para sumergirte en la visualización de datos, te recomiendo que revises los paquetes <a href="https://ggplot2.tidyverse.org/">ggplot2</a> y dplyr (si eres disciplinado podrás aprender la sintaxis de R en menos de un mes). Una vez aprendas la sintaxis, los gráficos de dispersión, barras y de burbujas, entre otros, serán muy fáciles.</p>
 <p>En general las visualizaciones que parecían extremadamente difíciles terminarán siendo más sencillas de lo que esperabas. Es a partir de este momento en el que tienes que hacer explotar tu creatividad, domina ggplot2 y dplyr porque serán tus principales herramientas para más adelante encontrar historias entre tus datos.</p>
-<p>A continuación algunos gráficos hechos con R. See Figure <a href="#fig:pie">1</a> for example:</p>
+<p>A continuación algunos gráficos hechos con R.</p>
 <pre class="r"><code>par(mar = c(0, 1, 0, 1))
 pie(
   c(280, 60, 20),
-  c(&#39;Sky&#39;, &#39;Sunny side of pyramid&#39;, &#39;Shady side of pyramid&#39;),
+  c(&#39;Cielo&#39;, &#39;Lado soleado de la pirámide&#39;, &#39;Lado sombrío de la pirámide.&#39;),
   col = c(&#39;#0292D8&#39;, &#39;#F7EA39&#39;, &#39;#C4B632&#39;),
   init.angle = -50, border = NA
 )</code></pre>
 <div class="figure"><span id="fig:pie"></span>
-<img src="/post/2018-12-27-visualización-de-datos-primeros-pasos_files/figure-html/pie-1.png" alt="A fancy pie chart." width="672" />
+<img src="/post/2018-12-27-visualización-de-datos-primeros-pasos_files/figure-html/pie-1.png" alt="Gráfico de pie para un ícono piramidal." width="672" />
 <p class="caption">
-Figure 1: A fancy pie chart.
+Figure 1: Gráfico de pie para un ícono piramidal.
 </p>
 </div>
-<p>R no solo genera visualizaciones estáticas, actualmente gracias a la R API de Plotly (una librería de código abierto de JavaScript) podemos crear gráficos interactivos basados en nuestros códigos en R.</p>
+<p>El paquete <a href="https://ggplot2.tidyverse.org/">ggplot2</a> puede ser acompañado de otros paquetes como <a href="https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/">ggthemes</a> para darle una apariencia automática a tu gráfico.</p>
+<pre class="r"><code>library(ggplot2)
+library(ggthemes)
+
+ggplot(mpg, aes(displ, hwy, colour = class)) + 
+  geom_point()+
+  theme_minimal()</code></pre>
+<div class="figure"><span id="fig:point"></span>
+<img src="/post/2018-12-27-visualización-de-datos-primeros-pasos_files/figure-html/point-1.png" alt="Gráfico de puntos estándar." width="672" />
+<p class="caption">
+Figure 2: Gráfico de puntos estándar.
+</p>
+</div>
+<p>R no solo genera visualizaciones estáticas, actualmente gracias a la R API de <a href="https://plot.ly/#/">Plotly</a> (una librería de código abierto de JavaScript) podemos crear gráficos interactivos basados en nuestros códigos en R.</p>
 <iframe width="640" height="320" frameborder="0" scrolling="no" src="//plot.ly/~EMTincopa/6.embed">
 </iframe>
+<p>Finalmente, tengo que decirte que R no es el único lenguaje con el cual podrás crear visualizaciones impactantes. Python, por ejemplo, tiene muchas librerías dedicadas a la visualización de datos (<a href="https://seaborn.pydata.org/">Seaborn</a> y <a href="https://bokeh.pydata.org/en/latest/">Bokeh</a>) y JavaScript con su librería D3 es la elección indicada si quieres publicar en la web gráficos interactivos.</p>
+<p>{{&lt; youtube PItDPJxMZ1k &gt;}}</p>
+<p>Ufff, hay mucho por ver pero esto es todo por hoy, espero este artículo te haya sido de ayuda y si terminas creando una visualización genial no olvides compartirlo conmigo por Twitter (<a href="https://twitter.com/EMTincopa">EMTincopa</a>).</p>
+<p>Suerte!!!</p>
+<div class="figure">
+<img src="https://www.youtube.com/watch?v=39cypVFGOKk" alt="Población mundial 1950-2100 - Power BI" />
+<p class="caption">Población mundial 1950-2100 - Power BI</p>
+</div>
 <p><strong>Aprende más en:</strong></p>
 <ul>
 <li><a href="https://searchbusinessanalytics.techtarget.com/definition/data-visualization">Data visualization</a></li>
@@ -236,9 +257,8 @@ Figure 1: A fancy pie chart.
 <li><a href="https://www.activebs.com/en/power-bi/why-power-bi">Why Power BI?</a></li>
 <li><a href="https://powerbi.microsoft.com/es-es/what-is-power-bi/">¿Qué es Power BI?</a></li>
 <li><a href="https://www.r-bloggers.com/why-you-should-start-by-learning-data-visualization-and-manipulation/">Why you should start by learning data visualization and manipulation</a></li>
-<li><a href="https://plot.ly/#/">Plotly</a></li>
 <li><a href="https://www.quora.com/Whats-the-most-popular-language-for-data-visualization">What’s the most popular language for data visualization?</a></li>
-<li>[Five Interactive R Visualizations With D3, ggplot2, &amp; RStudio] (<a href="https://moderndata.plot.ly/interactive-r-visualizations-with-d3-ggplot2-rstudio/" class="uri">https://moderndata.plot.ly/interactive-r-visualizations-with-d3-ggplot2-rstudio/</a>)</li>
+<li><a href="https://moderndata.plot.ly/interactive-r-visualizations-with-d3-ggplot2-rstudio/">Five Interactive R Visualizations With D3, ggplot2, &amp; RStudio</a></li>
 <li><a href="https://medium.com/datavisualization/where-should-i-start-c53acdf04a1c">Getting into data visualization — where should I start?</a></li>
 </ul>
 

@@ -6,9 +6,9 @@ author: EMTincopa
 published: true
 image: ""
 date: 2018-12-27T00:58:19-05:00
-draft: true
 categories: ["Tips"]
 tags: ["DataViz", "Data", "Power BI", "Tableau","R","Plot", "Tools"]
+draft: true
 showtoc: false
 ---
 
@@ -52,29 +52,51 @@ Por desgracia, lograr visualizaciones tan grandiosas como las que podemos encont
 ![Infografía hecha con R y Adobe Illustrator](\content\post\2018-12-27-visualización-de-datos-primeros-pasos\diabetes_mellitus.png)
 
 
-En cualquier caso, si finalmente te has decidido aprender R para sumergirte en la visualización de datos, te recomiendo que revises los paquetes ggplot2 y dplyr (si eres disciplinado podrás aprender la sintaxis de R en menos de un mes). Una vez aprendas la sintaxis, los gráficos de dispersión, barras y de burbujas, entre otros, serán muy fáciles. 
+En cualquier caso, si finalmente te has decidido aprender R para sumergirte en la visualización de datos, te recomiendo que revises los paquetes [ggplot2](https://ggplot2.tidyverse.org/) y dplyr (si eres disciplinado podrás aprender la sintaxis de R en menos de un mes). Una vez aprendas la sintaxis, los gráficos de dispersión, barras y de burbujas, entre otros, serán muy fáciles. 
 
 En general las visualizaciones que parecían extremadamente difíciles terminarán siendo más sencillas de lo que esperabas. Es a partir de este momento en el que tienes que hacer explotar tu creatividad, domina ggplot2 y dplyr porque serán tus principales herramientas para más adelante encontrar historias entre tus datos.
 
 
-A continuación algunos gráficos hechos con R. See Figure \@ref(fig:pie) for example:
+A continuación algunos gráficos hechos con R.
 
-```{r pie, fig.cap='A fancy pie chart.', tidy=FALSE}
+```{r pie, fig.cap='Gráfico de pie para un ícono piramidal.', tidy=FALSE}
 par(mar = c(0, 1, 0, 1))
 pie(
   c(280, 60, 20),
-  c('Sky', 'Sunny side of pyramid', 'Shady side of pyramid'),
+  c('Cielo', 'Lado soleado de la pirámide', 'Lado sombrío de la pirámide.'),
   col = c('#0292D8', '#F7EA39', '#C4B632'),
   init.angle = -50, border = NA
 )
 ```
 
-R no solo genera visualizaciones estáticas, actualmente gracias a la R API de Plotly (una librería de código abierto de JavaScript) podemos crear gráficos interactivos basados en nuestros códigos en R.
+El paquete [ggplot2](https://ggplot2.tidyverse.org/) puede ser acompañado de otros paquetes como [ggthemes](https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/) para darle una apariencia automática a tu gráfico.
+
+```{r point, fig.cap='Gráfico de puntos estándar.', tidy=FALSE}
+library(ggplot2)
+library(ggthemes)
+
+ggplot(mpg, aes(displ, hwy, colour = class)) + 
+  geom_point()+
+  theme_minimal()
+  
+```
+
+R no solo genera visualizaciones estáticas, actualmente gracias a la R API de [Plotly](https://plot.ly/#/) (una librería de código abierto de JavaScript) podemos crear gráficos interactivos basados en nuestros códigos en R.
 
 <iframe width="640" height="320" frameborder="0" scrolling="no" src="//plot.ly/~EMTincopa/6.embed"></iframe>
 
+Finalmente, tengo que decirte que R no es el único lenguaje con el cual podrás crear visualizaciones impactantes. Python, por ejemplo, tiene muchas librerías dedicadas a la visualización de datos ([Seaborn](https://seaborn.pydata.org/) y [Bokeh](https://bokeh.pydata.org/en/latest/)) y JavaScript con su librería D3 es la elección indicada si quieres publicar en la web gráficos interactivos.
+
+{{< youtube PItDPJxMZ1k >}}
 
 
+Ufff, hay mucho por ver pero esto es todo por hoy, espero este artículo te haya sido de ayuda y si terminas creando una visualización genial no olvides compartirlo conmigo por Twitter ([EMTincopa](https://twitter.com/EMTincopa)). 
+
+
+Suerte!!!
+
+
+![Población mundial 1950-2100 - Power BI](https://www.youtube.com/watch?v=39cypVFGOKk)
 
 
 **Aprende más en:**
@@ -85,9 +107,8 @@ R no solo genera visualizaciones estáticas, actualmente gracias a la R API de P
 * [Why Power BI?](https://www.activebs.com/en/power-bi/why-power-bi)
 * [¿Qué es Power BI?](https://powerbi.microsoft.com/es-es/what-is-power-bi/)
 * [Why you should start by learning data visualization and manipulation](https://www.r-bloggers.com/why-you-should-start-by-learning-data-visualization-and-manipulation/)
-* [Plotly](https://plot.ly/#/)
 * [What's the most popular language for data visualization?](https://www.quora.com/Whats-the-most-popular-language-for-data-visualization)
-* [Five Interactive R Visualizations With D3, ggplot2, & RStudio] (https://moderndata.plot.ly/interactive-r-visualizations-with-d3-ggplot2-rstudio/)
+* [Five Interactive R Visualizations With D3, ggplot2, & RStudio](https://moderndata.plot.ly/interactive-r-visualizations-with-d3-ggplot2-rstudio/)
 * [Getting into data visualization — where should I start?](https://medium.com/datavisualization/where-should-i-start-c53acdf04a1c)
 
 
