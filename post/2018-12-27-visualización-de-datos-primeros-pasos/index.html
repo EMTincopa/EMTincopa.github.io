@@ -8,7 +8,7 @@
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     
-    <meta name="description" content="De seguro te habrás preguntado de que va todo esto de la visualización de datos y si es necesario aprender algún lenguaje de programación y cuál sería el más apropiado para comenzar. Pero aún hay algunas cosas que debes tener en cuenta antes de emprender ese viaje.">
+    <meta name="description" content="De seguro te habrás preguntado de que va todo esto de la visualización de datos y si es necesario aprender algún lenguaje de programación y cuál sería el más apropiado para comenzar. Aquí algunas cosas que debes tener en cuenta antes de emprender ese viaje.">
     
     <meta name="keyword"  content="DataViz, El blog de EMTincopa, Storytelling, Health and Data Visualization, Web, Freelancer">
     <link rel="icon"  type="image/ico" href="/EMTincopa.github.io/img/favicon.ico">
@@ -191,9 +191,12 @@
 <p><strong>LA VISUALIZACIÓN DE DATOS</strong></p>
 <p>La visualización de datos se expresa como cualquier esfuerzo, en términos generales, para ayudar a las personas a comprender la información almacenada en grandes volúmenes de datos que pueden parecer inabarcables. Para lograr esto, tienes que mirar tus datos. Unos gráficos iniciales y tablas te permiten explorar y conocer la estructura de la información recopilada, en otras palabras, puedes extraer significados de tu propia información.</p>
 <p>Desde mi punto de vista no creo que haya buenas o malas visualizaciones, pero sí mejores o peores según el tipo de información con la cual se esté trabajando. Las visualizaciones acertadas facilitan la comunicación de tus ideas y hallazgos a otras personas. Al mismo tiempo, producir gráficos efectivos a partir de tus propios datos es la mejor manera de desarrollar un buen ojo crítico para no solo tus gráficos sino también los de los demás, como los que encuentras en los periódicos, páginas web, artículos de investigación, slides de negocios, etc.</p>
+<blockquote>
+<p>If you asked me to choose one mystery that has fascinated me through the years, it would be our brain’s ability to create and understand visual representations with different degrees of abstraction: graphics that encode data, concepts, connections, and geographical locations.- Alberto Cairo, “The Functional Art”.</p>
+</blockquote>
 <p><strong>¿POR QUÉ LA VISUALIZACIÓN DE DATOS ES IMPORTANTE EN CUALQUIER ÁREA?</strong></p>
 <p>En realidad, es difícil imaginar que un profesional científico o industrial no se beneficie de hacer la data más entendible para apoyar sus conclusiones y tomar mejores decisiones.</p>
-<p>Con el crecimiento de la tecnología han aparecido nuevas herramientas que facilitan la creación de gráficos interactivos e infografías de alto impacto, pero estas nuevas herramientas necesitan de profesionales que comprendan y manejen de la mejor forma los elementos visuales (tablas, gráficos y mapas) para la representación gráfica de información y datos. Y en cierto punto, crear gráficos de barras o gráficos circulares más sofisticados que los encontrados en las hojas de cálculo de Microsoft Excel, pero siempre primando el lograr transmitir un mensaje claro de lo que nos quieren decir nuestros datos.</p>
+<p>Con el crecimiento de la tecnología han aparecido nuevas herramientas que facilitan la creación de gráficos interactivos e infografías de alto impacto, pero estas nuevas herramientas necesitan de profesionales que comprendan y manejen de la mejor manera los elementos visuales (tablas, gráficos y mapas) para la representación gráfica de información y datos. Y en cierto punto, crear gráficos de barras o gráficos circulares más sofisticados que los encontrados en las hojas de cálculo de Microsoft Excel, pero siempre primando el lograr transmitir un mensaje claro de lo que nos quieren decir nuestros datos.</p>
 <p>Si nos centramos en el mundo de los negocios, encontramos que la visualización de datos es de hecho la principal herramienta de la inteligencia de negocios (BI), ayudando a democratizar los datos y los análisis, y ponerlos a disposición de las distintas unidades funcionales de una empresa. Las nuevas herramientas que han salido al mercado (Tableu, Qlik, y Power BI), por lo general, son más fáciles de operar que el software de análisis estadístico tradicional o programas pioneros en el BI. Esto ha llevado al aumento de empresas implementando por su cuenta estas herramientas enfocadas en la visualización de datos en sus organizaciones.</p>
 <p><strong>PRIMEROS PASOS EN LA VISUALIZACIÓN DE DATOS</strong></p>
 <p>Lo que puedo decir en este momento es que R es el lenguaje de programación perfecto para perderle el miedo al código y dar tus primeros pasos en la ciencia de datos y la visualización. Pero cuidado, antes de aprender a manipular los datos, tienes que aprender a visualizarlos (La visualización de datos es una relación cíclica entre manipular y visualizar datos, entre otras cosas).</p>
@@ -221,9 +224,9 @@ pie(
   init.angle = -50, border = NA
 )</code></pre>
 <div class="figure"><span id="fig:pie"></span>
-<img src="/post/2018-12-27-visualización-de-datos-primeros-pasos_files/figure-html/pie-1.png" alt="Gráfico de pie para un ícono piramidal." width="672" />
+<img src="/post/2018-12-27-visualización-de-datos-primeros-pasos_files/figure-html/pie-1.png" alt="Gráfico de pie para un ícono piramidal - Yihui Xie" width="672" />
 <p class="caption">
-Figure 1: Gráfico de pie para un ícono piramidal.
+Figure 1: Gráfico de pie para un ícono piramidal - Yihui Xie
 </p>
 </div>
 <p>El paquete <a href="https://ggplot2.tidyverse.org/">ggplot2</a> puede ser acompañado de otros paquetes como <a href="https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/">ggthemes</a> para darle una apariencia automática a tu gráfico.</p>
@@ -243,17 +246,11 @@ Figure 2: Gráfico de puntos estándar.
 <iframe width="640" height="320" frameborder="0" scrolling="no" src="//plot.ly/~EMTincopa/6.embed">
 </iframe>
 <p>Finalmente, tengo que decirte que R no es el único lenguaje con el cual podrás crear visualizaciones impactantes. Python, por ejemplo, tiene muchas librerías dedicadas a la visualización de datos (<a href="https://seaborn.pydata.org/">Seaborn</a> y <a href="https://bokeh.pydata.org/en/latest/">Bokeh</a>) y JavaScript con su librería D3 es la elección indicada si quieres publicar en la web gráficos interactivos.</p>
-<p>{{&lt; youtube PItDPJxMZ1k &gt;}}</p>
+<p>Y con un poco de suerte hacer magia como <a href="https://twitter.com/sxywu">Shirley Wu</a> <blockquote class="twitter-tweet"><p lang="en" dir="ltr">My very first 3d <a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> is live on <a href="https://twitter.com/christmasxp?ref_src=twsrc%5Etfw">@christmasxp</a> 🥳<br><br>Explore the 51 women awarded Nobel Prizes since 1901 🏆 &quot;walk&quot; amongst them to read about their accomplishments, then &quot;fly&quot; up to get a holistic view across the decades 🚀<br><br>🔗 <a href="https://t.co/jEqVtLWdiT">https://t.co/jEqVtLWdiT</a><br>⌨️ <a href="https://t.co/rJvFnKjLJh">https://t.co/rJvFnKjLJh</a> <a href="https://t.co/00iyXRu5o6">pic.twitter.com/00iyXRu5o6</a></p>&mdash; Shirley Wu (@sxywu) <a href="https://twitter.com/sxywu/status/1077661611765096449?ref_src=twsrc%5Etfw">December 25, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>
 <p>Ufff, hay mucho por ver pero esto es todo por hoy, espero este artículo te haya sido de ayuda y si terminas creando una visualización genial no olvides compartirlo conmigo por Twitter (<a href="https://twitter.com/EMTincopa">EMTincopa</a>).</p>
 <p>Suerte!!!</p>
-<blockquote class="twitter-tweet">
-<p lang="en" dir="ltr">
-Hugo 0.24 Released: Big archetype update + <a href="https://twitter.com/Netlify?ref_src=twsrc%5Etfw"><span class="citation">@Netlify</span></a> _redirects etc. file support<a href="https://t.co/X94FmYDEZJ">https://t.co/X94FmYDEZJ</a> <a href="https://twitter.com/hashtag/gohugo?src=hash&amp;ref_src=twsrc%5Etfw">#gohugo</a> <a href="https://twitter.com/hashtag/golang?src=hash&amp;ref_src=twsrc%5Etfw">#golang</a> <a href="https://twitter.com/spf13?ref_src=twsrc%5Etfw"><span class="citation">@spf13</span></a> <a href="https://twitter.com/bepsays?ref_src=twsrc%5Etfw"><span class="citation">@bepsays</span></a>
-</p>
-— GoHugo.io (<span class="citation">@GoHugoIO</span>) <a href="https://twitter.com/GoHugoIO/status/877500564405444608?ref_src=twsrc%5Etfw">June 21, 2017</a>
-</blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-<p><a href="https://www.youtube.com/watch?v=39cypVFGOKk" class="uri">https://www.youtube.com/watch?v=39cypVFGOKk</a></youtube></p>
 <p><strong>Aprende más en:</strong></p>
 <ul>
 <li><a href="https://searchbusinessanalytics.techtarget.com/definition/data-visualization">Data visualization</a></li>
