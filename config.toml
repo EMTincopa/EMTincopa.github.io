@@ -21,7 +21,7 @@ googleAnalytics = "UA-131186631-1"
 home = ["HTML", "RSS", "Algolia"]
 
 [params]
-  header_image = "img/ideashead.jpg"
+  header_image = "img/headataviz.jpg"
   SEOTitle = "My blog for share practical Storytelling and Data Visualization projects"
   description = "El blog de un entusiasta de los datos | Storytelling and Data Visualization"
   keyword = "DataViz, El blog de EMTincopa, Storytelling, Health and Data Visualization, Web, Freelancer"
