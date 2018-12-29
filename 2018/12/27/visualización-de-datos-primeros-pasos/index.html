@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><head>
+    <meta name="google-site-verification" content="9vIieCe-Qpd78QOmBl63rGtIVbhY6sYyuxX3j8XWBA4" />
+    <meta name="baidu-site-verification" content="LRrmH41lz7" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <meta name="description" content="De seguro te habrás preguntado de que va todo esto de la visualización de datos y si es necesario aprender algún lenguaje de programación y cuál sería el más apropiado para comenzar. Aquí algunas cosas que debes tener en cuenta antes de emprender ese viaje.">
+    
+    <meta name="keyword"  content="DataViz, El blog de EMTincopa, Storytelling, Health and Data Visualization, Web, Freelancer">
+    <link rel="icon"  type="image/ico" href="/EMTincopa.github.io/img/favicon.ico">
+
+    <title>Visualización de Datos-My blog for share practical Storytelling and Data Visualization projects</title>
+
+    <link rel="canonical" href="/2018/12/27/visualizaci%c3%b3n-de-datos-primeros-pasos/">
+
+    <link rel="stylesheet" href="/css/iDisqus.min.css"/>
+	
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    
+    
+    <script src="/js/jquery.min.js"></script>
+    
+    
+    <script src="/js/bootstrap.min.js"></script>
+    
+    
+    <script src="/js/hux-blog.min.js"></script>
+</head>
+</head>
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">EMT&#39;S Data Stories</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/categories/about">ABOUT</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/categories/tips">Tips</a>
+                    </li>
+                    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/content/post/2018-12-27-visualizaci%c3%b3n-de-datos-primeros-pasos/headataviz.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                       
+                       <a class="tag" href="/tags/dataviz" title="DataViz">
+                           DataViz
+                        </a>
+                        
+                       <a class="tag" href="/tags/data" title="Data">
+                           Data
+                        </a>
+                        
+                       <a class="tag" href="/tags/power-bi" title="Power BI">
+                           Power BI
+                        </a>
+                        
+                       <a class="tag" href="/tags/tableau" title="Tableau">
+                           Tableau
+                        </a>
+                        
+                       <a class="tag" href="/tags/r" title="R">
+                           R
+                        </a>
+                        
+                       <a class="tag" href="/tags/plot" title="Plot">
+                           Plot
+                        </a>
+                        
+                       <a class="tag" href="/tags/tools" title="Tools">
+                           Tools
+                        </a>
+                        
+                    </div>
+                    <h1>Visualización de Datos</h1>
+                    <h2 class="subheading">Cosas a tener en cuenta</h2>
+                    <span  class="meta">Posted by EMTincopa on Thursday, December 27, 2018
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+        		
+        		
+        		
+
+
+<p>Hola!</p>
+<p>De seguro te habrás preguntado de que va todo esto de la visualización de datos y si es necesario aprender algún lenguaje de programación y cuál sería el más apropiado para comenzar. En mi experiencia puedo decirte que lenguajes de programación para visualizar datos hay varios, siendo R el que yo utilizo hasta el momento. Pero veamos algunas cosas que debes tener en cuenta sobre la visualización de datos y otras opciones a las que podrías recurrir.</p>
+<p><strong>LA VISUALIZACIÓN DE DATOS</strong></p>
+<p>La visualización de datos se expresa como cualquier esfuerzo, en términos generales, para ayudar a las personas a comprender la información almacenada en grandes volúmenes de datos que pueden parecer inabarcables. Para lograr esto, tienes que mirar tus datos. Unos gráficos iniciales y tablas te permiten explorar y conocer la estructura de la información recopilada, en otras palabras, puedes extraer significados de tu propia información.</p>
+<p>Desde mi punto de vista no creo que haya buenas o malas visualizaciones, pero sí mejores o peores según el tipo de información con la cual se esté trabajando. Las visualizaciones acertadas facilitan la comunicación de tus ideas y hallazgos a otras personas. Al mismo tiempo, producir gráficos efectivos a partir de tus propios datos, es la mejor manera de desarrollar un buen ojo crítico para no solo tus gráficos sino también para los gráficos hechos por otros, como los que encuentras en los periódicos, páginas web, artículos de investigación, slides de negocios, etc.</p>
+<blockquote>
+<p>If you asked me to choose one mystery that has fascinated me through the years, it would be our brain’s ability to create and understand visual representations with different degrees of abstraction: graphics that encode data, concepts, connections, and geographical locations.- Alberto Cairo, “The Functional Art”.</p>
+</blockquote>
+<p><strong>¿POR QUÉ LA VISUALIZACIÓN DE DATOS ES IMPORTANTE EN CUALQUIER ÁREA?</strong></p>
+<p>En realidad, es difícil imaginar que un profesional científico o industrial no se beneficie de hacer la data más entendible para apoyar sus conclusiones y tomar mejores decisiones.</p>
+<p>Con el crecimiento de la tecnología han aparecido nuevas herramientas que facilitan la creación de gráficos interactivos e infografías de alto impacto, pero estas nuevas herramientas necesitan de profesionales que comprendan y manejen de la mejor manera los elementos visuales (tablas, gráficos y mapas) para la representación gráfica de información y datos. Y en cierto punto, crear gráficos de barras o gráficos circulares más sofisticados que los encontrados en las hojas de cálculo de Microsoft Excel, pero siempre primando el lograr transmitir un mensaje claro de lo que nos quieren decir nuestros datos.</p>
+<p>Si nos centramos en el mundo de los negocios, encontramos que la visualización de datos es de hecho la principal herramienta de la inteligencia de negocios (BI), ayudando a democratizar los datos y los análisis, y ponerlos a disposición de las distintas unidades funcionales de una empresa. Las opciones que se encuentran en el mercado (Tableu, Qlik, y Power BI), por lo general, son más fáciles de operar que el software de análisis estadístico tradicional o programas pioneros en el BI. Esto ha llevado al aumento de empresas implementando por su cuenta estas herramientas enfocadas en la visualización de datos en sus organizaciones.</p>
+<p><strong>PRIMEROS PASOS EN LA VISUALIZACIÓN DE DATOS</strong></p>
+<p>Lo que puedo decir en este momento es que <a href="https://www.r-project.org/">R</a> es el lenguaje de programación perfecto para perderle el miedo al código y dar tus primeros pasos en la ciencia de datos y la visualización.</p>
+<p>Pero cuidado, antes de emprender tal viaje deberías vivir Microsoft Excel al máximo, llegar a manejar bien las tablas dinámicas y tantear hasta donde puedes llegar, y cuando sientas las limitaciones de esa herramienta, aventúrate a buscar otras, pero si no tienes problemas en tu trabajo y Excel te da todo lo que necesitas, entonces deberías pensar muy bien si en verdad quieres adentrarte en el mundo de los datos y la visualización con lenguajes de programación (En serio, con Microsoft Excel se pueden hacer muchas cosas, y con algo más de esfuerzo gráficos bonitos).</p>
+<p>También, si eres de los que solo reciben los datos y necesitas una herramienta para explorarlos visualmente como también crear gráficos atractivos, <a href="https://www.tableau.com/">Tableau</a> sería una gran opción al ser muy popular y realmente poderoso. Esta es una herramienta de escritorio que te permite crear visualizaciones creativas y dashboards para monitorear las métricas más importantes en tu negocio, y si eres alguien experimentado en el lenguaje de programación JavaScript puedes subir tus visualizaciones hechas en <a href="https://www.tableau.com/">Tableau</a> a un sitio web. Tiene una versión pública gratuita y otra de pago que puedes obtener de forma gratuita si acreditas que eres estudiante, los gráficos que desarrolles puedes subirlos a tus redes sociales, incluirlos en investigaciones, imprimirlos para posters, etc.</p>
+<p>Otra opción es <a href="https://powerbi.microsoft.com/es-es/">Power BI</a>, la cual es, a mi parecer, la mejor herramienta para el análisis de negocios creada por Microsoft. Power BI te permite visualizar los datos de tu empresa, subirlos a una nube y compartirlos con todas las unidades funcionales de tu negocio, así como también descargar tus visualizaciones en formatos estáticos como los PDFs (Bueno, Tableau no es tan diferente en ese sentido) para editarlos a tu gusto con otras herramientas. Si eres un Excel boy creo que Power BI, a pesar de ser algo distinto, tiene un poco del mismo espíritu (Sobre todo cuando trabajes con la opción de tablas Fact y Dim). En resumen, <a href="https://powerbi.microsoft.com/es-es/">Power BI</a> te brinda una ventana donde podrás visualizar gráficos impactantes y crear Dashboards y reportes dinámicos.</p>
+<div class="figure">
+<img src="\content\post\2018-12-27-visualización-de-datos-primeros-pasos\population_example.gif" alt="Análisis de la población mundial (1950-2100) con Power BI" />
+<p class="caption">Análisis de la población mundial (1950-2100) con Power BI</p>
+</div>
+<p>Regresando a <a href="https://www.r-project.org/">R</a>, primero que nada, es gratis, tiene un séquito gigantesco de desarrolladores que constantemente crean y agregan nuevos paquetes, puede manejar grandes volúmenes de datos, lo retroalimenta una comunidad muy activa, brinda una amplia gama de herramientas estadísticas y, hay grandes recursos gratuitos para aprenderlo, como es el caso de Coursera, DataCamp, Udemy, entre otros. Si tu matriz de datos en Excel te está dando problemas al ser muy grande, no es lo suficientemente flexible y las visualizaciones no son lo que esperas, R es la solución, siendo muy útil para explorar rápidamente tus datos y tener visualizaciones muy personalizadas.</p>
+<p>Por desgracia, lograr visualizaciones tan grandiosas como las que podemos encontrar en los principales periódicos estadounidenses no es una tarea fácil y necesitarás mucha determinación y ganas para lograr que tus primeros trabajos tengan esos diseños de gran impacto. Tal vez tengas que aprender algo de Adobe Illustrator para retocar tus gráficos o crear infografías.</p>
+<div class="figure">
+<img src="\content\post\2018-12-27-visualización-de-datos-primeros-pasos\diabetes_mellitus.png" alt="Infografía hecha con R y Adobe Illustrator" />
+<p class="caption">Infografía hecha con R y Adobe Illustrator</p>
+</div>
+<p>En cualquier caso, si finalmente te has decidido aprender <a href="https://www.r-project.org/">R</a> para sumergirte en la visualización de datos, te recomiendo que revises los paquetes <a href="https://ggplot2.tidyverse.org/">ggplot2</a> y <a href="https://dplyr.tidyverse.org/">dplyr</a> (si eres disciplinado podrás aprender la sintaxis de R en menos de un mes). Una vez aprendas la sintaxis, los gráficos de dispersión, barras y de burbujas, entre otros, serán muy fáciles.</p>
+<p>En general las visualizaciones que parecían extremadamente difíciles terminarán siendo más sencillas de lo que esperabas. Es a partir de este momento en el que tienes que hacer explotar tu creatividad, domina <a href="https://ggplot2.tidyverse.org/">ggplot2</a> y <a href="https://dplyr.tidyverse.org/">dplyr</a> porque serán tus principales herramientas para más adelante encontrar historias entre tus datos.</p>
+<p>A continuación algunos gráficos hechos con R.</p>
+<pre class="r"><code>par(mar = c(0, 1, 0, 1))
+pie(
+  c(280, 60, 20),
+  c(&#39;Cielo&#39;, &#39;Lado soleado de la pirámide&#39;, &#39;Lado sombrío de la pirámide.&#39;),
+  col = c(&#39;#0292D8&#39;, &#39;#F7EA39&#39;, &#39;#C4B632&#39;),
+  init.angle = -50, border = NA
+)</code></pre>
+<div class="figure"><span id="fig:pie"></span>
+<img src="/post/2018-12-27-visualización-de-datos-primeros-pasos_files/figure-html/pie-1.png" alt="Gráfico de pie para un ícono piramidal - Yihui Xie" width="672" />
+<p class="caption">
+Figure 1: Gráfico de pie para un ícono piramidal - Yihui Xie
+</p>
+</div>
+<p>El paquete <a href="https://ggplot2.tidyverse.org/">ggplot2</a> puede ser acompañado de otros paquetes como <a href="https://yutannihilation.github.io/allYourFigureAreBelongToUs/ggthemes/">ggthemes</a> para darle una apariencia automática a tu gráfico.</p>
+<pre class="r"><code>library(ggplot2)
+library(ggthemes)
+
+ggplot(mpg, aes(displ, hwy, colour = class)) + 
+  geom_point()+
+  theme_minimal()</code></pre>
+<div class="figure"><span id="fig:point"></span>
+<img src="/post/2018-12-27-visualización-de-datos-primeros-pasos_files/figure-html/point-1.png" alt="Gráfico de puntos estándar." width="672" />
+<p class="caption">
+Figure 2: Gráfico de puntos estándar.
+</p>
+</div>
+<p><a href="https://www.r-project.org/">R</a> no solo genera visualizaciones estáticas, actualmente gracias a la R API de <a href="https://plot.ly/#/">Plotly</a> (una librería de código abierto de JavaScript) podemos crear gráficos interactivos basados en nuestros códigos en R.</p>
+<iframe width="640" height="320" frameborder="0" scrolling="no" src="//plot.ly/~EMTincopa/6.embed">
+</iframe>
+<p>Finalmente, tengo que decirte que R no es el único lenguaje con el cual podrás crear visualizaciones impactantes. <a href="https://www.python.org/">Python</a>, por ejemplo, tiene muchas librerías dedicadas a la visualización de datos (<a href="https://seaborn.pydata.org/">Seaborn</a> y <a href="https://bokeh.pydata.org/en/latest/">Bokeh</a>) y JavaScript con su librería <a href="https://d3js.org/">D3</a> es la elección indicada si quieres publicar en la web gráficos interactivos.</p>
+<p>Y con un poco de suerte hacer “magia” como <a href="https://twitter.com/sxywu">Shirley Wu</a> <blockquote class="twitter-tweet"><p lang="en" dir="ltr">My very first 3d <a href="https://twitter.com/hashtag/dataviz?src=hash&amp;ref_src=twsrc%5Etfw">#dataviz</a> is live on <a href="https://twitter.com/christmasxp?ref_src=twsrc%5Etfw">@christmasxp</a> 🥳<br><br>Explore the 51 women awarded Nobel Prizes since 1901 🏆 &quot;walk&quot; amongst them to read about their accomplishments, then &quot;fly&quot; up to get a holistic view across the decades 🚀<br><br>🔗 <a href="https://t.co/jEqVtLWdiT">https://t.co/jEqVtLWdiT</a><br>⌨️ <a href="https://t.co/rJvFnKjLJh">https://t.co/rJvFnKjLJh</a> <a href="https://t.co/00iyXRu5o6">pic.twitter.com/00iyXRu5o6</a></p>&mdash; Shirley Wu (@sxywu) <a href="https://twitter.com/sxywu/status/1077661611765096449?ref_src=twsrc%5Etfw">December 25, 2018</a></blockquote>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</p>
+<p>Ufff, hay mucho por ver pero esto es todo por hoy, espero este artículo te haya sido de ayuda y si terminas creando una visualización genial no olvides compartirlo conmigo por Twitter (<a href="https://twitter.com/EMTincopa">EMTincopa</a>).</p>
+<p>Suerte!!!</p>
+<p><strong>Aprende más en:</strong></p>
+<ul>
+<li><a href="https://searchbusinessanalytics.techtarget.com/definition/data-visualization">Data visualization</a></li>
+<li><a href="https://www.tableau.com/learn/articles/data-visualization">Data visualization beginner’s guide: a definition, examples, and learning resources</a></li>
+<li><a href="https://codinginthewild.com/coding-in-data-visualization-bc04732d3207">Coding for Data Visualization</a></li>
+<li><a href="https://www.activebs.com/en/power-bi/why-power-bi">Why Power BI?</a></li>
+<li><a href="https://powerbi.microsoft.com/es-es/what-is-power-bi/">¿Qué es Power BI?</a></li>
+<li><a href="https://www.r-bloggers.com/why-you-should-start-by-learning-data-visualization-and-manipulation/">Why you should start by learning data visualization and manipulation</a></li>
+<li><a href="https://www.quora.com/Whats-the-most-popular-language-for-data-visualization">What’s the most popular language for data visualization?</a></li>
+<li><a href="https://moderndata.plot.ly/interactive-r-visualizations-with-d3-ggplot2-rstudio/">Five Interactive R Visualizations With D3, ggplot2, &amp; RStudio</a></li>
+<li><a href="https://medium.com/datavisualization/where-should-i-start-c53acdf04a1c">Getting into data visualization — where should I start?</a></li>
+</ul>
+
+        
+                
+        
+              <hr>
+              <ul class="pager">
+                  
+                  
+                  <li class="next">
+                      <a href="/post/2018-12-17-about-me/" data-toggle="tooltip" data-placement="top" title="About Me">Next Post &rarr;</a>
+                  </li>
+                  
+              </ul>
+  
+              
+<div id="disqus-comment"></div>
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-emtincopa-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+            </div>
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                   <li>
+                       <a href="" rel="alternate" type="application/rss+xml" title="EMT&#39;S Data Stories" >
+                           <span class="fa-stack fa-lg">
+                               <i class="fa fa-circle fa-stack-2x"></i>
+                               <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
+                           </span>
+                       </a>
+                   </li>
+                   
+                    
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/EMTincopa">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/enrique.tincopa">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+
+		    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/EMTincopa">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/enrique-mendoza-tincopa-4b2a14173/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; EMT&#39;S Data Stories , 2018
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https'){
+       bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+      }
+      else{
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+      }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-131186631-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
