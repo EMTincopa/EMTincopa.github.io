@@ -1,0 +1,20 @@
+"2","Rendering content/post/2018-12-27-visualización-de-datos-primeros-pasos.Rmd
+"
+"1","Error in parse_block(g[-1], g[1], params.src) : duplicate label 'pie'
+"
+"1","Calls: local ... process_file -> split_file -> lapply -> FUN -> parse_block
+"
+"1","Ejecución interrumpida
+"
+"1","<"
+"1","simpleError"
+"1"," in "
+"1","render_page(f)"
+"1",": "
+"1","Failed to render 'content/post/2018-12-27-visualización-de-datos-primeros-pasos.Rmd'"
+"1",">
+"
+"2","
+* Retrying in 32 seconds...
+
+"
