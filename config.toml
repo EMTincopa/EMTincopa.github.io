@@ -22,13 +22,13 @@ home = ["HTML", "RSS", "Algolia"]
 
 [params]
   header_image = "img/headataviz.jpg"
-  SEOTitle = "My blog for share practical Storytelling and Data Visualization projects"
+  SEOTitle = "My blog of Visualization and Storytelling with data."
   description = "El blog de un entusiasta de los datos | Storytelling and Data Visualization"
-  keyword = "DataViz, El blog de EMTincopa, Storytelling, Health and Data Visualization, Web, Freelancer"
+  keyword = "DataViz, El blog de EMTincopa, Storytelling with data, Data Visualization, Datos, Visualizaci�n de datos, Data Stories"
   slogan = "La visualización de datos como medio expresivo para narrar lo que descubrimos."
 
   image_404 = "img/headupdating.gif"
-  title_404 = "Estás lejos de casa :("
+  title_404 = "Te encuentras lejos de casa :("
   
   
   # leancloud storage for page view counter
@@ -45,7 +45,7 @@ home = ["HTML", "RSS", "Algolia"]
   
   # Sidebar settings
   sidebar_about_description = "Entusiasta de los datos, el DataViz, la Investigación Operativa y de cada cosa que lo emociona."
-  sidebar_avatar = "img/emt-profile.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
+  sidebar_avatar = "img/imagen-de-perfil-de-emtincopa.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
 
   featured_tags = true
   featured_condition_size = 2
