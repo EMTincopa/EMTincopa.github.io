@@ -24,7 +24,7 @@ home = ["HTML", "RSS", "Algolia"]
   header_image = "img/headataviz.jpg"
   SEOTitle = "My blog of Visualization and Storytelling with data."
   description = "El blog de un entusiasta de los datos | Storytelling and Data Visualization"
-  keyword = "DataViz, El blog de EMTincopa, Storytelling with data, Data Visualization, Datos, Visualización de datos, Data Stories"
+  keyword = "DataViz, El blog de EMTincopa, Storytelling with data, Data Visualization, Datos, Visualizacion de datos, Data Stories"
   slogan = "La visualizaciÃ³n de datos como medio expresivo para narrar lo que descubrimos."
 
   image_404 = "img/headupdating.gif"
