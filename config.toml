@@ -48,8 +48,11 @@ home = ["HTML", "RSS", "Algolia"]
   sidebar_avatar = "img/emt-profile.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
 
   featured_tags = true
-  featured_condition_size = 2
+  featured_condition_size = 1
 
+  friends = true
+  bookmarks = true
+  about_me = true
 
   [params.social]
   rss           = true 
@@ -60,7 +63,7 @@ home = ["HTML", "RSS", "Algolia"]
   #instagram    = "https://www.instagram.com/emtincopa/"
   github        = "https://github.com/EMTincopa"
   
-  bookmarks = true
+
   [[params.bookmark_link]]
   title =  "Flourish"
   href =  "https://flourish.studio/"
@@ -79,6 +82,11 @@ home = ["HTML", "RSS", "Algolia"]
   [[params.bookmark_link]]
   title = "R for Data Science - 1st Edition"
   href = "https://amzn.to/2EBIFtX"
+  
+  
+  [[params.addtional_menus]]
+  title =  "ABOUT"
+  href = "/top/about/"
 
 
 [outputFormats.Algolia]

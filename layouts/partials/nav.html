@@ -29,11 +29,15 @@
                         <a href="{{ "categories/" | relLangURL }}{{ $name | urlize }}">{{ $name }}</a>
                     </li>
                     {{ end }}
+                    
+		    {{ range .Site.Params.addtional_menus }}
+                        <li><a href="{{.href}}">{{.title}}</a></li>
+                    {{ end }}
 
                     {{ if .Site.Params.algolia_search }}
-		            <li>
+		    <li>
                         <a href="{{ "search" | relURL }}">SEARCH <img src="{{ "img/search.png" | relURL }}" height="15" style="cursor: pointer;"></a>
-		            </li>
+		    </li>
                     {{ end }}
                 </ul>
             </div>

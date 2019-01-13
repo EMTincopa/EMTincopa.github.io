@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tops on EMT&#39;S Data Stories</title>
+    <link>/top/</link>
+    <description>Recent content in Tops on EMT&#39;S Data Stories</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 EMT&#39;S Data stories</copyright>
+    
+	<atom:link href="/top/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title></title>
+      <link>/top/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/top/about/</guid>
+      <description>Hola!
+Soy EMTincopa, estudiante universitario peruano.
+En estos momentos me encuentro a 6 meses de graduarme como Administrador de Salud en mi país, y dentro de un año más como Biólogo. Pero a pesar de mi formación universitaria, en los últimos dos años he desarrollado un fuerte interés en la ciencia de los datos.
+No me mal entiendan, no es mi objetivo convertirme en un científico de datos, pero sí poder rebuscar en el área y utilizar varias de sus herramientas en el sector salud donde me desempeñaré.</description>
+    </item>
+    
+  </channel>
+</rss>
