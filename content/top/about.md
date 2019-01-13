@@ -1,6 +1,6 @@
 Hola!
 
-Soy **_EMTincopa_**, estudiante universitario peruano.
+Soy **_EMTincopa_**, peruano y aficionado de los datos.
 
 En estos momentos me encuentro a 6 meses de graduarme como Administrador de Salud en mi país, y dentro de un año más como Biólogo. Pero a pesar de mi formación universitaria, en los últimos dos años he desarrollado un fuerte interés en la ciencia de los datos.
 
