@@ -14,7 +14,7 @@ Tal vez no pueda cumplir un horario fijo (quisiera poder publicar el 10, 20 y 30
 
 Espero tengas una buena experiencia leyendo mis artículos y acercándote un poquito, de alguna manera, a mi día a día. Por supuesto, si sientes que quieres compartir algo conmigo, sería grandioso.
 
-Siéntete libre de contactarme vía Twitter ([EMTincopa](https://twitter.com/EMTincopa)) o envíame un correo (emtincopa@gmail). Si no contesto de inmediato es porque tal vez estoy atorado en el difícil tráfico limeño, quizás viendo una película, caminando, pero más que seguro leyendo algún libro o un blog interesante, de todas formas, contestaré, no de tan rápido, pero lo haré.
+Siéntete libre de contactarme vía Twitter ([EMTincopa](https://twitter.com/EMTincopa)) o envíame un correo (emtincopa@gmail). Si no contesto de inmediato es porque tal vez estoy atorado en el difícil tráfico limeño, quizás viendo una película, caminando, pero más que seguro leyendo algún libro o un blog interesante, de todas formas contestaré, no tan rápido, pero lo haré.
 
 Gracias!
 
