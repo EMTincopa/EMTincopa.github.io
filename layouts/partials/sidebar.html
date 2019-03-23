@@ -26,11 +26,14 @@
     {{ end }}
 
     <!-- Short About -->
+	{{ if .Site.Params.about_me }}
     <section class="visible-md visible-lg">
-        <hr><h5><a href="">ABOUT ME</a></h5>
+	<hr><h5><a href="{{ "/top/about" | relLangURL }}">ABOUT ME</a></h5>
         <div class="short-about">
             {{ with .Site.Params.sidebar_avatar }}
-            <img src="{{ . | relURL }}" />
+            <a href="{{ "/top/about" | relLangURL }}">
+               <img src="{{ . | relURL }}" alt="avatar" style="cursor: pointer" />
+            </a>
             {{ end }}
             {{ with .Site.Params.sidebar_about_description }}
                 <p>{{ . }}</p>
@@ -130,6 +133,7 @@
                 </ul>
             </div>
     </section>
+	{{ end }}
     <!-- Friends Blog -->
     {{ if .Site.Params.friends }}
     <section>
@@ -137,7 +141,7 @@
         <h5>FRIENDS</h5>
         <ul class="list-inline">
             {{ range .Site.Params.friend_link }}
-            <li><a target="_blank" href="{{.href}}">{{.title}}</a></li>
+            <li><a target="_blank" href="{{.href | relLangURL}}">{{.title}}</a></li>
             {{ end }}
         </ul>
     </section>
@@ -150,7 +154,7 @@
         <h5>BOOKMARKS</h5>
         <ul class="list-inline">
             {{ range .Site.Params.bookmark_link }}
-            <li><a target="_blank" href="{{.href}}">{{.title}}</a></li>
+            <li><a target="_blank" href="{{.href | relLangURL}}">{{.title}}</a></li>
             {{ end }}
         </ul>
     </section>
