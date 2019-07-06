@@ -1,4 +1,4 @@
-Hola!
+![](/img/emt-profile.jpg)Hola!
 
 Soy **_EMTincopa_**, peruano y aficionado de los datos.
 
