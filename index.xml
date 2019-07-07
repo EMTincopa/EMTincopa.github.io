@@ -7,10 +7,21 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 EMT&#39;S Data stories</copyright>
-    <lastBuildDate>Thu, 27 Dec 2018 00:58:19 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Nuevas metas</title>
+      <link>/post/nuevas-metas/</link>
+      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/nuevas-metas/</guid>
+      <description>HEY HEY HEY!
+Este será un post corto y continuaré con lo que compartí en mi cuenta de Twitter hace pocos días.Es tan frustrante tener todo para aprender: ganas, capacidad, #curiosidad, pero carecer de dinero. Perdí una #beca del 50% en #businessanalytics y #BigData que me había otorgado la @OEA_oficial por falta de #financiamiento. Aún así, seguiré adelante como el #autodidacta que soy🤓
+&amp;mdash; Enrique Tincopa (@EMTincopa) June 18, 2019  En estos últimos meses he estado trabajando en el puesto de Medical Information en la farmacéutica Roche Perú, actividad que junto a mis estudios en pregrado no me permitio continuar con mi objetivo inicial, hacer crecer este blog y compartirles todo lo que iba aprendiendo sobre la Visualización de Datos.</description>
+    </item>
     
     <item>
       <title>Visualización de Datos</title>
@@ -50,7 +61,7 @@ Puedes seguirme en mis redes sociales para estar al tanto de mis últimos proyec
       <guid>/top/about/</guid>
       <description>Hola!
 Soy EMTincopa, peruano y aficionado de los datos.
-Soy Administrador en Salud y estudiante de Biología en mi país. Pero a pesar de mi formación universitaria, en el último año he desarrollado un fuerte interés en la ciencia de los datos.
+Soy Administrador en Salud y estudiante de Biología en mi país pero, a pesar de mi formación universitaria, en el último año he desarrollado un fuerte interés en la ciencia de los datos.
 No es mi objetivo convertirme en un científico de datos, pero sí poder rebuscar en el área y utilizar varias de sus herramientas en el sector salud. Por lo que en estos momentos tengo como objetivo inmediato mejorar y, de ser posible, especializarme en la Visualización de Datos, la cual comprendo es una herramienta necesaria en el campo de la salud para poder gestionar mejor la información y tomar óptimas decisiones.</description>
     </item>
     

@@ -7,10 +7,28 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 EMT&#39;S Data stories</copyright>
-    <lastBuildDate>Thu, 27 Dec 2018 00:58:19 -0500</lastBuildDate>
+    <lastBuildDate>Sat, 06 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>BI</title>
+      <link>/tags/bi/</link>
+      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/bi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BigData</title>
+      <link>/tags/bigdata/</link>
+      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/bigdata/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Data</title>
@@ -49,6 +67,15 @@
     </item>
     
     <item>
+      <title>Personal</title>
+      <link>/tags/personal/</link>
+      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/personal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Plot</title>
       <link>/tags/plot/</link>
       <pubDate>Thu, 27 Dec 2018 00:58:19 -0500</pubDate>
@@ -76,9 +103,18 @@
     </item>
     
     <item>
+      <title>SelfRealization</title>
+      <link>/tags/selfrealization/</link>
+      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/selfrealization/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>SelfTaught</title>
       <link>/tags/selftaught/</link>
-      <pubDate>Tue, 18 Dec 2018 15:58:07 -0500</pubDate>
+      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/selftaught/</guid>
       <description></description>
