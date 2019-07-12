@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/post/el-servicio-de-internet-movil-en-lima/</loc>
+    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/nuevas-metas/</loc>
     <lastmod>2019-07-06T00:00:00+00:00</lastmod>
   </url>
@@ -38,7 +43,19 @@
   </url>
   
   <url>
+    <loc>/tags/calidad/</loc>
+    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/char/</loc>
+    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -50,13 +67,13 @@
   
   <url>
     <loc>/tags/dataviz/</loc>
-    <lastmod>2018-12-27T00:58:19-05:00</lastmod>
+    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2019-07-06T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -73,6 +90,30 @@
   </url>
   
   <url>
+    <loc>/tags/internet/</loc>
+    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/maps/</loc>
+    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/movil/</loc>
+    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/osiptel/</loc>
+    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/tags/personal/</loc>
     <lastmod>2019-07-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
@@ -80,13 +121,13 @@
   
   <url>
     <loc>/tags/plot/</loc>
-    <lastmod>2018-12-27T00:58:19-05:00</lastmod>
+    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2019-07-06T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -98,7 +139,13 @@
   
   <url>
     <loc>/tags/r/</loc>
-    <lastmod>2018-12-27T00:58:19-05:00</lastmod>
+    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/tags/ranking/</loc>
+    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -116,7 +163,7 @@
   
   <url>
     <loc>/categories/stories/</loc>
-    <lastmod>2019-07-06T00:00:00+00:00</lastmod>
+    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

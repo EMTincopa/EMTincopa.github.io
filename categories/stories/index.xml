@@ -7,10 +7,20 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 EMT&#39;S Data stories</copyright>
-    <lastBuildDate>Sat, 06 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 09 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/stories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>El servicio de internet móvil en Lima</title>
+      <link>/post/el-servicio-de-internet-movil-en-lima/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/el-servicio-de-internet-movil-en-lima/</guid>
+      <description>En agosto del 2018 OSIPTEL, ente regulador de telecomunicaciones en Perú, lanzó los resultados de la medición de velocidades 3G y 4G por distrito que realizó en la ciudad de Lima.
+#RankingCalidadMóvil Conoce el ranking de velocidades 3G y 4G por distrito. Para ver la lista de todos los distritos, así como todos los resultados de la medición, puedes descargar el resumen en el siguiente enlace: https://t.</description>
+    </item>
     
     <item>
       <title>Nuevas metas</title>
@@ -20,7 +30,7 @@
       <guid>/post/nuevas-metas/</guid>
       <description>HEY HEY HEY!
 Este será un post corto y continuaré con lo que compartí en mi cuenta de Twitter hace pocos días.Es tan frustrante tener todo para aprender: ganas, capacidad, #curiosidad, pero carecer de dinero. Perdí una #beca del 50% en #businessanalytics y #BigData que me había otorgado la @OEA_oficial por falta de #financiamiento. Aún así, seguiré adelante como el #autodidacta que soy🤓
-&amp;mdash; Enrique Tincopa (@EMTincopa) June 18, 2019  En estos últimos meses he estado trabajando en el puesto de Medical Information en la farmacéutica Roche Perú, actividad que junto a mis estudios en pregrado no me permitió continuar con mi objetivo inicial: hacer crecer este blog y compartirles todo lo que iba aprendiendo sobre la Visualización de Datos.</description>
+&amp;mdash; Enrique💻📊🎨 (@EMTincopa) June 18, 2019  En estos últimos meses he estado trabajando en el puesto de Medical Information en la farmacéutica Roche Perú, actividad que junto a mis estudios en pregrado no me permitió continuar con mi objetivo inicial: hacer crecer este blog y compartirles todo lo que iba aprendiendo sobre la Visualización de Datos.</description>
     </item>
     
   </channel>

@@ -31,6 +31,24 @@
     </item>
     
     <item>
+      <title>Calidad</title>
+      <link>/tags/calidad/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/calidad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Char</title>
+      <link>/tags/char/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/char/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Data</title>
       <link>/tags/data/</link>
       <pubDate>Thu, 27 Dec 2018 00:58:19 -0500</pubDate>
@@ -42,7 +60,7 @@
     <item>
       <title>DataViz</title>
       <link>/tags/dataviz/</link>
-      <pubDate>Thu, 27 Dec 2018 00:58:19 -0500</pubDate>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/dataviz/</guid>
       <description></description>
@@ -67,6 +85,42 @@
     </item>
     
     <item>
+      <title>Internet</title>
+      <link>/tags/internet/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/internet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Maps</title>
+      <link>/tags/maps/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/maps/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Movil</title>
+      <link>/tags/movil/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/movil/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Osiptel</title>
+      <link>/tags/osiptel/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/osiptel/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Personal</title>
       <link>/tags/personal/</link>
       <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
@@ -78,7 +132,7 @@
     <item>
       <title>Plot</title>
       <link>/tags/plot/</link>
-      <pubDate>Thu, 27 Dec 2018 00:58:19 -0500</pubDate>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/plot/</guid>
       <description></description>
@@ -96,9 +150,18 @@
     <item>
       <title>R</title>
       <link>/tags/r/</link>
-      <pubDate>Thu, 27 Dec 2018 00:58:19 -0500</pubDate>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ranking</title>
+      <link>/tags/ranking/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ranking/</guid>
       <description></description>
     </item>
     
