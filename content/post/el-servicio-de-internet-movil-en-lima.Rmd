@@ -1,14 +1,26 @@
 ---
-title:  "El servicio de internet móvil en Lima"
-subtitle: Ranking de calidad distrital
-description: Resultados del ranking de calidad distrital de internet y telefonía móvil en Lima, datos obtenidos de un estudio elaborado por OSIPTEL en el 2018.
-date:        2019-07-09
-author: EMTincopa
+title: "El servicio de internet móvil en Lima"
+author: "EMTincopa"
+date: '2019-07-09'
 image: /content/post/el-servicio-de-internet-movil-en-lima/phones.jpg
-tags: ["Maps", "Movil", "Char", "Plot", "Internet", "Osiptel", "Calidad", "Ranking", "DataViz", "R", "Plot"]
-categories:  ["Stories"]
+description: Resultados del ranking de calidad distrital de internet y telefonía móvil
+  en Lima, datos obtenidos de un estudio elaborado por OSIPTEL en el 2018.
 published: yes
 showtoc: no
+subtitle: Ranking de calidad distrital
+tags:
+- Maps
+- Movil
+- Char
+- Plot
+- Internet
+- Osiptel
+- Calidad
+- Ranking
+- DataViz
+- R
+- Plot
+categories: Stories
 ---
 
 En agosto del 2018 [OSIPTEL](https://www.osiptel.gob.pe/), ente regulador de telecomunicaciones en Perú, lanzó los [resultados](http://www.osiptel.gob.pe/repositorioaps/data/1/1/1/not/np-osiptel-ranking-distritos-calidad-internet/files/indicadores-calidad-lima.pdf) de la medición de velocidades 3G y 4G por distrito que realizó en la ciudad de Lima. 
