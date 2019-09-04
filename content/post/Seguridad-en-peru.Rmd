@@ -1,0 +1,337 @@
+---
+title: "Seguridad ciudadana"
+author: "by EMTincopa"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    storyboard: True
+    theme: sandstone
+    social: menu
+---
+
+```{r setup, include=FALSE}
+
+library(flexdashboard)
+library(gapminder)
+library(png)
+library(readxl)
+library(DT)
+library(tidyr)
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+library(ggthemes)
+library(lubridate)
+library(gridExtra)
+library(forcats)
+library(shiny)
+library(magrittr)
+library(highcharter)
+library(sf)
+library(scales)
+library(RColorBrewer)
+library(extrafont)
+library(htmlwidgets)
+library(maptools)
+
+
+
+
+#Opción para evitar exponenciales
+
+options(scipen = 999)
+
+#Archivos
+
+Denuncias<- read_excel("D:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx", sheet=1)
+colnames(Denuncias) <- make.names(colnames(Denuncias))
+
+Denuncias_renamed <- rename(Denuncias,
+                            "2015"="X2015",
+                            "2016"="X2016",
+                            "2017"="X2017")
+
+####wrangler my data
+wdenuncias <- gather(Denuncias_renamed, key = "Year", value = "Cantidad", 8:10)
+wdenuncias<-na.omit(wdenuncias)
+
+
+#############################################################
+
+####Sustraer data de homicidios
+
+Homicidios<- read_excel("D:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx", sheet=2)
+colnames(Homicidios) <- make.names(colnames(Homicidios))
+
+Homicidios_renamed <- rename(Homicidios,
+                            "2015"="X2015",
+                            "2016"="X2016",
+                            "2017"="X2017")
+
+####wrangler my data Homicidios data
+
+whomicidios <- gather(Homicidios_renamed, key = "Year", value = "Cantidad", 8:10)
+whomicidios<-na.omit(whomicidios)
+
+
+#############################################################
+
+Vigilancia<- read_excel("D:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx", sheet=3)
+colnames(Vigilancia) <- make.names(colnames(Vigilancia))
+
+#############################################################
+
+#Accidentes de tránsito
+#######################
+
+Accidentes<- read_excel("D:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx", sheet=4)
+colnames(Accidentes) <- make.names(colnames(Accidentes))
+
+Accidentes_renamed <- rename(Accidentes,
+                            "2010"="X2010",
+                            "2011"="X2011",
+                            "2012"="X2012",
+                            "2013"="X2013",
+                            "2014"="X2014",
+                            "2015"="X2015",
+                            "2016"="X2016",
+                            "2017"="X2017")
+
+####wrangler my data accidentes
+
+wAccidentes <- gather(Accidentes_renamed, key = "Year", value = "Cantidad", 3:10)
+wAccidentes<-na.omit(wAccidentes)
+
+
+#Muertes por accidentes de tránsito
+#######################
+
+Accidentes_muertes<- read_excel("D:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx", sheet=5)
+colnames(Accidentes_muertes) <- make.names(colnames(Accidentes_muertes))
+
+Accidentes_muertes_renamed <- rename(Accidentes_muertes,
+                            "2010"="X2010",
+                            "2011"="X2011",
+                            "2012"="X2012",
+                            "2013"="X2013",
+                            "2014"="X2014",
+                            "2015"="X2015",
+                            "2016"="X2016",
+                            "2017"="X2017")
+
+####wrangler my data accidentes muertes
+
+wAccidentes_muertes <- gather(Accidentes_muertes_renamed, key = "Year", value = "Cantidad", 3:10)
+wAccidentes_muertes<-na.omit(wAccidentes_muertes)
+```
+
+Denuncias
+=====================================
+
+Column {data-width=650}
+-----------------------------------------------------------------------
+
+### Gráfico 1: La información se ha conseguido de la base de datos del Observatorio Nacional de Seguridad Ciudadana. Este gráfico puede descargarse, al igual que todos los demás, haciendo click en la esquina derecha superior.
+
+```{r echo = FALSE,fig.width = 8, fig.height = 7, dev = c("png", "svg")}
+
+Denuncias_2<-wdenuncias %>% 
+  group_by(nombdep, Year) %>% 
+  summarize(Suma=sum(Cantidad))%>% 
+  arrange(desc(Suma))
+
+
+Denuncias_2%>%
+  hchart(type = "column",
+         hcaes(x = nombdep, y = Suma, group = Year)) %>%
+  hc_title(text = "Cantidad de denuncias por departamento entre 2015 y 2017") %>%
+  hc_subtitle(text = "Fuente: Observatorio Nacional de Seguridad Ciudadana") %>%
+  hc_add_theme(hc_theme_538())%>%
+  hc_yAxis(title = list(text = "")) %>%
+  hc_xAxis(title = list(text = "")) %>%
+  hc_exporting(enabled = TRUE)
+```
+
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Gráfico 2: Muestra el total de denuncias realizadas en los años 2015, 2016 y 2017.
+
+```{r echo = FALSE,fig.width = 8, fig.height = 6, dev = c("png", "svg")}
+
+Denuncias_2<-wdenuncias %>% 
+  group_by(Year) %>%
+  summarize(Suma=sum(Cantidad))%>% 
+  arrange(desc(Suma))
+
+Denuncias_2%>%
+  hchart(type = "column",
+         hcaes(x = Year, y = Suma)) %>%
+  hc_title(text = "Cantidad de denuncias por año en Perú") %>%
+  hc_subtitle(text = "Fuente: Observatorio Nacional de Seguridad Ciudadana") %>%
+  hc_add_theme(hc_theme_538())%>%
+  hc_yAxis(title = list(text = "")) %>%
+  hc_xAxis(title = list(text = "")) %>%
+  hc_exporting(enabled = TRUE)
+
+```
+
+### Gráfico 3: Muestra la cantidad total de denuncias en Lima en los años 2015, 2016 y 2017.
+
+```{r echo = FALSE,fig.width = 8, fig.height = 6}
+Denuncias_2<-wdenuncias %>% 
+  group_by(nombdep, Year) %>%
+  summarize(Suma=sum(Cantidad))%>% 
+  arrange(desc(Suma))
+
+Denuncias_2_filter<-filter(Denuncias_2, nombdep == "LIMA")
+
+Denuncias_2_filter%>%
+  hchart(type = "bar",
+         hcaes(x = nombdep, y = Suma, group = Year)) %>%
+  hc_title(text = "Cantidad de denuncias por año solo en Lima") %>%
+  hc_subtitle(text = "Fuente: Observatorio Nacional de Seguridad Ciudadana") %>%
+  hc_add_theme(hc_theme_538())%>%
+  hc_yAxis(title = list(text = "")) %>%
+  hc_xAxis(title = list(text = "")) %>%
+  hc_exporting(enabled = TRUE)
+```
+
+Homicidios {data-orientation=rows}
+=====================================
+
+Row {data-height=600, .tabset}
+-----------------------------------------------------------------------
+
+### Gráfico 4: Homicidios en Perú
+
+```{r}
+Homicidios_2<-whomicidios %>% 
+  group_by(nombdep, Year) %>% 
+  summarize(Suma=sum(Cantidad))%>% 
+  arrange(desc(Suma))
+
+
+Homicidios_2%>%
+  hchart(type = "column",
+         hcaes(x = nombdep, y = Suma, group = Year)) %>%
+  hc_title(text = "Cantidad de Homicidios por departamento entre 2015 y 2017") %>%
+  hc_subtitle(text = "Fuente: Observatorio Nacional de Seguridad Ciudadana") %>%
+  hc_add_theme(hc_theme_538())%>%
+  hc_yAxis(title = list(text = "")) %>%
+  hc_xAxis(title = list(text = "")) %>%
+  hc_exporting(enabled = TRUE)
+
+```
+
+
+### Gráfico 5: Total homicidios al año
+```{r}
+Homicidios_2<-whomicidios %>% 
+  group_by(Year) %>%
+  summarize(Suma=sum(Cantidad))
+
+Homicidios_2%>%
+  hchart(type = "line",
+         hcaes(x = Year, y = Suma)) %>%
+  hc_title(text = "Cantidad de homicidios por año en Perú") %>%
+  hc_subtitle(text = "Fuente: Observatorio Nacional de Seguridad Ciudadana") %>%
+  hc_add_theme(hc_theme_538())%>%
+  hc_yAxis(title = list(text = "")) %>%
+  hc_xAxis(title = list(text = "")) %>%
+  hc_exporting(enabled = TRUE)
+
+```
+
+### Gráfico 6: Total homicidios durante el año 2017
+```{r}
+### Leyendo el shapefile en R con "sf"
+
+Homicidios_2<-whomicidios %>% 
+  group_by(nombdep, Year) %>%
+  summarize(Suma=sum(Cantidad))
+
+Homicidios_2_filter<-filter(Homicidios_2, Year == "2017")
+
+hcmap("https://code.highcharts.com/mapdata/countries/pe/pe-all.js", data = Homicidios_2_filter, name = "Homicidios", value = "Suma", joinBy = c("name", "nombdep"), borderColor = "black", borderWidth = 0.1) %>%
+  hc_legend(layout = "vertical", align = "right",
+            floating = TRUE, valueDecimals = 0, valueSuffix = "%") %>%
+  hc_exporting(enabled = TRUE) %>%
+  hc_add_theme(hc_theme_538()) %>%
+  hc_colorAxis(minColor = "#d1d1d1", maxColor = "#fa051d")%>%
+  hc_title(text = "Cantidad de homicidios en Perú")%>%
+  hc_subtitle(text = "Fuente: Observatorio Nacional de Seguridad Ciudadana")
+  
+```
+
+Accidentes de tránsito {data-orientation=columns}
+=====================================
+
+Column {data-height=600, .tabset}
+-----------------------------------------------------------------------
+
+### Gráfico 7: Total de accidentes de tránsito.
+```{r echo = FALSE,fig.width = 8, fig.height = 7, dev = c("png", "svg")}
+Accidentes_2<-wAccidentes %>% 
+  group_by(nombdep, Year) %>% 
+  summarize(Suma=sum(Cantidad))%>% 
+  arrange(desc(Suma))
+
+Accidentes_2_filter<-filter(Accidentes_2, Year == "2017" | Year=="2016" | Year=="2015")
+
+
+Accidentes_2_filter%>%
+  hchart(type = "column",
+         hcaes(x = nombdep, y = Suma, group = Year)) %>%
+  hc_title(text = "Cantidad de accidentes de tránsito por departamento entre el 2015 y 2017") %>%
+  hc_subtitle(text = "Fuente: Observatorio Nacional de Seguridad Ciudadana") %>%
+  hc_add_theme(hc_theme_538())%>%
+  hc_yAxis(title = list(text = "")) %>%
+  hc_xAxis(title = list(text = "")) %>%
+  hc_exporting(enabled = TRUE)
+
+```
+
+### Gráfico 8: Total de muertes por accidentes de tránsito.
+
+```{r}
+Accidentes_muertes_2<-wAccidentes_muertes %>% 
+  group_by(nombdep, Year) %>% 
+  summarize(Suma=sum(Cantidad))%>% 
+  arrange(desc(Suma))
+
+Accidentes_muertes_2_filter<-filter(Accidentes_muertes_2, Year == "2017" | Year=="2016" | Year=="2015")
+
+Accidentes_muertes_2_filter%>%
+  hchart(type = "column",
+         hcaes(x = nombdep, y = Suma, group = Year)) %>%
+  hc_title(text = "Cantidad de muertes por accidentes de tránsito por departamento entre el 2015 y 2017") %>%
+  hc_subtitle(text = "Fuente: Observatorio Nacional de Seguridad Ciudadana") %>%
+  hc_add_theme(hc_theme_538())%>%
+  hc_yAxis(title = list(text = "")) %>%
+  hc_xAxis(title = list(text = "")) %>%
+  hc_exporting(enabled = TRUE)
+```
+
+Column {data-width=350}
+-----------------------------------------------------------------------
+
+### Gráfico 9: Muestra el total de accidentes de tránsito en el Perú entre los años 2010 y 2017.
+```{r}
+Accidentes_2<-wAccidentes %>% 
+  group_by(Year) %>% 
+  summarize(Suma=sum(Cantidad))
+
+
+Accidentes_2%>%
+  hchart(type = "bar",
+         hcaes(x = Year, y = Suma)) %>%
+  hc_title(text = "Cantidad accidentes de tránsito desde el año 2010 al 2017 en el Perú") %>%
+  hc_subtitle(text = "Fuente: Observatorio Nacional de Seguridad Ciudadana") %>%
+  hc_add_theme(hc_theme_538())%>%
+  hc_yAxis(title = list(text = "")) %>%
+  hc_xAxis(title = list(text = "")) %>%
+  hc_exporting(enabled = TRUE)
+```
