@@ -7,6 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 EMT&#39;S Data stories</copyright>
+    <lastBuildDate>Fri, 25 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +15,18 @@
     <item>
       <title>Stories</title>
       <link>/categories/stories/</link>
-      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/categories/stories/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Life</title>
+      <link>/categories/life/</link>
+      <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/life/</guid>
       <description></description>
     </item>
     

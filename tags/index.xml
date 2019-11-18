@@ -7,26 +7,125 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 EMT&#39;S Data stories</copyright>
-    <lastBuildDate>Sat, 06 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>BI</title>
-      <link>/tags/bi/</link>
-      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
+      <title>City</title>
+      <link>/tags/city/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/bi/</guid>
+      <guid>/tags/city/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>BigData</title>
-      <link>/tags/bigdata/</link>
-      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
+      <title>Data</title>
+      <link>/tags/data/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/bigdata/</guid>
+      <guid>/tags/data/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dataviz</title>
+      <link>/tags/dataviz/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/dataviz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lima</title>
+      <link>/tags/lima/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/lima/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Perú</title>
+      <link>/tags/per%C3%BA/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/per%C3%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Plot</title>
+      <link>/tags/plot/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/plot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>/tags/security/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seguridad</title>
+      <link>/tags/seguridad/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/seguridad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Boardgames</title>
+      <link>/tags/boardgames/</link>
+      <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/boardgames/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Gallery</title>
+      <link>/tags/gallery/</link>
+      <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/gallery/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Photograph</title>
+      <link>/tags/photograph/</link>
+      <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/photograph/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tour</title>
+      <link>/tags/tour/</link>
+      <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/tour/</guid>
       <description></description>
     </item>
     
@@ -45,42 +144,6 @@
       <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/char/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data</title>
-      <link>/tags/data/</link>
-      <pubDate>Thu, 27 Dec 2018 00:58:19 -0500</pubDate>
-      
-      <guid>/tags/data/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>DataViz</title>
-      <link>/tags/dataviz/</link>
-      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/dataviz/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Freelance</title>
-      <link>/tags/freelance/</link>
-      <pubDate>Tue, 18 Dec 2018 15:58:07 -0500</pubDate>
-      
-      <guid>/tags/freelance/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>HealthManagement</title>
-      <link>/tags/healthmanagement/</link>
-      <pubDate>Tue, 18 Dec 2018 15:58:07 -0500</pubDate>
-      
-      <guid>/tags/healthmanagement/</guid>
       <description></description>
     </item>
     
@@ -121,47 +184,38 @@
     </item>
     
     <item>
-      <title>Personal</title>
-      <link>/tags/personal/</link>
-      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/personal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Plot</title>
-      <link>/tags/plot/</link>
-      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/plot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Power BI</title>
-      <link>/tags/power-bi/</link>
-      <pubDate>Thu, 27 Dec 2018 00:58:19 -0500</pubDate>
-      
-      <guid>/tags/power-bi/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>/tags/r/</link>
-      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/r/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Ranking</title>
       <link>/tags/ranking/</link>
       <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/ranking/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BI</title>
+      <link>/tags/bi/</link>
+      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/bi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>BigData</title>
+      <link>/tags/bigdata/</link>
+      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/bigdata/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Personal</title>
+      <link>/tags/personal/</link>
+      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/personal/</guid>
       <description></description>
     </item>
     
@@ -184,6 +238,15 @@
     </item>
     
     <item>
+      <title>Power BI</title>
+      <link>/tags/power-bi/</link>
+      <pubDate>Thu, 27 Dec 2018 00:58:19 -0500</pubDate>
+      
+      <guid>/tags/power-bi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Tableau</title>
       <link>/tags/tableau/</link>
       <pubDate>Thu, 27 Dec 2018 00:58:19 -0500</pubDate>
@@ -198,6 +261,24 @@
       <pubDate>Thu, 27 Dec 2018 00:58:19 -0500</pubDate>
       
       <guid>/tags/tools/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Freelance</title>
+      <link>/tags/freelance/</link>
+      <pubDate>Tue, 18 Dec 2018 15:58:07 -0500</pubDate>
+      
+      <guid>/tags/freelance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>HealthManagement</title>
+      <link>/tags/healthmanagement/</link>
+      <pubDate>Tue, 18 Dec 2018 15:58:07 -0500</pubDate>
+      
+      <guid>/tags/healthmanagement/</guid>
       <description></description>
     </item>
     

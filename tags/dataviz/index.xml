@@ -1,16 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DataViz on EMT&#39;S Data Stories</title>
+    <title>Dataviz on EMT&#39;S Data Stories</title>
     <link>/tags/dataviz/</link>
-    <description>Recent content in DataViz on EMT&#39;S Data Stories</description>
+    <description>Recent content in Dataviz on EMT&#39;S Data Stories</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 EMT&#39;S Data stories</copyright>
-    <lastBuildDate>Tue, 09 Jul 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 25 Oct 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/dataviz/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Inseguridad en el Perú</title>
+      <link>/post/seguridad-ciudadana-en-peru/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/seguridad-ciudadana-en-peru/</guid>
+      <description>En el Perú nos encontramos en una época de mucha inseguridad y violencia que, en el sentir de la población, nos da la impresión de estar empeorando cada día.</description>
+    </item>
     
     <item>
       <title>El servicio de internet móvil en Lima</title>

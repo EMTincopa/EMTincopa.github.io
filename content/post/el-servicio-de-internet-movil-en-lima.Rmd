@@ -247,6 +247,7 @@ En promedio, se realizaron entre 20 y 56 mediciones de velocidad 3G/4G (Carga y 
 La infografía siguiente muestra en los mapas la calidad del servicio de internet móvil en Lima, así como también la operadora líder por distrito a finales del 2018.
 
 ![Figure 2: Resumen de la Calidad Distrital del Servicio de Telefonía Móvil](\content\post\el-servicio-de-internet-movil-en-lima\Telefonía e Internet Móvil en Lima.png)
+
 *Gracias por visitar el blog. Este post ha sido realizado con datos compartidos por Osiptel en redes sociales y al lenguaje de programación R*.
 
 *Nos vemos el 24 de Julio!*
