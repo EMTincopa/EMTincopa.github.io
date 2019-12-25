@@ -4,7 +4,7 @@ subtitle: "Tres días en Lima"
 description: Capturando los lugares donde se puede ir a disfrutar variados juegos de mesa en Lima.
 date: 2019-10-12
 author: EMTincopa
-image: /content/post/Juegos-analógicos-en-lima/boardgame.jpg
+image: /content/post/juegos-analógicos-en-lima/boardgame.jpg
 tags:        ["Boardgames", "Lima", "Tour", "City", "Photograph", "Gallery"]
 categories:  ["Life"]
 published: yes

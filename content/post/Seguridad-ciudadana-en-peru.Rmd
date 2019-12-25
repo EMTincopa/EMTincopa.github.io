@@ -438,7 +438,7 @@ d3heatmap(CEM2016hab, scale = "column", dendrogram = "none", color = "YlOrRd", y
           xaxis_font_size = 10)
 ```
 
-_En la segunda base de datos, del año 2017 y hasta septiembre de 2018, la información presenta la cantidad de víctimas atendidas en los CEM’s detallando el tipo de violencia sufrida: violencia económica o patrimonial, violencia psicológica, violencia física y violencia sexual. En esta gráfica se muestra la cantidad de casos por cada 100 000 habitantes en cada departamento en el año 2018_ [Hacer click aquí para acceder a las versiones originales de las bases de datos](https://www.mimp.gob.pe/contigo/contenidos/pncontigo-articulos.php?codigo=36)
+_En la segunda base de datos, del año 2017 y hasta septiembre de 2018, la información presenta la cantidad de víctimas atendidas en los CEM’s detallando el tipo de violencia sufrida: violencia económica o patrimonial, violencia psicológica, violencia física y violencia sexual. En esta gráfica se muestra la cantidad de casos por cada 100 000 habitantes en cada departamento en el año 2018_. [Hacer click aquí para acceder a las versiones originales de las bases de datos](https://www.mimp.gob.pe/contigo/contenidos/pncontigo-articulos.php?codigo=36)
 
 ```{r,  echo=FALSE, fig.width = 7, fig.height = 8, dev='svg'}
 d3heatmap(CEM2018hab, scale = "column", dendrogram = "none", color = "YlOrRd", yaxis_font_size = 9,
