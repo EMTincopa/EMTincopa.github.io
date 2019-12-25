@@ -1,0 +1,273 @@
+"0",""
+"0","knitr::opts_chunk$set(echo = TRUE)"
+"0",""
+"0","library(png)"
+"0","library(readxl)"
+"0","library(tidyr)"
+"2","Registered S3 method overwritten by 'dplyr':
+  method           from
+  print.rowwise_df     
+"
+"0","library(tidyverse)"
+"2","Registered S3 methods overwritten by 'dbplyr':
+  method         from
+  print.tbl_lazy     
+  print.tbl_sql      
+"
+"2","[37m-- [1mAttaching packages[22m --------------------------------------- tidyverse 1.3.0 --[39m
+"
+"2","[37m[32m<U+2713>[37m [34mggplot2[37m 3.2.1     [32m<U+2713>[37m [34mdplyr  [37m 0.8.3
+[32m<U+2713>[37m [34mtibble [37m 2.1.3     [32m<U+2713>[37m [34mstringr[37m 1.4.0
+[32m<U+2713>[37m [34mreadr  [37m 1.3.1     [32m<U+2713>[37m [34mforcats[37m 0.4.0
+[32m<U+2713>[37m [34mpurrr  [37m 0.3.3     [39m
+"
+"2","[37m-- [1mConflicts[22m ------------------------------------------ tidyverse_conflicts() --
+[31mx[37m [34mdplyr[37m::[32mfilter()[37m masks [34mstats[37m::filter()
+[31mx[37m [34mdplyr[37m::[32mlag()[37m    masks [34mstats[37m::lag()[39m
+"
+"0","library(dplyr)"
+"0","library(ggplot2)"
+"0","library(ggthemes)"
+"0","library(lubridate)"
+"2","
+Attaching package: ‘lubridate’
+
+"
+"2","The following object is masked from ‘package:base’:
+
+    date
+
+"
+"0","library(gridExtra)"
+"2","
+Attaching package: ‘gridExtra’
+
+"
+"2","The following object is masked from ‘package:dplyr’:
+
+    combine
+
+"
+"0","library(forcats)"
+"0","library(magrittr)"
+"2","
+Attaching package: ‘magrittr’
+
+"
+"2","The following object is masked from ‘package:purrr’:
+
+    set_names
+
+"
+"2","The following object is masked from ‘package:tidyr’:
+
+    extract
+
+"
+"0","library(highcharter)"
+"2","Registered S3 method overwritten by 'htmlwidgets':
+  method           from         
+  print.htmlwidget tools:rstudio
+"
+"2","Registered S3 method overwritten by 'xts':
+  method     from
+  as.zoo.xts zoo 
+"
+"2","Registered S3 method overwritten by 'quantmod':
+  method            from
+  as.zoo.data.frame zoo 
+"
+"2","Registered S3 method overwritten by 'data.table':
+  method           from
+  print.data.table     
+"
+"2","Highcharts (www.highcharts.com) is a Highsoft software product which is
+"
+"2","not free for commercial and Governmental use
+"
+"0","library(scales)"
+"2","
+Attaching package: ‘scales’
+
+"
+"2","The following object is masked from ‘package:purrr’:
+
+    discard
+
+"
+"2","The following object is masked from ‘package:readr’:
+
+    col_factor
+
+"
+"0","library(RColorBrewer)"
+"0","library(extrafont)"
+"2","Registering fonts with R
+"
+"0","library(htmlwidgets)"
+"0","library(d3heatmap)"
+"0","library(DT)"
+"2","package ‘DT’ was built under R version 3.6.2"
+"0","#OpciÃ³n para evitar exponenciales"
+"0",""
+"0","options(scipen = 999)"
+"0",""
+"0","#Archivos"
+"0",""
+"0","Denuncias<- read_excel(""E:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx"", sheet=1)"
+"0","colnames(Denuncias) <- make.names(colnames(Denuncias))"
+"0",""
+"0","Denuncias_renamed <- rename(Denuncias,""2015"" = ""X2015"",""2016"" = ""X2016"",""2017"" = ""X2017"")"
+"0",""
+"0","####wrangler my data"
+"0","wdenuncias <- gather(Denuncias_renamed, key = ""Year"", value = ""Cantidad"", 8:10)"
+"0","wdenuncias<-na.omit(wdenuncias)"
+"0",""
+"0","####Sustraer data de denuncias tasa por aÃ±o por departamento"
+"0",""
+"0","denuncias_tasa<- read_excel(""E:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx"", sheet=7)"
+"0","colnames(denuncias_tasa) <- make.names(colnames(denuncias_tasa))"
+"0",""
+"0",""
+"0","####Sustraer data de denuncias tasa por aÃ±o por departamento"
+"0",""
+"0","denunciasTasa<- read_excel(""E:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx"", sheet=10)"
+"0","colnames(denunciasTasa) <- make.names(colnames(denunciasTasa))"
+"0",""
+"0",""
+"0","#############################################################"
+"0",""
+"0","####Sustraer data de homicidios"
+"0",""
+"0","Homicidios<- read_excel(""E:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx"", sheet=2)"
+"0","colnames(Homicidios) <- make.names(colnames(Homicidios))"
+"0",""
+"0","Homicidios_renamed <- rename(Homicidios,""2015""=""X2015"",""2016""=""X2016"",""2017""=""X2017"")"
+"0",""
+"0",""
+"0","####wrangler my data Homicidios data"
+"0",""
+"0","whomicidios <- gather(Homicidios_renamed, key = ""Year"", value = ""Cantidad"", 8:10)"
+"0","whomicidios<-na.omit(whomicidios)"
+"0",""
+"0",""
+"0","####Sustraer data de homicidios tasa por aÃ±o"
+"0",""
+"0","Homi_tasa<- read_excel(""E:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx"", sheet=6)"
+"0","colnames(Homi_tasa) <- make.names(colnames(Homi_tasa))"
+"0",""
+"0","#############################################################"
+"0",""
+"0","Vigilancia<- read_excel(""E:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx"", sheet=3)"
+"0","colnames(Vigilancia) <- make.names(colnames(Vigilancia))"
+"0",""
+"0","#############################################################"
+"0",""
+"0","#Accidentes de trÃ¡nsito"
+"0","#######################"
+"0",""
+"0","Accidentes<- read_excel(""E:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx"", sheet=4)"
+"0","colnames(Accidentes) <- make.names(colnames(Accidentes))"
+"0",""
+"0","Accidentes_renamed <- rename(Accidentes, "
+"0","                            ""2010""=""X2010"","
+"0","                            ""2011""=""X2011"","
+"0","                            ""2012""=""X2012"","
+"0","                            ""2013""=""X2013"","
+"0","                            ""2014""=""X2014"","
+"0","                            ""2015""=""X2015"","
+"0","                            ""2016""=""X2016"","
+"0","                            ""2017""=""X2017"")"
+"0",""
+"0","####wrangler my data accidentes"
+"0",""
+"0","wAccidentes <- gather(Accidentes_renamed, key = ""Year"", value = ""Cantidad"", 3:10)"
+"0","wAccidentes<-na.omit(wAccidentes)"
+"0",""
+"0",""
+"0","#Muertes por accidentes de trÃ¡nsito"
+"0","#######################"
+"0",""
+"0","Accidentes_muertes<- read_excel(""E:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx"", sheet=5)"
+"0","colnames(Accidentes_muertes) <- make.names(colnames(Accidentes_muertes))"
+"0",""
+"0","Accidentes_muertes_renamed <- rename(Accidentes_muertes,"
+"0","                            ""2010""=""X2010"","
+"0","                            ""2011""=""X2011"","
+"0","                            ""2012""=""X2012"","
+"0","                            ""2013""=""X2013"","
+"0","                            ""2014""=""X2014"","
+"0","                            ""2015""=""X2015"","
+"0","                            ""2016""=""X2016"","
+"0","                            ""2017""=""X2017"")"
+"0",""
+"0","####wrangler my data accidentes muertes"
+"0",""
+"0","wAccidentes_muertes <- gather(Accidentes_muertes_renamed, key = ""Year"", value = ""Cantidad"", 3:10)"
+"0","wAccidentes_muertes<-na.omit(wAccidentes_muertes)"
+"0",""
+"0","####heatmap CEM 2002-2016"
+"0",""
+"0","CEM_2016<- read_excel(""E:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx"", sheet=8)"
+"0","colnames(CEM_2016) <- make.names(colnames(CEM_2016))"
+"0",""
+"0","CEM_2016_filter<-filter(CEM_2016, YEAR == ""2016"")"
+"0",""
+"0","CEM_2016_filter_2<-CEM_2016_filter %>% "
+"0","  select(-YEAR, -VS6, -NE)"
+"0",""
+"0","CEM_2016_FINAL<- CEM_2016_filter_2%>% "
+"0","  group_by(NAME) %>% "
+"0","  summarise_all(funs(sum))"
+"2","funs() is soft deprecated as of dplyr 0.8.0
+Please use a list of either functions or lambdas: 
+
+  # Simple named list: 
+  list(mean = mean, median = median)
+
+  # Auto named with `tibble::lst()`: 
+  tibble::lst(mean, median)
+
+  # Using lambdas
+  list(~ mean(., trim = .2), ~ median(., na.rm = TRUE))
+[90mThis warning is displayed once per session.[39m"
+"0","row.names(CEM_2016_FINAL) <- CEM_2016_FINAL$""NAME"""
+"2","Setting row names on a tibble is deprecated."
+"0","CEM_2016_FINAL<-select(CEM_2016_FINAL, -""NAME"")"
+"0",""
+"0",""
+"0","####heatmap CEM 2017-2018"
+"0","CEM_2018<- read_excel(""E:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx"", sheet=9)"
+"0","colnames(CEM_2018) <- make.names(colnames(CEM_2018))"
+"0",""
+"0","CEM_2018_filter<-filter(CEM_2018, YEAR == ""2018"")"
+"0",""
+"0","CEM_2018_filter_2<-CEM_2018_filter %>% "
+"0","  select(-YEAR)"
+"0",""
+"0","CEM_2018_FINAL<- CEM_2018_filter_2%>% "
+"0","  group_by(NAME) %>% "
+"0","  summarise_all(funs(sum))"
+"0",""
+"0","row.names(CEM_2018_FINAL) <- CEM_2018_FINAL$""NAME"""
+"2","Setting row names on a tibble is deprecated."
+"0","CEM_2018_FINAL<-select(CEM_2018_FINAL, -""NAME"")"
+"0",""
+"0","####Tabla de variables CEM"
+"0","matriz<- read_excel(""E:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx"", sheet=11)"
+"0",""
+"0","####heatmap CEM 2018 X 100 000 HAB."
+"0","CEM2018hab<- read_excel(""E:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx"", sheet=12)"
+"0","colnames(CEM2018hab) <- make.names(colnames(CEM2018hab))"
+"0",""
+"0","row.names(CEM2018hab) <- CEM2018hab$""NAME"""
+"2","Setting row names on a tibble is deprecated."
+"0","CEM2018hab<-select(CEM2018hab, -""NAME"")"
+"0",""
+"0","####heatmap CEM 2016 X 100 000 HAB."
+"0","CEM2016hab<- read_excel(""E:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx"", sheet=13)"
+"0","colnames(CEM2016hab) <- make.names(colnames(CEM2016hab))"
+"0",""
+"0","row.names(CEM2016hab) <- CEM2016hab$""NAME"""
+"2","Setting row names on a tibble is deprecated."
+"0","CEM2016hab<-select(CEM2016hab, -""NAME"")"

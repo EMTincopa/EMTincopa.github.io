@@ -7,24 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 EMT&#39;S Data stories</copyright>
-    <lastBuildDate>Fri, 25 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Dec 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>City</title>
-      <link>/tags/city/</link>
-      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      <title>Carreras</title>
+      <link>/tags/carreras/</link>
+      <pubDate>Sun, 22 Dec 2019 00:00:00 +0000</pubDate>
       
-      <guid>/tags/city/</guid>
+      <guid>/tags/carreras/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Data</title>
       <link>/tags/data/</link>
-      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 22 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/data/</guid>
       <description></description>
@@ -33,9 +33,99 @@
     <item>
       <title>Dataviz</title>
       <link>/tags/dataviz/</link>
-      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 22 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/dataviz/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Egresado</title>
+      <link>/tags/egresado/</link>
+      <pubDate>Sun, 22 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/egresado/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Estudio</title>
+      <link>/tags/estudio/</link>
+      <pubDate>Sun, 22 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/estudio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Perú</title>
+      <link>/tags/per%C3%BA/</link>
+      <pubDate>Sun, 22 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/per%C3%BA/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ponteencarrera</title>
+      <link>/tags/ponteencarrera/</link>
+      <pubDate>Sun, 22 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ponteencarrera/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Sun, 22 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/r/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Remuneración</title>
+      <link>/tags/remuneraci%C3%B3n/</link>
+      <pubDate>Sun, 22 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/remuneraci%C3%B3n/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Trabajo</title>
+      <link>/tags/trabajo/</link>
+      <pubDate>Sun, 22 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/trabajo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Técnico</title>
+      <link>/tags/t%C3%A9cnico/</link>
+      <pubDate>Sun, 22 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/t%C3%A9cnico/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Universitario</title>
+      <link>/tags/universitario/</link>
+      <pubDate>Sun, 22 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/universitario/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>City</title>
+      <link>/tags/city/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/city/</guid>
       <description></description>
     </item>
     
@@ -49,29 +139,11 @@
     </item>
     
     <item>
-      <title>Perú</title>
-      <link>/tags/per%C3%BA/</link>
-      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/per%C3%BA/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Plot</title>
       <link>/tags/plot/</link>
       <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/plot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>R</title>
-      <link>/tags/r/</link>
-      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/r/</guid>
       <description></description>
     </item>
     

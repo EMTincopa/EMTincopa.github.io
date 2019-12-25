@@ -17,6 +17,8 @@ En el Perú nos encontramos en una época de mucha inseguridad y violencia que, 
 
 ```{r setup, include=FALSE}
 
+knitr::opts_chunk$set(echo = TRUE)
+
 library(png)
 library(readxl)
 library(tidyr)
@@ -172,6 +174,22 @@ CEM_2018_FINAL<-select(CEM_2018_FINAL, -"NAME")
 
 ####Tabla de variables CEM
 matriz<- read_excel("E:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx", sheet=11)
+
+####heatmap CEM 2018 X 100 000 HAB.
+CEM2018hab<- read_excel("E:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx", sheet=12)
+colnames(CEM2018hab) <- make.names(colnames(CEM2018hab))
+
+row.names(CEM2018hab) <- CEM2018hab$"NAME"
+
+CEM2018hab<-select(CEM2018hab, -"NAME")
+
+####heatmap CEM 2016 X 100 000 HAB.
+CEM2016hab<- read_excel("E:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Seguridad-en-peru/Consolidado.xlsx", sheet=13)
+colnames(CEM2016hab) <- make.names(colnames(CEM2016hab))
+
+row.names(CEM2016hab) <- CEM2016hab$"NAME"
+
+CEM2016hab<-select(CEM2016hab, -"NAME")
 ```
 
 
@@ -380,10 +398,11 @@ Accidentes_muertes_2_filter%>%
 
 _El Ministerio de la Mujer y Poblaciones Vulnerables (MIMP) efectúa acciones de prevención y atención de la violencia familiar y sexual mediante los Centros Emergencia Mujer (CEM). Estos establecimientos brindan servicios públicos especializados y gratuitos, para víctimas de violencia contra la mujer e integrantes del grupo familiar, en los cuales se brinda orientación legal, defensa judicial y consejería psicológica._
 
+Estos establecimientos también son de importancia para generar indicadores sobre violencia contra la mujer y densidad de casos registrados.
 
 La siguiente tabla contiene la descripción de las variables creadas por los CEMs en cada periodo:
 
-```{r, warning=F, echo=F, message=F}
+```{r, warning=F, message=F, echo=FALSE}
 
 datatable(matriz,
     escape = FALSE,
@@ -411,18 +430,19 @@ datatable(matriz,
 ))
 ```
 
-_La información presentada en las bases de datos comprende dos períodos de tiempo. En la primera base de datos se presentan los registros de personas víctimas de violencia familiar y violencia sexual atendidas en los CEM’s entre los años 2002 a 2016._ 
 
-```{r,  echo=FALSE, fig.width = 6, fig.height = 8, dev='svg'}
-d3heatmap(CEM_2016_FINAL, scale = "column", dendrogram = "none", color = "YlOrRd", yaxis_font_size = 10,
-          xaxis_font_size = 12)
+_La información presentada en las bases de datos comprende dos períodos de tiempo. En la primera base de datos se presentan los registros de personas víctimas de violencia familiar y violencia sexual atendidas en los CEM’s entre los años 2002 a 2016. En el gráfico siguiente tenemos un mapa de calor mostrando la cantidad de casos por cada 100 000 habitantes en cada departamento en el año 2016_ 
+
+```{r,  echo=FALSE, fig.width = 7, fig.height = 8, dev='svg'}
+d3heatmap(CEM2016hab, scale = "column", dendrogram = "none", color = "YlOrRd", yaxis_font_size = 9,
+          xaxis_font_size = 10)
 ```
 
-_En la segunda base de datos, del año 2017 y hasta septiembre de 2018, la información presenta la cantidad de víctimas atendidas en los CEM’s detallando el tipo de violencia sufrida: violencia económica o patrimonial, violencia psicológica, violencia física y violencia sexual._ [Hacer click aquí para las versiones originales de las bases de datos](https://www.mimp.gob.pe/contigo/contenidos/pncontigo-articulos.php?codigo=36)
+_En la segunda base de datos, del año 2017 y hasta septiembre de 2018, la información presenta la cantidad de víctimas atendidas en los CEM’s detallando el tipo de violencia sufrida: violencia económica o patrimonial, violencia psicológica, violencia física y violencia sexual. En esta gráfica se muestra la cantidad de casos por cada 100 000 habitantes en cada departamento en el año 2018_ [Hacer click aquí para acceder a las versiones originales de las bases de datos](https://www.mimp.gob.pe/contigo/contenidos/pncontigo-articulos.php?codigo=36)
 
-```{r,  echo=FALSE, fig.width = 6, fig.height = 8, dev='svg'}
-d3heatmap(CEM_2018_FINAL, scale = "column", dendrogram = "none", color = "YlOrRd", yaxis_font_size = 10,
-          xaxis_font_size = 12)
+```{r,  echo=FALSE, fig.width = 7, fig.height = 8, dev='svg'}
+d3heatmap(CEM2018hab, scale = "column", dendrogram = "none", color = "YlOrRd", yaxis_font_size = 9,
+          xaxis_font_size = 10)
 ```
 
 *Gracias por visitar el blog. La información mostrada en este post ha sido obtenida de los datos compartidos por el [Observatorio Nacional de Seguridad Ciudadana](https://observatorio.mininter.gob.pe/) y construido con el lenguaje de programación R*.

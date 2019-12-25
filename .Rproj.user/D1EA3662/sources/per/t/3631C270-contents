@@ -6,7 +6,7 @@ enableEmoji = true
 footnotereturnlinkcontents = "<sup>^<sup>"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_caches$"]
 preserveTaxonomyNames = true
-paginate = 5 #frontpage pagination
+paginate = 6 #frontpage pagination
 hasCJKLanguage = true
 publishDir = "../EMTincopa.github.io"
 
@@ -22,7 +22,7 @@ home = ["HTML", "RSS", "Algolia"]
 
 [params]
   header_image = "img/headataviz.jpg"
-  SEOTitle = "My blog of Visualization and Storytelling with data"
+  SEOTitle = "EMT's blog | Storytelling with data"
   description = "El blog de un entusiasta de los datos | Storytelling and Data Visualization"
   keyword = "DataViz, El blog de EMTincopa, Storytelling with data, Data Visualization, Datos, Visualización de datos, Data Stories"
   slogan = "La visualización de datos como medio expresivo para narrar lo que descubrimos."
@@ -59,13 +59,13 @@ home = ["HTML", "RSS", "Algolia"]
   highlightjs = "docco"
   
   [params.social]
-  rss           = true 
-  #email        = "emtincopa@gmail.com"
+  rss           = false 
+  email        = "emtincopa@gmail.com"
   facebook      = "https://www.facebook.com/enrique.tincopa"
   twitter       = "https://twitter.com/EMTincopa"
   linkedin      = "https://www.linkedin.com/in/enrique-mendoza-tincopa-4b2a14173/"
   github        = "https://github.com/EMTincopa"
-  instagram     = "https://www.instagram.com/emtincopa/"
+  #instagram     = "https://www.instagram.com/emtincopa/"
 
   
   [[params.bookmark_link]]

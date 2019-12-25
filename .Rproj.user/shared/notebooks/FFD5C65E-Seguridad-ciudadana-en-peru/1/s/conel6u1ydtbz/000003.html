@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+<script src="lib/htmlwidgets-1.5.1/htmlwidgets.js"></script>
+<script src="lib/jquery-1.11.1/jquery.min.js"></script>
+<script src="lib/proj4js-2.3.15/proj4.js"></script>
+<link href="lib/highcharts-7.0.1/css/motion.css" rel="stylesheet" />
+<link href="lib/highcharts-7.0.1/css/htmlwdgtgrid.css" rel="stylesheet" />
+<script src="lib/highcharts-7.0.1/highcharts.js"></script>
+<script src="lib/highcharts-7.0.1/highcharts-3d.js"></script>
+<script src="lib/highcharts-7.0.1/highcharts-more.js"></script>
+<script src="lib/highcharts-7.0.1/modules/stock.js"></script>
+<script src="lib/highcharts-7.0.1/modules/map.js"></script>
+<script src="lib/highcharts-7.0.1/modules/annotations.js"></script>
+<script src="lib/highcharts-7.0.1/modules/boost.js"></script>
+<script src="lib/highcharts-7.0.1/modules/data.js"></script>
+<script src="lib/highcharts-7.0.1/modules/drag-panes.js"></script>
+<script src="lib/highcharts-7.0.1/modules/drilldown.js"></script>
+<script src="lib/highcharts-7.0.1/modules/item-series.js"></script>
+<script src="lib/highcharts-7.0.1/modules/offline-exporting.js"></script>
+<script src="lib/highcharts-7.0.1/modules/overlapping-datalabels.js"></script>
+<script src="lib/highcharts-7.0.1/modules/exporting.js"></script>
+<script src="lib/highcharts-7.0.1/modules/export-data.js"></script>
+<script src="lib/highcharts-7.0.1/modules/funnel.js"></script>
+<script src="lib/highcharts-7.0.1/modules/heatmap.js"></script>
+<script src="lib/highcharts-7.0.1/modules/treemap.js"></script>
+<script src="lib/highcharts-7.0.1/modules/sankey.js"></script>
+<script src="lib/highcharts-7.0.1/modules/solid-gauge.js"></script>
+<script src="lib/highcharts-7.0.1/modules/streamgraph.js"></script>
+<script src="lib/highcharts-7.0.1/modules/sunburst.js"></script>
+<script src="lib/highcharts-7.0.1/modules/vector.js"></script>
+<script src="lib/highcharts-7.0.1/modules/wordcloud.js"></script>
+<script src="lib/highcharts-7.0.1/modules/xrange.js"></script>
+<script src="lib/highcharts-7.0.1/modules/tilemap.js"></script>
+<script src="lib/highcharts-7.0.1/modules/venn.js"></script>
+<script src="lib/highcharts-7.0.1/modules/gantt.js"></script>
+<script src="lib/highcharts-7.0.1/modules/timeline.js"></script>
+<script src="lib/highcharts-7.0.1/modules/parallel-coordinates.js"></script>
+<script src="lib/highcharts-7.0.1/plugins/grouped-categories.js"></script>
+<script src="lib/highcharts-7.0.1/plugins/motion.js"></script>
+<script src="lib/highcharts-7.0.1/plugins/multicolor_series.js"></script>
+<script src="lib/highcharts-7.0.1/custom/reset.js"></script>
+<script src="lib/highcharts-7.0.1/custom/symbols-extra.js"></script>
+<script src="lib/highcharts-7.0.1/custom/text-symbols.js"></script>
+<script src="lib/highchart-binding-0.7.0/highchart.js"></script>
+
+</head>
+<body>
+<!-- htmlwidget-container-begin -->
+<div id="htmlwidget-ab7776968edc68950dc8" style="width:auto;height:500px;" class="highchart html-widget"></div>
+<!-- htmlwidget-container-end -->
+<script type="application/json" data-for="htmlwidget-ab7776968edc68950dc8">{"x":{"hc_opts":{"title":{"text":"Tasa de denuncias por comisión de delitos por cada 10 mil habitantes según departamento en el 2017"},"yAxis":{"title":{"text":""},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":true},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"nombdep":"LIMA","Tasa":4679.09,"y":4679.09,"name":"LIMA"},{"nombdep":"AREQUIPA","Tasa":672.14,"y":672.14,"name":"AREQUIPA"},{"nombdep":"LAMBAYEQUE","Tasa":663.87,"y":663.87,"name":"LAMBAYEQUE"},{"nombdep":"LA LIBERTAD","Tasa":577.09,"y":577.09,"name":"LA LIBERTAD"},{"nombdep":"PIURA","Tasa":531.28,"y":531.28,"name":"PIURA"},{"nombdep":"CALLAO","Tasa":394.01,"y":394.01,"name":"CALLAO"},{"nombdep":"ICA","Tasa":363.01,"y":363.01,"name":"ICA"},{"nombdep":"CUSCO","Tasa":361.85,"y":361.85,"name":"CUSCO"},{"nombdep":"ANCASH","Tasa":310.98,"y":310.98,"name":"ANCASH"},{"nombdep":"JUNIN","Tasa":287.2,"y":287.2,"name":"JUNIN"},{"nombdep":"CAJAMARCA","Tasa":249.17,"y":249.17,"name":"CAJAMARCA"},{"nombdep":"UCAYALI","Tasa":184.93,"y":184.93,"name":"UCAYALI"},{"nombdep":"AMAZONAS","Tasa":150.14,"y":150.14,"name":"AMAZONAS"},{"nombdep":"SAN MARTIN","Tasa":136.46,"y":136.46,"name":"SAN MARTIN"},{"nombdep":"LORETO","Tasa":127.65,"y":127.65,"name":"LORETO"},{"nombdep":"AYACUCHO","Tasa":120.56,"y":120.56,"name":"AYACUCHO"},{"nombdep":"TUMBES","Tasa":116.08,"y":116.08,"name":"TUMBES"},{"nombdep":"PUNO","Tasa":110.86,"y":110.86,"name":"PUNO"},{"nombdep":"TACNA","Tasa":105.78,"y":105.78,"name":"TACNA"},{"nombdep":"HUANUCO","Tasa":102.67,"y":102.67,"name":"HUANUCO"},{"nombdep":"APURIMAC","Tasa":67.64,"y":67.64,"name":"APURIMAC"},{"nombdep":"MADRE DE DIOS","Tasa":63.29,"y":63.29,"name":"MADRE DE DIOS"},{"nombdep":"MOQUEGUA","Tasa":59.15,"y":59.15,"name":"MOQUEGUA"},{"nombdep":"PASCO","Tasa":46.71,"y":46.71,"name":"PASCO"},{"nombdep":"HUANCAVELICA","Tasa":39.09,"y":39.09,"name":"HUANCAVELICA"}],"type":"bar"}],"xAxis":{"type":"category","title":{"text":""}},"subtitle":{"text":"Fuente: Observatorio Nacional de Seguridad Ciudadana"}},"theme":{"colors":["#d35400","#2980b9","#2ecc71","#f1c40f","#2c3e50","#7f8c8d"],"chart":{"style":{"fontFamily":"Roboto","color":"#666666"}},"title":{"align":"left","style":{"fontFamily":"Roboto Condensed","fontWeight":"bold"}},"subtitle":{"align":"left","style":{"fontFamily":"Roboto Condensed"}},"legend":{"align":"right","verticalAlign":"bottom"},"xAxis":{"gridLineWidth":1,"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"yAxis":{"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"plotOptions":{"line":{"marker":{"enabled":false}},"spline":{"marker":{"enabled":false}},"area":{"marker":{"enabled":false}},"areaspline":{"marker":{"enabled":false}},"arearange":{"marker":{"enabled":false}},"bubble":{"maxSize":"10%"}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":["Roboto","Roboto+Condensed"],"debug":false},"evals":[],"jsHooks":[]}</script>
+<!-- htmlwidget-sizing-policy-base64 PHNjcmlwdCB0eXBlPSJhcHBsaWNhdGlvbi9odG1sd2lkZ2V0LXNpemluZyIgZGF0YS1mb3I9Imh0bWx3aWRnZXQtYWI3Nzc2OTY4ZWRjNjg5NTBkYzgiPnsidmlld2VyIjp7IndpZHRoIjoiYXV0byIsImhlaWdodCI6MzUwLCJwYWRkaW5nIjowLCJmaWxsIjp0cnVlfSwiYnJvd3NlciI6eyJ3aWR0aCI6ImF1dG8iLCJoZWlnaHQiOjUwMCwicGFkZGluZyI6MCwiZmlsbCI6ZmFsc2V9fTwvc2NyaXB0Pg== -->
+</body>
+</html>

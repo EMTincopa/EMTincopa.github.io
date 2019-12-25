@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Egresado on EMT&#39;S Data Stories</title>
+    <link>/tags/egresado/</link>
+    <description>Recent content in Egresado on EMT&#39;S Data Stories</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2018 EMT&#39;S Data stories</copyright>
+    <lastBuildDate>Sun, 22 Dec 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/tags/egresado/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>¿Cuáles son las profesiones mejor pagadas en el Perú?</title>
+      <link>/post/carrerras-y-sueldos/</link>
+      <pubDate>Sun, 22 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/carrerras-y-sueldos/</guid>
+      <description>En la mayoría de los casos, a mi parecer, la decisión más importante que debe tomar un adolescente a partir de los 16 años (he visto casos de menor y mayor edad) es la de decidir qué carrera cursar por aproximadamente 5 años (3 años en el caso de escoger un instituto técnico).</description>
+    </item>
+    
+  </channel>
+</rss>

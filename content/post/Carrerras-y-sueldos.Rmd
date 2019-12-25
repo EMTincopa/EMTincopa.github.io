@@ -1,0 +1,222 @@
+---
+title: "¿Cuáles son las profesiones mejor pagadas en el Perú?"
+subtitle: "Estas son las carreras técnicas y universitarias con los mejores sueldos en el Perú"
+author: "by EMTincopa"
+description: "Conoce qué carrera lidera este ránking nacional gracias a la data compartida por el portal Ponte en Carrera."
+date: "2019-12-22"
+image: /content/post/Carrerras-y-sueldos/trabajo-sueldo.jpg
+tags:        ["Carreras", "Universitario", "Técnico", "Perú", "Remuneración", "Egresado", "Estudio", "Trabajo", "R", "Dataviz", "Data", "Ponteencarrera"]
+categories:  ["Stories"]
+published: yes
+showtoc: no
+---
+
+En la mayoría de los casos, a mi parecer, la decisión más importante que debe tomar un adolescente a partir de los 16 años (he visto casos de menor y mayor edad) es la de decidir qué carrera cursar por aproximadamente 5 años (3 años en el caso de escoger un instituto técnico). Esta complicada decisión tiene varias opciones, como nos indica el diario [Gestión](https://gestion.pe/fotogalerias/ranking-las-diez-carreras-universitarias-mejor-pagadas-en-el-peru-noticia/?ref=gesr):
+
+* *Decidir si prefieres ganar más en el mercado laboral y elegir entre las carreras universitarias mejor pagadas y, quizás, dejar un poco de lado tus preferencias o hobbies.* 
+
+* *Elegir entre las opciones que siempre has deseado, a pesar de que haya menos demanda o que los ingresos no vayan a ser tan altos.*
+
+* *O elegir entre las carreras más demandadas en tu país (que quizás no sean siempre las mejor pagadas) para tener más posibilidades de encontrar un trabajo.*
+
+Gracias a la información compartida por el portal [Ponte en Carrera](https://www.ponteencarrera.pe/), creado por el [Ministerio del Trabajo](https://www.trabajo.gob.pe/mostrarContenido.php?id=415&tip=105), sobre la oferta de carreras y los promedios salariales de los egresados de universidades e institutos, comparto los siguientes gráficos a modo de resumen de las profesiones cuyos egresados ganan más dinero en el País.
+
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE)
+
+library(ggplot2)
+library(readr)
+library(readxl)
+library(dplyr)
+library(ggthemes)
+library(gridExtra)
+library(extrafont)
+library(forcats)
+library(htmlwidgets)
+library(magrittr)
+library(highcharter)
+
+
+#Archivos - Data
+ 
+sueldos<- read_excel("E:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Carrerras-y-sueldos/consolidado_sueldo.xlsx", sheet=1)
+colnames(sueldos) <- make.names(colnames(sueldos))
+
+sueldos_2<- read_excel("E:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Carrerras-y-sueldos/consolidado_sueldo.xlsx", sheet=2)
+colnames(sueldos_2) <- make.names(colnames(sueldos_2))
+
+sueldos_ggplot<- read_excel("E:/MyNewPersonalBlog/EMTincopa.github.io/content/post/Carrerras-y-sueldos/consolidado_sueldo.xlsx", sheet=3)
+colnames(sueldos_ggplot) <- make.names(colnames(sueldos_ggplot))
+
+#Filtros GGPLOT
+universitarios <-filter(sueldos_ggplot, grado == "Universitario")
+tecnicos <- filter(sueldos_ggplot, grado == "Técnico")
+
+```
+
+
+## Profesionales universitarios egresados
+
+Según **Ponte en Carrera** entre las carreras universitarias con mejor remuneración se encuentran **Medicina, Ingeniería de Telecomunicaciones y Agronegocios**, con ingresos promedio mensuales de entre **S/ 4,072, S/ 4046 y S/ 3,964** respectivamente.
+
+```{r,  echo=FALSE, fig.width = 7, fig.height = 15, dev='svg', fig.cap='1ra. Parte - Carreras Universitarias'}
+
+sueldosUniv<-sueldos %>% 
+  group_by(carrera, ingresoPromedio) %>%
+  filter(grado == "Universitario")
+
+sueldosUniv%>%
+    hchart(type = "bar",
+         hcaes(x = carrera, y = ingresoPromedio)) %>%
+  hc_chart(backgroundColor = "#ffffff") %>%
+  hc_add_theme(hc_theme_flat())%>%
+  hc_title(text = "¿Cuánto ganan los jóvenes profesionales universitarios?") %>%
+  hc_subtitle(text = "Ingreso promedio en soles por carrera, datos al 2017 - Perú") %>%
+  hc_yAxis(title = list(text = "Ingreso promedio mensual (Soles)")) %>%
+  hc_xAxis(title = list(text = ""),reversed = TRUE, tickLength = 0, gridLineWidth = 0, labels = list(style = list(fontSize = "7px"),useHTML = TRUE)) %>%
+  hc_exporting(enabled = TRUE)
+```
+
+---
+
+```{r,  echo=FALSE, fig.width = 7, fig.height = 15, dev='svg', fig.cap='2da. Parte - Carreras Universitarias'}
+
+sueldosUniv2<-sueldos_2%>% 
+  group_by(carrera, ingresoPromedio) %>%
+  filter(grado == "Universitario")
+
+sueldosUniv2%>%
+    hchart(type = "bar",
+         hcaes(x = carrera, y = ingresoPromedio)) %>%
+  hc_chart(backgroundColor = "#ffffff") %>%
+  hc_add_theme(hc_theme_flat())%>%
+  hc_title(text = "¿Cuánto ganan los jóvenes profesionales universitarios?") %>%
+  hc_subtitle(text = "Ingreso promedio en soles por carrera, datos al 2017 - Perú") %>%
+  hc_yAxis(title = list(text = "Ingreso promedio mensual (Soles)")) %>%
+  hc_xAxis(title = list(text = ""),reversed = TRUE, tickLength = 0, gridLineWidth = 0, labels = list(style = list(fontSize = "7px"),useHTML = TRUE)) %>%
+  hc_exporting(enabled = TRUE)
+```
+
+## Profesionales técnicos egresados
+
+En el caso de las carreras técnicas, la remuneración más elevada la tiene **Arquitectura y Urbanismo, seguida de Ciencias de la Comunicación y Periodismo y Locución**, con ingresos promedios mensuales de entre **S/ 2,871, S/ 2,295 y S/ 2,246** respectivamente.
+
+```{r,  echo=FALSE, fig.width = 7, fig.height = 15, dev='svg', fig.cap='Total de Carreras Técnicas analizadas'}
+
+sueldosTecni<-sueldos %>% 
+  group_by(carrera, ingresoPromedio) %>%
+  filter(grado == "Técnico")
+
+sueldosTecni%>%
+    hchart(type = "bar",
+         hcaes(x = carrera, y = ingresoPromedio)) %>%
+  hc_chart(backgroundColor = "#ffffff") %>%
+  hc_title(text = "¿Cuánto ganan los jóvenes profesionales técnicos?") %>%
+  hc_subtitle(text = "Ingreso promedio en soles por carrera, datos al 2017 - Perú") %>%
+  hc_add_theme(hc_theme_flat(colors = c("#337EE8"))) %>%
+  hc_yAxis(title = list(text = "Ingreso promedio mensual (Soles)")) %>%
+  hc_xAxis(title = list(text = ""),reversed = TRUE, tickLength = 0, gridLineWidth = 0, labels = list(style = list(fontSize = "8px"),useHTML = TRUE)) %>%
+  hc_exporting(enabled = TRUE)
+```
+
+---
+
+> ### El estudio:
+Para medir el ingreso promedio mensual de profesionales universitarios, el portal Ponte en Carrera fijó un lapso de edades entre los 18 y 29 años, egresados entre el 2012 y 2016.  
+Asimismo, tomó en consideración las planillas electrónicas del Ministerio de Trabajo y Promoción del Empleo (MTPE) hasta el año 2017. Los profesionales considerados trabajan en un 72% de los casos en el sector privado (Fuente: [El Comercio](https://elcomercio.pe/economia/personal/ponte-carrera-son-carreras-mejor-pagadas-peru-universidad-medicina-economia-ingenieria-marketing-administracion-pucp-ulima-udep-upc-pacifico-usmp-unmsm-noticia-658154-noticia/?ref=ecr)).
+Otras Ingenierías comprende las siguientes carreras a 6 dígitos: Ingeniería de Transportes e Ingeniería automotriz.
+Otras Carreras de Administración comprende las siguientes carreras a 6 dígitos: Gestión y Alta Dirección; Relaciones Industriales; y Gestión de Recursos Humanos.
+Se excluyen las familias de carreras con menos de 25 casos.
+Elaboración: MTPE- DGPE - Dirección de Investigación Socio Económico Laboral (DISEL).
+
+---
+
+### Comparativa sueldos mínimos y máximos en profesionales universitarios y técnicos egresados
+
+La información de *Ponte en Carrera* no solo nos brinda el promedio de remuneraciones sino también los valores mínimos y máximos. Si vemos el siguiente gráfico, podemos encontrar que la profesión de **Agronegocios** puede llegar a dar remuneraciones alrededor de los **S/ 8,100**, siendo así el registro de remuneración más alto de entre todas las carreras. Por otra parte, **Medicina** es la carrera que tiene la remuneración mínima más alta según la información de *Ponte en Carrera*. En el caso de las últimas dos carreras: *Odontología* y *Educación Primaria*, vemos que tienen remuneraciones mínimas y máximas menos distantes, lo que podría darnos una mayor seguridad acerca de la remuneración que recibiríamos por optar estudiar cualquiera de estas carreras.
+
+```{r,  echo=FALSE, fig.width = 16, fig.height = 17, dev='svg'}
+
+ universitarios_ordenado <- universitarios %>% 
+    mutate(carrera=fct_reorder(carrera, -desc(maximo)))
+ 
+ ggplot(universitarios_ordenado)+
+    geom_segment(
+       aes(x = minimo, y = carrera, xend = maximo, yend = carrera),
+       color = "black")+
+    geom_point(aes(x = ingresoPromedio, y = carrera), fill="darkorange", shape=23, color="darkorange", size=2)+
+    geom_point(aes(x = minimo, y = carrera), color = "black")+
+    geom_point(aes(x = maximo, y = carrera), color = "darkblue")+
+    labs(x = "", y = "",
+         title = "Ingresos mensuales de trabajadores jóvenes que egresaron 
+de la universidad entre el 2012 y el 2016",
+         subtitle = "Rango en soles (Mínimo a Máximo) y promedio (Rombo naranja)",
+         caption = "Datos de ponteencarrera.pe y MTPE - OGETIC - OE - Planilla Electrónica 2017") +
+    theme_minimal() +
+    geom_text(aes(x = minimo, y = carrera, label = minimo), color = "black", hjust = ifelse(universitarios_ordenado$minimo<universitarios_ordenado$maximo, 1.5, -.5), size = 4) +
+    geom_text(aes(x = maximo, y = carrera, label = maximo), color = "darkblue", hjust = ifelse(universitarios_ordenado$minimo<universitarios_ordenado$maximo, -.2, 1.5), size = 4) +
+    theme(panel.border =  element_blank(),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.line = element_blank(),
+          axis.text = element_text(color = "black", face= "italic", size = 14),
+          axis.text.x = element_blank())+
+     theme(plot.background = element_rect(fill = "white", colour = "white"),
+           plot.title = element_text(color = "black", face = "bold", size = 22),
+           plot.subtitle = element_text(color = "black", size = 18),
+           plot.caption = element_text(color = "black", face = "italic"))
+ 
+```
+
+En el caso de las carreras técnicas, nos encontramos con que **Arquitectura y Urbanismo** tiene un tope de **S/ 5,400**, siendo así el registro de remuneración más alto entre las carreras técnicas.
+En cambio, las tres últimas carreras: *Educación Secundaria*, *Educación Primaria* y *Educación Inicial* no superan el máximo de **S/ 1300** en remuneración y la variación de sueldos no es tan pronunciada.
+
+```{r,  echo=FALSE, fig.width = 16, fig.height = 14, dev='svg'}
+
+ tecnicos_ordenado <- tecnicos %>% 
+    mutate(carrera=fct_reorder(carrera, -desc(maximo)))
+ 
+ ggplot(tecnicos_ordenado)+
+    geom_segment(
+       aes(x = minimo, y = carrera, xend = maximo, yend = carrera),
+       color = "black")+
+    geom_point(aes(x = ingresoPromedio, y = carrera), fill="darkorange", shape=23, color="darkorange", size=2)+
+    geom_point(aes(x = minimo, y = carrera), color = "black")+
+    geom_point(aes(x = maximo, y = carrera), color = "darkblue")+
+    labs(x = "", y = "",
+         title = "Ingresos mensuales de trabajadores jóvenes que egresaron 
+de un instituto técnico entre el 2012 y el 2016",
+         subtitle = "Rango en soles (Mínimo a Máximo) y promedio (Rombo naranja)",
+         caption = "Datos de ponteencarrera.pe y MTPE - OGETIC - OE - Planilla Electrónica 2017") +
+    theme_minimal() +
+    geom_text(aes(x = minimo, y = carrera, label = minimo), color = "black", hjust = ifelse(tecnicos_ordenado$minimo<tecnicos_ordenado$maximo, 1.5, -.5), size = 4) +
+    geom_text(aes(x = maximo, y = carrera, label = maximo), color = "darkblue", hjust = ifelse(tecnicos_ordenado$minimo<tecnicos_ordenado$maximo, -.2, 1.5), size = 4) +
+    theme(panel.border =  element_blank(),
+          panel.grid.major = element_blank(),
+          panel.grid.minor = element_blank(),
+          axis.line = element_blank(),
+          axis.text = element_text(color = "black", face= "italic", size = 14),
+          axis.text.x = element_blank())+
+     theme(plot.background = element_rect(fill = "white", colour = "white"),
+           plot.title = element_text(color = "black", face = "bold", size = 22),
+           plot.subtitle = element_text(color = "black", size = 18),
+           plot.caption = element_text(color = "black", face = "italic"))
+ 
+```
+
+
+Hay que tener en cuenta que las listas van cambiando ya que el mercado laboral es muy oscilante, por lo que en una nueva actualización de la data en el portal podría incluir la carrera en la que estas interesado.
+
+*Gracias por visitar el blog. La información mostrada en este post ha sido obtenida de los datos compartidos por el [Portal Ponte en Carrera](https://www.ponteencarrera.pe/) (Fuente: MTPE - OGETIC - OE - Planilla Electrónica 2017) y construido con el lenguaje de programación R*.
+
+
+**Aprende más en:**
+
+* [Ranking: las diez carreras universitarias mejor pagadas en el Perú](https://gestion.pe/fotogalerias/ranking-las-diez-carreras-universitarias-mejor-pagadas-en-el-peru-noticia/?ref=gesr)
+* [Estas son las 10 carreras universitarias mejor pagadas en el Perú](https://gestion.pe/fotogalerias/son-10-carreras-universitarias-mejor-pagadas-peru-nndc-253664-noticia/?ref=gesr)
+* [¿Cuáles son las profesiones mejor pagadas en el Perú?](https://elcomercio.pe/economia/personal/ponte-carrera-son-carreras-mejor-pagadas-peru-universidad-medicina-economia-ingenieria-marketing-administracion-pucp-ulima-udep-upc-pacifico-usmp-unmsm-noticia-658154-noticia/)
+* [Las universidades donde puedes estudiar las 10 carreras mejor pagadas en Perú, según el Ministerio de Trabajo](https://aweita.larepublica.pe/cooltura/8761-las-universidades-donde-puedes-estudiar-las-10-carreras-mejor-pagadas-en-peru-segun-el-ministerio-de-trabajo)
+* [Estas son las carreras mejores pagadas en el Perú](https://peru21.pe/peru/son-carreras-mejor-pagadas-peru-458881-noticia/?ref=p21r)
+* [Ponte en Carrera](https://www.ponteencarrera.pe/como-va-el-empleo)
