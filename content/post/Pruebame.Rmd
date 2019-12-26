@@ -1,0 +1,15 @@
+---
+title: "Inseguridad en el Perú"
+subtitle: "Estado de la seguridad ciudadana en el Perú"
+author: "by EMTincopa"
+description: "Análisis de la seguridad ciudadana en el Perú en base a los datos liberados por el Observatorio Nacional de Seguridad Ciudadana. El artículo se centra en mostrar la cantidad total de denuncias por distintos delitos, homicidios y accidentes de tránsito registrados en el País."
+date: "2019-12-26"
+image: /content/post/Seguridad-en-peru/seguridad.jpg
+tags:        ["Seguridad", "Data", "Dataviz", "R", "Lima", "Security", "Perú", "City", "Plot"]
+categories:  ["Stories"]
+published: yes
+showtoc: no
+---
+
+
+En el Perú nos encontramos en una época de mucha inseguridad y violencia que, en el sentir de la población, nos da la impresión de estar empeorando cada día. Por esto, gracias a los registros de la base de datos del [Observatorio Nacional de Seguridad Ciudadana](https://observatorio.mininter.gob.pe/), centro de generación de datos e investigación aplicados al conocimiento de fenómenos criminales y economías ilegales para la formulación de políticas públicas, se ha realizado el siguiente artículo sobre la inseguridad en el páis: información sobre denuncias por comisión de delitos, homicidios y accidentes de tránsito. Espero este artículo sea de ayuda para comprender la situación actual de la seguridad ciudadana en el Perú.
