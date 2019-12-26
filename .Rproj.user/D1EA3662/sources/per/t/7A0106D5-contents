@@ -133,7 +133,7 @@ Elaboración: MTPE- DGPE - Dirección de Investigación Socio Económico Laboral
 
 ### Comparativa sueldos mínimos y máximos en profesionales universitarios y técnicos egresados
 
-La información de *Ponte en Carrera* no solo nos brinda el promedio de remuneraciones sino también los valores mínimos y máximos. Si vemos el siguiente gráfico, podemos encontrar que la profesión de **Agronegocios** puede llegar a dar remuneraciones alrededor de los **S/ 8,100**, siendo así el registro de remuneración más alto de entre todas las carreras. Por otra parte, **Medicina** es la carrera que tiene la remuneración mínima más alta según la información de *Ponte en Carrera*. En el caso de las últimas dos carreras: *Odontología* y *Educación Primaria*, vemos que tienen remuneraciones mínimas y máximas menos distantes, lo que podría darnos una mayor seguridad acerca de la remuneración que recibiríamos por optar estudiar cualquiera de estas carreras.
+La información de *Ponte en Carrera* no solo nos brinda el promedio de remuneraciones sino también los valores mínimos y máximos. Si vemos el siguiente gráfico, podemos encontrar que la profesión de **Agronegocios** puede llegar a dar remuneraciones alrededor de los **S/ 8,100**, siendo así el registro de remuneración más alto de entre todas las carreras. Por otra parte, **Medicina** es la carrera que tiene la remuneración mínima más alta según la información de *Ponte en Carrera*. En el caso de las últimas dos carreras: **Odontología** y **Educación Primaria**, vemos que tienen remuneraciones mínimas y máximas menos distantes, lo que podría darnos una mayor seguridad acerca de la remuneración que recibiríamos por optar estudiar cualquiera de estas carreras.
 
 ```{r,  echo=FALSE, fig.width = 16, fig.height = 17, dev='svg'}
 
@@ -169,7 +169,7 @@ de la universidad entre el 2012 y el 2016",
 ```
 
 En el caso de las carreras técnicas, nos encontramos con que **Arquitectura y Urbanismo** tiene un tope de **S/ 5,400**, siendo así el registro de remuneración más alto entre las carreras técnicas.
-En cambio, las tres últimas carreras: *Educación Secundaria*, *Educación Primaria* y *Educación Inicial* no superan el máximo de **S/ 1300** en remuneración y la variación de sueldos no es tan pronunciada.
+En cambio, las tres últimas carreras: **Educación Secundaria**, **Educación Primaria** y **Educación Inicial** no superan el máximo de **S/ 1300** en remuneración y la variación de sueldos no es tan pronunciada.
 
 ```{r,  echo=FALSE, fig.width = 16, fig.height = 14, dev='svg'}
 
