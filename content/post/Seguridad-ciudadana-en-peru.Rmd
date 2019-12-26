@@ -1,7 +1,7 @@
 ---
 title: "Inseguridad en el Perú"
 subtitle: "Estado de la seguridad ciudadana en el Perú"
-author: "by EMTincopa"
+author: "EMTincopa"
 description: "Análisis de la seguridad ciudadana en el Perú en base a los datos liberados por el Observatorio Nacional de Seguridad Ciudadana. El artículo se centra en mostrar la cantidad total de denuncias por distintos delitos, homicidios y accidentes de tránsito registrados en el País."
 date: "2019-10-25"
 image: /content/post/Seguridad-en-peru/seguridad.jpg
