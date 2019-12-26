@@ -22,15 +22,6 @@
     </item>
     
     <item>
-      <title>City</title>
-      <link>/tags/city/</link>
-      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/city/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Data</title>
       <link>/tags/data/</link>
       <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
@@ -40,7 +31,7 @@
     </item>
     
     <item>
-      <title>DataViz</title>
+      <title>Dataviz</title>
       <link>/tags/dataviz/</link>
       <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
       
@@ -67,29 +58,11 @@
     </item>
     
     <item>
-      <title>Lima</title>
-      <link>/tags/lima/</link>
-      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/lima/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Perú</title>
       <link>/tags/per%C3%BA/</link>
       <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/per%C3%BA/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Plot</title>
-      <link>/tags/plot/</link>
-      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/plot/</guid>
       <description></description>
     </item>
     
@@ -121,24 +94,6 @@
     </item>
     
     <item>
-      <title>Security</title>
-      <link>/tags/security/</link>
-      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/security/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Seguridad</title>
-      <link>/tags/seguridad/</link>
-      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/tags/seguridad/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Trabajo</title>
       <link>/tags/trabajo/</link>
       <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
@@ -162,6 +117,51 @@
       <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/universitario/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>City</title>
+      <link>/tags/city/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/city/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Lima</title>
+      <link>/tags/lima/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/lima/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Plot</title>
+      <link>/tags/plot/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/plot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>/tags/security/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Seguridad</title>
+      <link>/tags/seguridad/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/seguridad/</guid>
       <description></description>
     </item>
     
