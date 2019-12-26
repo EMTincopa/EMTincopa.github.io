@@ -1,3 +1,0 @@
-"0","sueldosUniv%>%"
-"0","    hchart(type = ""bar"","
-"0","         hcaes(x = ingresoPromedio, y = carrera ))"

@@ -13,3 +13,6 @@
 "0","  hc_yAxis(title = list(text = """")) %>%"
 "0","  hc_xAxis(title = list(text = """")) %>%"
 "0","  hc_exporting(enabled = TRUE)"
+"2","`parse_quosure()` is deprecated as of rlang 0.2.0.
+Please use `parse_quo()` instead.
+[90mThis warning is displayed once per session.[39m"
