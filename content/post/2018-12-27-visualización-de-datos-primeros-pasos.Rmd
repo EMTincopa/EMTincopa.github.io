@@ -12,7 +12,7 @@ published: yes
 showtoc: no
 subtitle: Cosas a tener en cuenta
 tags:
-- DataViz
+- Dataviz
 - Data
 - Power BI
 - Tableau

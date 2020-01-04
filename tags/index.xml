@@ -13,11 +13,38 @@
     
     
     <item>
+      <title>Adobe</title>
+      <link>/tags/adobe/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/adobe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AR</title>
+      <link>/tags/ar/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/ar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Carreras</title>
       <link>/tags/carreras/</link>
       <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/carreras/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>China</title>
+      <link>/tags/china/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/china/</guid>
       <description></description>
     </item>
     
@@ -31,7 +58,7 @@
     </item>
     
     <item>
-      <title>DataViz</title>
+      <title>Dataviz</title>
       <link>/tags/dataviz/</link>
       <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
       
@@ -54,6 +81,24 @@
       <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/estudio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Illustrator</title>
+      <link>/tags/illustrator/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/illustrator/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Medicine</title>
+      <link>/tags/medicine/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/medicine/</guid>
       <description></description>
     </item>
     
@@ -94,11 +139,38 @@
     </item>
     
     <item>
+      <title>Rheumatoid arthritis</title>
+      <link>/tags/rheumatoid-arthritis/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/rheumatoid-arthritis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Science</title>
+      <link>/tags/science/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Trabajo</title>
       <link>/tags/trabajo/</link>
       <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
       
       <guid>/tags/trabajo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Treatments</title>
+      <link>/tags/treatments/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/tags/treatments/</guid>
       <description></description>
     </item>
     

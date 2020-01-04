@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1578104666571.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3946079910",
+    "id" : "90D830F0",
+    "lastKnownWriteTime" : 1578018733,
+    "last_content_update" : 1578018733,
+    "path" : "E:/R proyectos/Roche/Análisis Papers/Instagram_version_final.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "27,0",
+        "scrollLine" : "13"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

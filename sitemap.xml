@@ -3,6 +3,16 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/tags/adobe/</loc>
+    <lastmod>2019-12-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/ar/</loc>
+    <lastmod>2019-12-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/carreras/</loc>
     <lastmod>2019-12-26T00:00:00+00:00</lastmod>
   </url>
@@ -13,12 +23,22 @@
   </url>
   
   <url>
+    <loc>/tags/china/</loc>
+    <lastmod>2019-12-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/data/</loc>
     <lastmod>2019-12-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/tags/dataviz/</loc>
+    <lastmod>2019-12-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/post/eficacia-y-seguridad-de-varios-tratamientos-antirreumaticos/</loc>
     <lastmod>2019-12-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -34,6 +54,16 @@
   
   <url>
     <loc>/tags/estudio/</loc>
+    <lastmod>2019-12-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/illustrator/</loc>
+    <lastmod>2019-12-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/medicine/</loc>
     <lastmod>2019-12-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -63,6 +93,16 @@
   </url>
   
   <url>
+    <loc>/tags/rheumatoid-arthritis/</loc>
+    <lastmod>2019-12-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/science/</loc>
+    <lastmod>2019-12-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/stories/</loc>
     <lastmod>2019-12-26T00:00:00+00:00</lastmod>
   </url>
@@ -73,7 +113,17 @@
   </url>
   
   <url>
+    <loc>/categories/tips/</loc>
+    <lastmod>2019-12-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/tags/trabajo/</loc>
+    <lastmod>2019-12-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/treatments/</loc>
     <lastmod>2019-12-26T00:00:00+00:00</lastmod>
   </url>
   
@@ -229,11 +279,6 @@
   
   <url>
     <loc>/tags/tableau/</loc>
-    <lastmod>2018-12-27T00:58:19-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/tips/</loc>
     <lastmod>2018-12-27T00:58:19-05:00</lastmod>
   </url>
   

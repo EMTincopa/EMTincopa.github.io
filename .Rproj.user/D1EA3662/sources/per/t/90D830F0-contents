@@ -1,0 +1,48 @@
+
+#Librerias
+
+library(tidyverse)
+library(readxl)
+library(dplyr)
+library(ggplot2)
+library(ggthemes)
+library(forcats)
+library(patchwork)
+library(lubridate)
+library(ggExtra)
+library(summarytools)
+library(gridExtra)
+library(readr)
+
+########################################################
+#Obtener data
+
+RA<- read_excel("tablas_original_negativos.xlsx", sheet=1)
+colnames(RA) <- make.names(colnames(RA))
+
+View(RA)
+
+########################################################
+#HEATMAP editor
+
+RAedited<-gather(RA, key = "INDICADORES", value = "VALORES", 2:7)
+RAedited$Treatments = forcats::fct_rev(factor(RAedited$Treatments))
+
+RAedited %>%
+  mutate(INDICADORES = factor(INDICADORES, levels=c("ACR20", "ACR50", "ACR70", "Remission", "AEs", "SAEs")))%>%
+  ggplot(aes(x = INDICADORES, y = Treatments, fill = VALORES)) + geom_tile()+
+  geom_text(aes(label = round(VALORES, 2)))+
+  scale_fill_gradient(na.value = "white", low="#711c91", high="#0abdc6", guide="colorbar")+
+  labs(title = "Relative ranking of the treatments assessed by surface under cumulative ranking curve area",
+       subtitle = "Corresponding author: Kexun Ma, Ling Li, Chunhui Liu, Lingling Zhou, Xueping Zhou",
+       y = "", x = "PBO – placebo, MTX – methotrexate, IFX – infliximab, ETN – etanercept, ADA – adalimumab, GOL – golimumab, TCZ – tocilizumab, ABT – abatacept, cDMARDs – traditional synthetic disease modifying antirheumatic drugs, 
+ACR – American College of Rheumatology, AEs – adverse events, SAEs – serious adverse events", fill ="Valores", caption = "DOI of the paper: https://doi.org/10.5114/aoms.2018.73714")+
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_text(face = "italic", size = 6, hjust = 0),
+        panel.border = element_blank(),
+        axis.text.x = element_text(size = 8),
+        axis.text = element_text (size = 8),
+        legend.title=element_text(size=8),
+        legend.text=element_text(size=6),
+        plot.title = element_text(hjust = 0),
+        plot.caption = element_text(color = "blue", face = "italic", size = 7))

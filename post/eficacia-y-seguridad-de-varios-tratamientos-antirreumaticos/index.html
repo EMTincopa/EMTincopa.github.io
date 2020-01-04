@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="EMT&#39;S Data Stories">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="//img/headataviz.jpg">
+    <meta property="twitter:image" content="//img/headataviz.jpg" />
+    
+
+    
+    <meta name="title" content="Eficacia y seguridad de varios tratamientos antirreumáticos" />
+    <meta property="og:title" content="Eficacia y seguridad de varios tratamientos antirreumáticos" />
+    <meta property="twitter:title" content="Eficacia y seguridad de varios tratamientos antirreumáticos" />
+    
+
+    
+    <meta name="description" content="Estos son algunos de los resultados del metaanálisis realizado por investigadores de la Nanjing University of Chinese Medicine - China. También agrego una pequeña descripción del proceso de creación del gráfico.">
+    <meta property="og:description" content="Estos son algunos de los resultados del metaanálisis realizado por investigadores de la Nanjing University of Chinese Medicine - China. También agrego una pequeña descripción del proceso de creación del gráfico." />
+    <meta property="twitter:description" content="Estos son algunos de los resultados del metaanálisis realizado por investigadores de la Nanjing University of Chinese Medicine - China. También agrego una pequeña descripción del proceso de creación del gráfico." />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="DataViz, El blog de EMTincopa, Storytelling with data, Data Visualization, Datos, Visualización de datos, Data Stories">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Eficacia y seguridad de varios tratamientos antirreumáticos-EMT&#39;s blog | Storytelling with data</title>
+
+    <link rel="canonical" href="/post/eficacia-y-seguridad-de-varios-tratamientos-antirreumaticos/">
+
+    <link rel="stylesheet" href="/css/iDisqus.min.css"/>
+	
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="/css/syntax.css">
+    
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+    
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    
+    <script src="/js/jquery.min.js"></script>
+    
+    
+    <script src="/js/bootstrap.min.js"></script>
+    
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/docco.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+
+</head>
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">EMT&#39;S Data Stories</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/categories/life">life</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/categories/stories">stories</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/categories/tips">tips</a>
+                    </li>
+                    
+                    
+		    
+                        <li><a href="/top/about/">ABOUT</a></li>
+                    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/content/post/tratamientos-antirreumaticos/ar_treatments.jpg')
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/rheumatoid-arthritis" title="Rheumatoid arthritis">
+                            Rheumatoid arthritis
+                        </a>
+                        
+                        <a class="tag" href="/tags/ar" title="AR">
+                            AR
+                        </a>
+                        
+                        <a class="tag" href="/tags/medicine" title="Medicine">
+                            Medicine
+                        </a>
+                        
+                        <a class="tag" href="/tags/treatments" title="Treatments">
+                            Treatments
+                        </a>
+                        
+                        <a class="tag" href="/tags/dataviz" title="Dataviz">
+                            Dataviz
+                        </a>
+                        
+                        <a class="tag" href="/tags/science" title="Science">
+                            Science
+                        </a>
+                        
+                        <a class="tag" href="/tags/r" title="R">
+                            R
+                        </a>
+                        
+                        <a class="tag" href="/tags/data" title="Data">
+                            Data
+                        </a>
+                        
+                        <a class="tag" href="/tags/adobe" title="Adobe">
+                            Adobe
+                        </a>
+                        
+                        <a class="tag" href="/tags/dataviz" title="Dataviz">
+                            Dataviz
+                        </a>
+                        
+                        <a class="tag" href="/tags/illustrator" title="Illustrator">
+                            Illustrator
+                        </a>
+                        
+                        <a class="tag" href="/tags/china" title="China">
+                            China
+                        </a>
+                        
+                    </div>
+                    <h1>Eficacia y seguridad de varios tratamientos antirreumáticos</h1>
+                    <h2 class="subheading">Comparación de 15 tratamientos para tratar la Artritis reumatoide</h2>
+                    <span class="meta">
+                        Posted by 
+                        
+                            EMTincopa
+                         
+                        on 
+                        Thursday, December 26, 2019
+                        
+                        
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/datatables-binding/datatables.js"></script>
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js"></script>
+<script src="/rmarkdown-libs/jszip/jszip.min.js"></script>
+<script src="/rmarkdown-libs/pdfmake/pdfmake.min.js"></script>
+<script src="/rmarkdown-libs/pdfmake/vfs_fonts.js"></script>
+<link href="/rmarkdown-libs/dt-ext-buttons/css/buttons.dataTables.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-ext-buttons/js/dataTables.buttons.min.js"></script>
+<script src="/rmarkdown-libs/dt-ext-buttons/js/buttons.flash.min.js"></script>
+<script src="/rmarkdown-libs/dt-ext-buttons/js/buttons.html5.min.js"></script>
+<script src="/rmarkdown-libs/dt-ext-buttons/js/buttons.colVis.min.js"></script>
+<script src="/rmarkdown-libs/dt-ext-buttons/js/buttons.print.min.js"></script>
+<link href="/rmarkdown-libs/dt-ext-colreorder/css/colReorder.dataTables.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-ext-colreorder/js/dataTables.colReorder.min.js"></script>
+<link href="/rmarkdown-libs/dt-ext-keytable/css/keyTable.dataTables.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-ext-keytable/js/dataTables.keyTable.min.js"></script>
+<link href="/rmarkdown-libs/dt-ext-fixedheader/css/fixedHeader.dataTables.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-ext-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<link href="/rmarkdown-libs/dt-ext-responsive/css/responsive.dataTables.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-ext-responsive/js/dataTables.responsive.min.js"></script>
+<link href="/rmarkdown-libs/dt-plugin-searchhighlight/source.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-plugin-searchhighlight/jquery.highlight.js"></script>
+<script src="/rmarkdown-libs/dt-plugin-searchhighlight/source.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+
+
+<p>La artritis reumatoide <a href="https://medlineplus.gov/spanish/rheumatoidarthritis.html">AR</a> es una enfermedad autoinmune crónica sistémica distribuida en todos los grupos raciales y étnicos, provoca rigidez, deformidad y daño en las articulaciones, generando empeoramiento de la condición física, una reducción de la calidad de vida, una disminución del empleo y un aumento de los gastos directos o indirectos.
+El siguiente gráfico muestra la eficacia y seguridad de 15 tratamientos distintos para pacientes con <strong>AR</strong> en base a los resultados del metaanálisis realizado por <em><a href="https://www.termedia.pl/Efficacy-and-safety-of-various-anti-rheumatic-treatments-for-patients-with-rheumatoid-arthritis-a-network-meta-analysis,19,31923,1,1.html">Kexun Ma, et al. (Marzo, 2017)</a></em>.
+Se utilizaron seis indicadores de resultado: tasa de respuesta del 20% del American College of Rheumatology (ACR20), ACR50, ACR70, remisión, eventos adversos (EA) y eventos adversos graves (SAE), para evaluar la eficacia y la seguridad de los diferentes tratamientos.</p>
+<div class="figure">
+<img src="tratamientos-antirreumaticos/AR_VERDE.png" alt="Eficacia y seguridad de 15 tratamientos Illustrator" />
+<p class="caption">Eficacia y seguridad de 15 tratamientos Illustrator</p>
+</div>
+<p>Las conclusiones del estudio muestran que el Certolizumab pegol (CZP) junto al Metotrexato (MTX) es la terapia farmacológica óptima porque tiene la clasificación más alta en resultados de eficacia y un riesgo relativamente bajo de eventos adversos. Al mismo tiempo, Tocilizumab (TCZ) junto con MTX se recomienda como alternativa al mostrar una mejor remisión en el dolor en comparación con otros tratamientos, también tuvo mejores resultados de eficacia. Abatacept (ABT) y cDMARD no se recomiendan debido a su baja eficacia (al igual que un mayor riesgo de Eventos adversos con cDMARD).
+Para encontrar precios de estos medicamentos en el Perú puedes revisar el <a href="http://observatorio.digemid.minsa.gob.pe/">Observatorio de precios del DIGEMID</a>.</p>
+<div id="creación-del-gráfico-en-r" class="section level3">
+<h3>Creación del gráfico en R</h3>
+<p>Para crear el gráfico anterior primero se trabajó con la información de la siguiente tabla obtenida del estudio:</p>
+<div id="htmlwidget-1" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"filter":"none","extensions":["Buttons","ColReorder","KeyTable","FixedHeader","Responsive"],"caption":"<caption style=\"caption-side:bottom; text-align:left;\">\n  Nota:\n  <em>Tabla V - Relative ranking of the treatments assessed by surface under cumulative ranking curve area.<\/em>\n<\/caption>","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"],["ABT","ABT + MTX","ADA","ADA + MTX","cDMARDs","CZP","CZP + MTX","ETN","ETN + MTX","GOL","GOL + MTX","IFX + MTX","PBO","TCZ","TCZ + MTX"],[0.108,0.51,0.392,0.554,0.108,0.818,0.833,0.359,0.634,0.303,0.594,0.547,0.023,0.532,0.685],[0.239,0.564,0.375,0.722,0.084,0.796,0.842,0.307,0.611,0.332,0.66,0.546,0.004,0.609,0.809],[0.2,0.605,0.326,0.62,0.089,0.882,0.751,0.358,0.597,0.332,0.561,0.511,0.005,0.47,0.693],[null,0.402,0.617,0.428,0.05,null,null,0.22,0.364,0.36,0.501,0.385,null,0.89,0.784],[-0.148,-0.549,-0.077,-0.606,-0.862,-0.099,-0.602,-0.295,-0.556,-0.747,-0.555,-0.466,-0.613,-0.352,-0.407],[-0.172,-0.852,-0.551,-0.693,-0.727,-0.051,-0.365,-0.356,-0.506,-0.567,-0.186,-0.637,-0.545,-0.346,-0.445]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Treatments<\/th>\n      <th>ACR20<\/th>\n      <th>ACR50<\/th>\n      <th>ACR70<\/th>\n      <th>Remission<\/th>\n      <th>AEs<\/th>\n      <th>SAEs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"search":{"regex":true,"caseInsensitive":false},"searchHighlight":true,"pageLenght":5,"autoWidth":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"colReorder":false,"keys":true,"fixedHeader":false,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5,6,7]},{"orderable":false,"targets":0}],"order":[],"orderClasses":false,"responsive":true}},"evals":[],"jsHooks":[]}</script>
+<p>La tabla original no tiene números negativos (el símbolo <strong>“-”</strong>), esto lo he agregado yo para facilitarme la creación de la gradiente de color diferenciada entre los resultados de eficacia y seguridad, que se generará en el gráfico final.</p>
+<p>A continuación el código del gráfico:</p>
+<pre class="r"><code>RAedited&lt;-gather(RA, key = &quot;INDICADORES&quot;, value = &quot;VALORES&quot;, 2:7)
+RAedited$Treatments = forcats::fct_rev(factor(RAedited$Treatments))
+
+RAedited %&gt;%
+  mutate(INDICADORES = factor(INDICADORES, levels=c(&quot;ACR20&quot;, &quot;ACR50&quot;, &quot;ACR70&quot;, &quot;Remission&quot;, &quot;AEs&quot;, &quot;SAEs&quot;)))%&gt;%
+  ggplot(aes(x = INDICADORES, y = Treatments, fill = VALORES)) + geom_tile()+
+  geom_text(aes(label = round(VALORES, 2)))+
+  scale_fill_gradient(na.value = &quot;white&quot;, low=&quot;#bd00ff&quot;, high=&quot;#00ff9f&quot;, guide=&quot;colorbar&quot;)+
+  labs(title = &quot;Relative ranking of the treatments assessed by surface 
+under cumulative ranking curve area&quot;,
+       subtitle = &quot;Corresponding author: Kexun Ma, Ling Li, Chunhui Liu, Lingling Zhou, Xueping Zhou&quot;,
+       y = &quot;&quot;, x = &quot;&quot;)+
+  theme(axis.title.y = element_blank(),
+        axis.title.x = element_text(face = &quot;italic&quot;, size = 6, hjust = 0),
+        panel.border = element_blank(),
+        axis.text.x = element_text(size = 8),
+        axis.text = element_text (size = 8),
+        legend.title=element_text(size=8),
+        legend.text=element_text(size=6),
+        plot.title = element_text(hjust = 0),
+        plot.caption = element_text(color = &quot;blue&quot;, face = &quot;italic&quot;, size = 7))</code></pre>
+<p>Tener en cuenta que si no se utiliza la línea <code>mutate(x = factor(x, levels=c()))</code>para ordenar los indicadores de resultado, automáticamente R los va a ordenar en orden alfabético. En mi caso quería tener al final AEs y SAEs juntos.</p>
+<p><img src="/post/eficacia-y-seguridad-de-varios-tratamientos-antirreumaticos_files/figure-html/unnamed-chunk-3-1.svg" width="672" /></p>
+<p>El gráfico resultante lo exporto como imagen <strong>pdf</strong> y lo edito en <strong>Adobe Illustrator</strong>, para mas tarde guardarlo en formato <strong>png</strong> y en dimensiones equivalentes a 1080 px x 1080 px, las cuales son adecuadas para imágenes que se subirán a instagram (<a href="https://www.instagram.com/emtincopa/">EMtincopa</a>).
+
+
+<blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/B63Ot5Qgy77/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/B63Ot5Qgy77/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div></a> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/B63Ot5Qgy77/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">La artritis reumatoide (AR) es una enfermedad autoinmune crónica sistémica distribuida en todos los grupos raciales y étnicos, provoca rigidez, deformidad y daño en las articulaciones, generando empeoramiento de la condición física, una reducción de la calidad de vida, una disminución del empleo y un aumento de los gastos directos o indirectos. El siguiente gráfico muestra la eficacia y seguridad de 15 tratamientos distintos para pacientes con AR en base a los resultados del metaanálisis realizado por Kexun Ma, et al. (Marzo, 2017). Se utilizaron seis indicadores de resultado: tasa de respuesta del 20% del American College of Rheumatology (ACR20), ACR50, ACR70, remisión, eventos adversos (EA) y eventos adversos graves (SAE), para evaluar la eficacia y la seguridad de los diferentes tratamientos. Las conclusiones del estudio muestran que el Certolizumab pegol (CZP) junto al Metotrexato (MTX) es la terapia farmacológica óptima porque tiene la clasificación más alta en resultados de eficacia y un riesgo relativamente bajo de eventos adversos. Al mismo tiempo, Tocilizumab (TCZ) junto con MTX se recomienda como alternativa al mostrar una mejor remisión en el dolor en comparación con otros tratamientos, también tuvo mejores resultados de eficacia. Abatacept (ABT) y cDMARD no se recomiendan debido a su baja eficacia (al igual que un mayor riesgo de Eventos adversos con cDMARD). Para encontrar precios de estos medicamentos en el Perú puedes revisar el Observatorio de precios del DIGEMID (observatorio.digemid.minsa.gob.pe/). ... #data #dataviz #datavisualization #charts #graphs #datavis #datavisualisation #infographic #infographics #design #datadesign #media #infodesign #informationdesign #bi #tech #health #science #healthscience #rheumatology #rheumatoidarthritis #arthritis #arthritisawareness #artritisreumatoide #medicine #medicinestudent #medicina #salud #ciencia #visualizaciondedatos</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by <a href="https://www.instagram.com/emtincopa/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> Enrique🖥️🎨</a> (@emtincopa) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2020-01-03T15:43:56+00:00">Jan 3, 2020 at 7:43am PST</time></p></div></blockquote>
+<script async src="//www.instagram.com/embed.js"></script></p>
+<p><em>Bueno, esto ha sido todo por hoy, gracias por visitar el blog. Durante estas primeras semanas de Enero estaré creando una galería donde reuniré todos los gráficos que voy desarrollando, espero quede genial.</em>
+<em>La información mostrada en este post ha sido obtenida de la AMS - Archives of Medical Science <a href="https://www.termedia.pl/en">Hacer clic aquí</a>.</em></p>
+<p><strong>Referencia:</strong></p>
+<ul>
+<li><em>Ma K, Li L, Liu C, Zhou L, Zhou X. Efficacy and safety of various anti-rheumatic treatments for patients with rheumatoid arthritis: a network meta-analysis. Archives of Medical Science. 2018;15(1):33-54. <a href="doi:10.5114/aoms.2018.73714" class="uri">doi:10.5114/aoms.2018.73714</a>.</em></li>
+</ul>
+</div>
+
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/carreras-y-sueldos-en-peru/" data-toggle="tooltip" data-placement="top" title="¿Cuáles son las profesiones mejor pagadas en el Perú?">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+
+                
+<div id="disqus-comment"></div>
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-emtincopa-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+            </div>
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/city" title="city">
+                            city
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/data" title="data">
+                            data
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/dataviz" title="dataviz">
+                            dataviz
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/lima" title="lima">
+                            lima
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/per%C3%BA" title="perú">
+                            perú
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/plot" title="plot">
+                            plot
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/r" title="r">
+                            r
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/selftaught" title="selftaught">
+                            selftaught
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/tools" title="tools">
+                            tools
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+                <section>
+                    <hr>
+                    <h5>FRIENDS</h5>
+                    <ul class="list-inline">
+                        
+                    </ul>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                    
+                    <li>
+                        <a href="mailto:emtincopa@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/EMTincopa">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+
+                    
+                    <li>
+                        <a target="_blank" href="https://www.facebook.com/enrique.tincopa">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+
+		    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/EMTincopa">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/enrique-mendoza-tincopa-4b2a14173/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; EMT&#39;S Data Stories 2020
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-131186631-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>
