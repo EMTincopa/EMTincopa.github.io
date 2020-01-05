@@ -230,7 +230,7 @@
                             EMTincopa
                          
                         on 
-                        Thursday, December 26, 2019
+                        Friday, January 3, 2020
                         
                         
                         
@@ -291,14 +291,14 @@
 El siguiente gráfico muestra la eficacia y seguridad de 15 tratamientos distintos para pacientes con <strong>AR</strong> en base a los resultados del metaanálisis realizado por <em><a href="https://www.termedia.pl/Efficacy-and-safety-of-various-anti-rheumatic-treatments-for-patients-with-rheumatoid-arthritis-a-network-meta-analysis,19,31923,1,1.html">Kexun Ma, et al. (Marzo, 2017)</a></em>.
 Se utilizaron seis indicadores de resultado: tasa de respuesta del 20% del American College of Rheumatology (ACR20), ACR50, ACR70, remisión, eventos adversos (EA) y eventos adversos graves (SAE), para evaluar la eficacia y la seguridad de los diferentes tratamientos.</p>
 <div class="figure">
-<img src="\content\post\tratamientos-antirreumaticos\AR_VERDE.png" alt="Eficacia y seguridad de 15 tratamientos Illustrator" />
-<p class="caption">Eficacia y seguridad de 15 tratamientos Illustrator</p>
+<img src="\content\post\tratamientos-antirreumaticos\AR_VERDE.png" alt="Eficacia y seguridad de 15 tratamientos" />
+<p class="caption">Eficacia y seguridad de 15 tratamientos</p>
 </div>
 <p>Las conclusiones del estudio muestran que el Certolizumab pegol (CZP) junto al Metotrexato (MTX) es la terapia farmacológica óptima porque tiene la clasificación más alta en resultados de eficacia y un riesgo relativamente bajo de eventos adversos. Al mismo tiempo, Tocilizumab (TCZ) junto con MTX se recomienda como alternativa al mostrar una mejor remisión en el dolor en comparación con otros tratamientos, también tuvo mejores resultados de eficacia. Abatacept (ABT) y cDMARD no se recomiendan debido a su baja eficacia (al igual que un mayor riesgo de Eventos adversos con cDMARD).
 Para encontrar precios de estos medicamentos en el Perú puedes revisar el <a href="http://observatorio.digemid.minsa.gob.pe/">Observatorio de precios del DIGEMID</a>.</p>
 <div id="creación-del-gráfico-en-r" class="section level3">
 <h3>Creación del gráfico en R</h3>
-<p>Para crear el gráfico anterior primero se trabajó con la información de la siguiente tabla obtenida del estudio:</p>
+<p>Para crear el gráfico anterior primero se trabajó con la información de la siguiente tabla sacada del estudio:</p>
 <div id="htmlwidget-1" style="width:100%;height:auto;" class="datatables html-widget"></div>
 <script type="application/json" data-for="htmlwidget-1">{"x":{"filter":"none","extensions":["Buttons","ColReorder","KeyTable","FixedHeader","Responsive"],"caption":"<caption style=\"caption-side:bottom; text-align:left;\">\n  Nota:\n  <em>Tabla V - Relative ranking of the treatments assessed by surface under cumulative ranking curve area.<\/em>\n<\/caption>","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15"],["ABT","ABT + MTX","ADA","ADA + MTX","cDMARDs","CZP","CZP + MTX","ETN","ETN + MTX","GOL","GOL + MTX","IFX + MTX","PBO","TCZ","TCZ + MTX"],[0.108,0.51,0.392,0.554,0.108,0.818,0.833,0.359,0.634,0.303,0.594,0.547,0.023,0.532,0.685],[0.239,0.564,0.375,0.722,0.084,0.796,0.842,0.307,0.611,0.332,0.66,0.546,0.004,0.609,0.809],[0.2,0.605,0.326,0.62,0.089,0.882,0.751,0.358,0.597,0.332,0.561,0.511,0.005,0.47,0.693],[null,0.402,0.617,0.428,0.05,null,null,0.22,0.364,0.36,0.501,0.385,null,0.89,0.784],[-0.148,-0.549,-0.077,-0.606,-0.862,-0.099,-0.602,-0.295,-0.556,-0.747,-0.555,-0.466,-0.613,-0.352,-0.407],[-0.172,-0.852,-0.551,-0.693,-0.727,-0.051,-0.365,-0.356,-0.506,-0.567,-0.186,-0.637,-0.545,-0.346,-0.445]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Treatments<\/th>\n      <th>ACR20<\/th>\n      <th>ACR50<\/th>\n      <th>ACR70<\/th>\n      <th>Remission<\/th>\n      <th>AEs<\/th>\n      <th>SAEs<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"search":{"regex":true,"caseInsensitive":false},"searchHighlight":true,"pageLenght":5,"autoWidth":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"colReorder":false,"keys":true,"fixedHeader":false,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5,6,7]},{"orderable":false,"targets":0}],"order":[],"orderClasses":false,"responsive":true}},"evals":[],"jsHooks":[]}</script>
 <p>La tabla original no tiene números negativos (el símbolo <strong>“-”</strong>), esto lo he agregado yo para facilitarme la creación de la gradiente de color diferenciada entre los resultados de eficacia y seguridad, que se generará en el gráfico final.</p>
