@@ -3,7 +3,7 @@ title: "Eficacia y seguridad de varios tratamientos antirreumáticos"
 subtitle: "Comparación de 15 tratamientos para tratar la Artritis reumatoide"
 author: "EMTincopa"
 description: "Estos son algunos de los resultados del metaanálisis realizado por investigadores de la Nanjing University of Chinese Medicine - China. También agrego una pequeña descripción del proceso de creación del gráfico."
-date: 2019-12-26
+date: 2020-01-03
 image: /content/post/tratamientos-antirreumaticos/ar_treatments.jpg
 tags: ["Rheumatoid arthritis", "AR", "Medicine", "Treatments", "Dataviz", "Science", "R", "Data", "Adobe", "Dataviz", "Illustrator", "China"]
 categories:  ["Tips"]
@@ -15,7 +15,7 @@ La artritis reumatoide [AR](https://medlineplus.gov/spanish/rheumatoidarthritis.
 El siguiente gráfico muestra la eficacia y seguridad de 15 tratamientos distintos para pacientes con **AR** en base a los resultados del metaanálisis realizado por *[Kexun Ma, et al. (Marzo, 2017)](https://www.termedia.pl/Efficacy-and-safety-of-various-anti-rheumatic-treatments-for-patients-with-rheumatoid-arthritis-a-network-meta-analysis,19,31923,1,1.html)*. 
 Se utilizaron seis indicadores de resultado: tasa de respuesta del 20% del American College of Rheumatology (ACR20), ACR50, ACR70, remisión, eventos adversos (EA) y eventos adversos graves (SAE), para evaluar la eficacia y la seguridad de los diferentes tratamientos.
 
-![Eficacia y seguridad de 15 tratamientos Illustrator](\content\post\tratamientos-antirreumaticos\AR_VERDE.png)
+![Eficacia y seguridad de 15 tratamientos](\content\post\tratamientos-antirreumaticos\AR_VERDE.png)
 
 Las conclusiones del estudio muestran que el Certolizumab pegol (CZP) junto al Metotrexato (MTX) es la terapia farmacológica óptima porque tiene la clasificación más alta en resultados de eficacia y un riesgo relativamente bajo de eventos adversos. Al mismo tiempo, Tocilizumab (TCZ) junto con MTX se recomienda como alternativa al mostrar una mejor remisión en el dolor en comparación con otros tratamientos, también tuvo mejores resultados de eficacia. Abatacept (ABT) y cDMARD no se recomiendan debido a su baja eficacia (al igual que un mayor riesgo de Eventos adversos con cDMARD).
 Para encontrar precios de estos medicamentos en el Perú puedes revisar el [Observatorio de precios del DIGEMID](http://observatorio.digemid.minsa.gob.pe/).
@@ -45,7 +45,7 @@ colnames(RA) <- make.names(colnames(RA))
 
 ### Creación del gráfico en R
 
-Para crear el gráfico anterior primero se trabajó con la información de la siguiente tabla obtenida del estudio:
+Para crear el gráfico anterior primero se trabajó con la información de la siguiente tabla sacada del estudio:
 
 ```{r, warning=F, message=F, echo=FALSE}
 
