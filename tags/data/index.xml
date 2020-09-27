@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Data on EMT&#39;S Data Stories</title>
+    <title>Data on Dataviz Adventure</title>
     <link>/tags/data/</link>
-    <description>Recent content in Data on EMT&#39;S Data Stories</description>
+    <description>Recent content in Data on Dataviz Adventure</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018 EMT&#39;S Data stories</copyright>
+    <copyright>&amp;copy; 2018 Dataviz Adventure</copyright>
     <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/tags/data/index.xml" rel="self" type="application/rss+xml" />
@@ -47,17 +47,6 @@
       <guid>/2018/12/27/visualizaci%C3%B3n-de-datos-primeros-pasos/</guid>
       <description>Hola!
 De seguro te habrás preguntado de que va todo esto de la visualización de datos y si es necesario aprender algún lenguaje de programación y cuál sería el más apropiado para comenzar. En mi experiencia puedo decirte que lenguajes de programación para visualizar datos hay varios, siendo R el que yo utilizo hasta el momento. Pero veamos algunas cosas que debes tener en cuenta sobre la visualización de datos y otras opciones a las que podrías recurrir.</description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>/post/about-me-emtincopa/</link>
-      <pubDate>Tue, 18 Dec 2018 15:58:07 -0500</pubDate>
-      
-      <guid>/post/about-me-emtincopa/</guid>
-      <description>Acerca de mi - Hola, soy EMTincopa! Un entusiasta de los temas en Salud, el DataViz, la Investigación de Operaciones y de cada cosa que lo emociona.
-Actualmente me encuentro en el constante autoaprendizaje de la gestión de data y visualización de la misma, por medio de lenguajes de programación como R y otras herramientas de diseño (Flourish, Power BI, Tableau, etc.).
-Puedes seguirme en mis redes sociales para estar al tanto de mis últimos proyectos con data pública o de cualquier otra publicación que se me haya ocurrido hacer 😄</description>
     </item>
     
   </channel>

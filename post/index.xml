@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on EMT&#39;S Data Stories</title>
+    <title>Posts on Dataviz Adventure</title>
     <link>/post/</link>
-    <description>Recent content in Posts on EMT&#39;S Data Stories</description>
+    <description>Recent content in Posts on Dataviz Adventure</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018 EMT&#39;S Data stories</copyright>
+    <copyright>&amp;copy; 2018 Dataviz Adventure</copyright>
     <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
@@ -40,16 +40,6 @@
     </item>
     
     <item>
-      <title>Buscando juegos analógicos</title>
-      <link>/post/juegos-anal%C3%B3gicos-en-lima/</link>
-      <pubDate>Sat, 12 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/juegos-anal%C3%B3gicos-en-lima/</guid>
-      <description>Desde hace mucho tiempo he sido fanático de los juegos de mesa, y no solo de los juegos de mesa más conocidos en la historia como el Ajedréz, Monopolio, Dominó, Jenga y etc., sino también de los juegos más modernos por su potencial pedagógico y de disfrute que proporcionan en cualquier lugar donde los juegues.
-Este post resume mis 3 días de búsqueda de los lugares en Lima donde poder disfrutar con amigos y familiares estos increibles juegos de mesa.</description>
-    </item>
-    
-    <item>
       <title>El servicio de internet móvil en Lima</title>
       <link>/post/el-servicio-de-internet-movil-en-lima/</link>
       <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
@@ -67,7 +57,7 @@ Este post resume mis 3 días de búsqueda de los lugares en Lima donde poder dis
       <guid>/post/nuevas-metas/</guid>
       <description>HEY HEY HEY!
 Este será un post corto y continuaré con lo que compartí en mi cuenta de Twitter hace pocos días.Es tan frustrante tener todo para aprender: ganas, capacidad, #curiosidad, pero carecer de dinero. Perdí una #beca del 50% en #businessanalytics y #BigData que me había otorgado la @OEA_oficial por falta de #financiamiento. Aún así, seguiré adelante como el #autodidacta que soy🤓
-&amp;mdash; Enrique💻📊🎨 (@EMTincopa) June 18, 2019  En estos últimos meses he estado trabajando en el puesto de Medical Information en la farmacéutica Roche Perú, actividad que junto a mis estudios en pregrado no me permitió continuar con mi objetivo inicial: hacer crecer este blog y compartirles todo lo que iba aprendiendo sobre la Visualización de Datos.</description>
+&amp;mdash; Enrique💻📊🎨🇵🇪 (@EMTincopa) June 18, 2019  En estos últimos meses he estado trabajando en el puesto de Medical Information en la farmacéutica Roche Perú, actividad que junto a mis estudios en pregrado no me permitió continuar con mi objetivo inicial: hacer crecer este blog y compartirles todo lo que iba aprendiendo sobre la Visualización de Datos.</description>
     </item>
     
     <item>
@@ -78,17 +68,6 @@ Este será un post corto y continuaré con lo que compartí en mi cuenta de Twit
       <guid>/2018/12/27/visualizaci%C3%B3n-de-datos-primeros-pasos/</guid>
       <description>Hola!
 De seguro te habrás preguntado de que va todo esto de la visualización de datos y si es necesario aprender algún lenguaje de programación y cuál sería el más apropiado para comenzar. En mi experiencia puedo decirte que lenguajes de programación para visualizar datos hay varios, siendo R el que yo utilizo hasta el momento. Pero veamos algunas cosas que debes tener en cuenta sobre la visualización de datos y otras opciones a las que podrías recurrir.</description>
-    </item>
-    
-    <item>
-      <title>About Me</title>
-      <link>/post/about-me-emtincopa/</link>
-      <pubDate>Tue, 18 Dec 2018 15:58:07 -0500</pubDate>
-      
-      <guid>/post/about-me-emtincopa/</guid>
-      <description>Acerca de mi - Hola, soy EMTincopa! Un entusiasta de los temas en Salud, el DataViz, la Investigación de Operaciones y de cada cosa que lo emociona.
-Actualmente me encuentro en el constante autoaprendizaje de la gestión de data y visualización de la misma, por medio de lenguajes de programación como R y otras herramientas de diseño (Flourish, Power BI, Tableau, etc.).
-Puedes seguirme en mis redes sociales para estar al tanto de mis últimos proyectos con data pública o de cualquier otra publicación que se me haya ocurrido hacer 😄</description>
     </item>
     
   </channel>

@@ -111,8 +111,9 @@ RAedited$Treatments = forcats::fct_rev(factor(RAedited$Treatments))
 RAedited %>%
   mutate(INDICADORES = factor(INDICADORES, levels=c("ACR20", "ACR50", "ACR70", "Remission", "AEs", "SAEs")))%>%
   ggplot(aes(x = INDICADORES, y = Treatments, fill = VALORES)) + geom_tile()+
+  geom_vline(xintercept = 4.5, color = "white", size = 2)+
   geom_text(aes(label = round(VALORES, 2)))+
-  scale_fill_gradient(na.value = "white", low="#bd00ff", high="#00ff9f", guide="colorbar")+
+  scale_fill_gradient2(na.value = "white", low="#bd00ff", high="#00ff9f", guide="colorbar", mid = "lightgray")+
   labs(title = "Relative ranking of the treatments assessed by surface 
 under cumulative ranking curve area",
        subtitle = "Corresponding author: Kexun Ma, Ling Li, Chunhui Liu, Lingling Zhou, Xueping Zhou",
@@ -120,10 +121,11 @@ under cumulative ranking curve area",
   theme(axis.title.y = element_blank(),
         axis.title.x = element_text(face = "italic", size = 6, hjust = 0),
         panel.border = element_blank(),
+        panel.background = element_blank(),
         axis.text.x = element_text(size = 8),
+        axis.text.y = element_text(size = 10, face = "bold"),
         axis.text = element_text (size = 8),
-        legend.title=element_text(size=8),
-        legend.text=element_text(size=6),
+        legend.title=element_blank(),
         plot.title = element_text(hjust = 0),
         plot.caption = element_text(color = "blue", face = "italic", size = 7))
 ```

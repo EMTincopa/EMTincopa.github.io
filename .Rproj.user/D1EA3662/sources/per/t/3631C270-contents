@@ -1,7 +1,7 @@
 baseURL = "https://emtincopa.github.io/"
 languageCode = "en-us"
-title = "EMT'S Data Stories"
-copyright = "&copy; 2018 EMT'S Data stories"
+title = "Dataviz Adventure"
+copyright = "&copy; 2018 Dataviz Adventure"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^<sup>"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_caches$"]
@@ -22,9 +22,9 @@ home = ["HTML", "RSS", "Algolia"]
 
 [params]
   header_image = "img/headataviz.jpg"
-  SEOTitle = "EMT's blog | Storytelling with data"
+  SEOTitle = "Dataviz Adventure | Adventures with data"
   description = "El blog de un entusiasta de los datos | Storytelling and Data Visualization"
-  keyword = "DataViz, El blog de EMTincopa, Storytelling with data, Data Visualization, Datos, Visualización de datos, Data Stories"
+  keyword = "DataViz, Dataviz Adventure, Storytelling with data, Data Visualization, Datos, Visualización de datos, Data Stories"
   slogan = "La visualización de datos como medio expresivo para narrar lo que descubrimos."
 
   image_404 = "img/headupdating.gif"
@@ -50,7 +50,7 @@ home = ["HTML", "RSS", "Algolia"]
   featured_tags = true
   featured_condition_size = 1
 
-  friends = true
+  friends = false
   bookmarks = true
   about_me = true
   
@@ -61,7 +61,7 @@ home = ["HTML", "RSS", "Algolia"]
   [params.social]
   rss           = false 
   email        = "emtincopa@gmail.com"
-  facebook      = "https://www.facebook.com/enrique.tincopa"
+  #facebook      = "https://www.facebook.com/enrique.tincopa"
   twitter       = "https://twitter.com/EMTincopa"
   linkedin      = "https://www.linkedin.com/in/enrique-mendoza-tincopa-4b2a14173/"
   github        = "https://github.com/EMTincopa"
