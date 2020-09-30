@@ -22,7 +22,7 @@ home = ["HTML", "RSS", "Algolia"]
 
 [params]
   header_image = "img/headataviz.jpg"
-  SEOTitle = "Dataviz Adventure | Adventures with data"
+  SEOTitle = "Storytelling & adventures with data"
   description = "El blog de un entusiasta de los datos | Storytelling and Data Visualization"
   keyword = "DataViz, Dataviz Adventure, Storytelling with data, Data Visualization, Datos, Visualización de datos, Data Stories"
   slogan = "La visualización de datos como medio expresivo para narrar lo que descubrimos."
@@ -45,7 +45,7 @@ home = ["HTML", "RSS", "Algolia"]
   
   # Sidebar settings
   sidebar_about_description = "Entusiasta de los datos, el DataViz, la Investigación Operativa y de cada cosa que lo emociona."
-  sidebar_avatar = "img/me-emtincopa.jpg"      # use absolute URL, seeing it's used in both `/` and `/about/`
+  sidebar_avatar = "img/me-emtincopa.png"      # use absolute URL, seeing it's used in both `/` and `/about/`
 
   featured_tags = true
   featured_condition_size = 1
