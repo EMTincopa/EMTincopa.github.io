@@ -22,29 +22,30 @@ home = ["HTML", "RSS", "Algolia"]
 
 [params]
   header_image = "img/headataviz.png"
-  SEOTitle = " Storytelling & adventures with data"
-  description = "El blog de un entusiasta de los datos | Storytelling and Data Visualization"
-  keyword = "DataViz, Dataviz Adventure, Storytelling with data, Data Visualization, Datos, Visualización de datos, Data Stories"
-  slogan = "La visualización de datos como medio expresivo para narrar lo que descubrimos."
+  SEOTitle = "Data visualization & information design | E.Mendoza"
+  description = "Data visualization & information designer. Following the goal to save and change lives with graphics."
+  keyword = "DataViz, Dataviz Adventure, Storytelling with data, Data Visualization, Data, Datos, Visualización de datos, Desig, Information design"
+  slogan = "Data visualization as an expressive medium to narrate what we discover."
 
   image_404 = "img/headupdating.gif"
-  title_404 = "Te encuentras lejos de casa :("
+  title_404 = "You are far from home :("
   
   
   # leancloud storage for page view counter
   page_view_conter = false
   leancloud_app_id = ""
   leancloud_app_key = ""
+  omit_categories = false
   
   # algolia site search
-  algolia_search = false 
+  algolia_search = true 
   algolia_appId = ""
   algolia_indexName = ""
   algolia_apiKey = ""
   
   
   # Sidebar settings
-  sidebar_about_description = "Aficionado al diseño de datos e información. ¡Estoy en mi propia aventura para convertirme en un experto en Dataviz!"
+  sidebar_about_description = "E. Mendoza | Enthusiast of data & information design. I'm on my own adventure to become an expert in dataviz!"
   sidebar_avatar = "img/me-emtincopa.png"      # use absolute URL, seeing it's used in both `/` and `/about/`
 
   featured_tags = true
@@ -57,6 +58,9 @@ home = ["HTML", "RSS", "Algolia"]
   # Highlight.js theme
   # demo: https://highlightjs.org/static/demo/
   #highlightjs = "docco"
+  
+  [markup.goldmark.renderer]
+  unsafe= true
   
   [params.social]
   rss           = false 
@@ -75,9 +79,6 @@ home = ["HTML", "RSS", "Algolia"]
   title = "Quick-R"
   href =  "https://www.statmethods.net/"
   [[params.bookmark_link]]
-  title = "Inzight"
-  href = "https://www.stat.auckland.ac.nz/~wild/iNZight/"
-  [[params.bookmark_link]]
   title =  "Pexels"
   href = "https://www.pexels.com/"
   [[params.bookmark_link]]
@@ -89,35 +90,28 @@ home = ["HTML", "RSS", "Algolia"]
   [[params.bookmark_link]]
   title = "Unsplash"
   href = "https://unsplash.com"
-  [[params.bookmark_link]]
-  title = "Infogram"
-  href = "https://infogram.com/"
-  [[params.bookmark_link]]
-  title = "Canva"
-  href = "https://www.canva.com/"
-  [[params.bookmark_link]]
-  title = "Tiny png"
-  href = "https://tinypng.com/"
   
   
   [[params.addtional_menus]]
   title =  "ABOUT"
   href = "/top/about/"
-
+  [[params.addtional_menus]]
+  title =  "DASHBOARDS"
+  href = "/top/dashboards/"
 
 [outputFormats.Algolia]
-baseName = "algolia"
-isPlainText = true
-mediaType = "application/json"
-notAlternative = true
+  baseName = "algolia"
+  isPlainText = true
+  mediaType = "application/json"
+  notAlternative = true
 
-[params.algolia]
-vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
-params = ["categories", "tags"]
+  [params.algolia]
+  vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
+  params = ["categories", "tags"]
 
-[markup]
-  [markup.tableOfContents]
-    endLevel = 2
-    startLevel = 1
-  [markup.highlight]
-    style = "dracula"
+  [markup]
+    [markup.tableOfContents]
+      endLevel = 2
+      startLevel = 1
+    [markup.highlight]
+      style = "dracula"
