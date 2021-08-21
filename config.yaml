@@ -10,7 +10,7 @@ googleAnalytics: 'UA-131186631-1'
 preserveTaxonomyNames: yes
 paginate: 6
 hasCJKLanguage: yes
-publishDir: '../EMTincopa.github.io'
+publishDir: ../EMTincopa.github.io
 outputs:
   home:
     - HTML
