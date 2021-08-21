@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dataviz Adventure </title>
+    <link>/</link>
+    <description>Recent content on Dataviz Adventure </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2020 Dataviz Adventure</copyright>
+    <lastBuildDate>Fri, 03 Jan 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Eficacia y seguridad de varios tratamientos antirreumáticos</title>
+      <link>/post/eficacia-y-seguridad-de-varios-tratamientos-antirreumaticos/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/post/eficacia-y-seguridad-de-varios-tratamientos-antirreumaticos/</guid>
+      <description>La artritis reumatoide AR es una enfermedad autoinmune crónica sistémica distribuida en todos los grupos raciales y étnicos, provoca rigidez, deformidad y daño en las articulaciones, generando empeoramiento de la condición física, una reducción de la calidad de vida, una disminución del empleo y un aumento de los gastos directos o indirectos.</description>
+    </item>
+    
+    <item>
+      <title>¿Cuáles son las profesiones mejor pagadas en el Perú?</title>
+      <link>/post/carreras-y-sueldos-en-peru/</link>
+      <pubDate>Thu, 26 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/carreras-y-sueldos-en-peru/</guid>
+      <description>En la mayoría de los casos, a mi parecer, la decisión más importante que debe tomar un adolescente a partir de los 16 años (he visto casos de menor y mayor edad) es la de decidir qué carrera cursar por aproximadamente 5 años (3 años en el caso de escoger un instituto técnico).</description>
+    </item>
+    
+    <item>
+      <title>Inseguridad en el Perú</title>
+      <link>/post/seguridad-ciudadana-en-peru/</link>
+      <pubDate>Fri, 25 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/seguridad-ciudadana-en-peru/</guid>
+      <description>En el Perú nos encontramos en una época de mucha inseguridad y violencia que, en el sentir de la población, nos da la impresión de estar empeorando cada día.</description>
+    </item>
+    
+    <item>
+      <title>El servicio de internet móvil en Lima</title>
+      <link>/post/el-servicio-de-internet-movil-en-lima/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/el-servicio-de-internet-movil-en-lima/</guid>
+      <description>En agosto del 2018 OSIPTEL, ente regulador de telecomunicaciones en Perú, lanzó los resultados de la medición de velocidades 3G y 4G por distrito que realizó en la ciudad de Lima.
+#RankingCalidadMóvil Conoce el ranking de velocidades 3G y 4G por distrito. Para ver la lista de todos los distritos, así como todos los resultados de la medición, puedes descargar el resumen en el siguiente enlace: https://t.</description>
+    </item>
+    
+    <item>
+      <title>Nuevas metas</title>
+      <link>/post/nuevas-metas/</link>
+      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/nuevas-metas/</guid>
+      <description>HEY HEY HEY!
+Este será un post corto y continuaré con lo que compartí en mi cuenta de Twitter hace pocos días.Es tan frustrante tener todo para aprender: ganas, capacidad, #curiosidad, pero carecer de dinero. Perdí una #beca del 50% en #businessanalytics y #BigData que me había otorgado la @OEA_oficial por falta de #financiamiento. Aún así, seguiré adelante como el #autodidacta que soy🤓
+&amp;mdash; Enrique💻📊🎨🇵🇪 (@EMTincopa) June 18, 2019  En estos últimos meses he estado trabajando en el puesto de Medical Information en la farmacéutica Roche Perú, actividad que junto a mis estudios en pregrado no me permitió continuar con mi objetivo inicial: hacer crecer este blog y compartirles todo lo que iba aprendiendo sobre la Visualización de Datos.</description>
+    </item>
+    
+    <item>
+      <title>Visualización de Datos</title>
+      <link>/2018/12/27/visualizaci%C3%B3n-de-datos-primeros-pasos/</link>
+      <pubDate>Thu, 27 Dec 2018 00:58:19 -0500</pubDate>
+      
+      <guid>/2018/12/27/visualizaci%C3%B3n-de-datos-primeros-pasos/</guid>
+      <description>Hola!
+De seguro te habrás preguntado de que va todo esto de la visualización de datos y si es necesario aprender algún lenguaje de programación y cuál sería el más apropiado para comenzar. En mi experiencia puedo decirte que lenguajes de programación para visualizar datos hay varios, siendo R el que yo utilizo hasta el momento. Pero veamos algunas cosas que debes tener en cuenta sobre la visualización de datos y otras opciones a las que podrías recurrir.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/top/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/top/about/</guid>
+      <description>about.utf8.md/*! jQuery v1.11.3 | (c) 2005, 2015 jQuery Foundation, Inc. | jquery.org/license */!function(a,b){&#34;object&#34;==typeof module&amp;&amp;&#34;object&#34;==typeof module.exports?module.exports=a.document?b(a,!0):function(a){if(!a.document)throw new Error(&#34;jQuery requires a window with a document&#34;);return b(a)}:b(a)}(&#34;undefined&#34;!=typeof window?window:this,function(a,b){var c=[],d=c.slice,e=c.concat,f=c.push,g=c.indexOf,h={},i=h.toString,j=h.hasOwnProperty,k={},l=&#34;1.11.3&#34;,m=function(a,b){return new m.fn.init(a,b)},n=/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g,o=/^-ms-/,p=/-([\da-z])/gi,q=function(a,b){return b.toUpperCase()};m.fn=m.prototype={jquery:l,constructor:m,selector:&#34;&#34;,length:0,toArray:function(){return d.call(this)},get:function(a){return null!=a?0a?this[a+this.length]:this[a]:d.call(this)},pushStack:function(a){var b=m.merge(this.constructor(),a);return b.prevObject=this,b.context=this.context,b},each:function(a,b){return m.each(this,a,b)},map:function(a){return this.pushStack(m.map(this,function(b,c){return a.call(b,c,b)}))},slice:function(){return this.pushStack(d.apply(this,arguments))},first:function(){return this.eq(0)},last:function(){return this.eq(-1)},eq:function(a){var b=this.length,c=+a+(0a?b:0);return this.pushStack(c=0&amp;&amp;bc?[this[c]]:[])},end:function(){return this.prevObject||this.constructor(null)},push:f,sort:c.sort,splice:c.splice},m.extend=m.fn.extend=function(){var a,b,c,d,e,f,g=arguments[0]||{},h=1,i=arguments.length,j=!1;for(&#34;boolean&#34;==typeof g&amp;&amp;(j=g,g=arguments[h]||{},h++),&#34;object&#34;==typeof g||m.isFunction(g)||(g={}),h===i&amp;&amp;(g=this,h--);ih;h++)if(null!=(e=arguments[h]))for(d in e)a=g[d],c=e[d],g!==c&amp;&amp;(j&amp;&amp;c&amp;&amp;(m.isPlainObject(c)||(b=m.isArray(c)))?(b?(b=!1,f=a&amp;&amp;m.isArray(a)?a:[]):f=a&amp;&amp;m.isPlainObject(a)?a:{},g[d]=m.extend(j,f,c)):void 0!==c&amp;&amp;(g[d]=c));return g},m.extend({expando:&#34;jQuery&#34;+(l+Math.random()).replace(/\D/g,&#34;&#34;),isReady:!0,error:function(a){throw new Error(a)},noop:function(){},isFunction:function(a){return&#34;function&#34;===m.type(a)},isArray:Array.isArray||function(a){return&#34;array&#34;===m.type(a)},isWindow:function(a){return null!=a&amp;&amp;a==a.window},isNumeric:function(a){return!m.isArray(a)&amp;&amp;a-parseFloat(a)+1=0},isEmptyObject:function(a){var b;for(b in a)return!1;return!0},isPlainObject:function(a){var b;if(!a||&#34;object&#34;!==m.type(a)||a.nodeType||m.isWindow(a))return!1;try{if(a.constructor&amp;&amp;!j.call(a,&#34;constructor&#34;)&amp;&amp;!j.call(a.constructor.prototype,&#34;isPrototypeOf&#34;))return!1}catch(c){return!1}if(k.ownLast)for(b in a)return j.call(a,b);for(b in a);return void 0===b||j.call(a,b)},type:function(a){return null==a?a+&#34;&#34;:&#34;object&#34;==typeof a||&#34;function&#34;==typeof a?h[i.call(a)]||&#34;object&#34;:typeof a},globalEval:function(b){b&amp;&amp;m.trim(b)&amp;&amp;(a.execScript||function(b){a.eval.call(a,b)})(b)},camelCase:function(a){return a.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/top/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/top/about/</guid>
+      <description>Hola!
+Soy EMTincopa, peruano y aficionado de los datos.
+Soy Administrador en Salud y estudiante de Biología en mi país pero, a pesar de mi formación universitaria, en el último año y medio he desarrollado un fuerte interés en la ciencia de los datos.
+No es mi objetivo convertirme en un científico de datos, pero sí poder rebuscar en el área y utilizar varias de sus herramientas en el sector salud.</description>
+    </item>
+    
+  </channel>
+</rss>
