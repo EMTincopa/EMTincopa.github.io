@@ -1,0 +1,94 @@
+---
+title: "El servicio de internet móvil en Lima"
+author: "EMTincopa"
+date: '2019-07-09'
+image: /content/post/el-servicio-de-internet-movil-en-lima/phones.jpg
+description: Resultados del ranking de calidad distrital de internet y telefonía móvil
+  en Lima, datos obtenidos de un estudio elaborado por OSIPTEL en el 2018.
+published: yes
+showtoc: no
+subtitle: Ranking de calidad distrital
+tags:
+- Maps
+- Movil
+- Char
+- Plot
+- Internet
+- Osiptel
+- Calidad
+- Ranking
+- DataViz
+- R
+- Plot
+categories: Stories
+---
+
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<link href="/rmarkdown-libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/datatables-binding/datatables.js"></script>
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js"></script>
+<script src="/rmarkdown-libs/jszip/jszip.min.js"></script>
+<script src="/rmarkdown-libs/pdfmake/pdfmake.min.js"></script>
+<script src="/rmarkdown-libs/pdfmake/vfs_fonts.js"></script>
+<link href="/rmarkdown-libs/dt-ext-buttons/css/buttons.dataTables.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-ext-buttons/js/dataTables.buttons.min.js"></script>
+<script src="/rmarkdown-libs/dt-ext-buttons/js/buttons.flash.min.js"></script>
+<script src="/rmarkdown-libs/dt-ext-buttons/js/buttons.html5.min.js"></script>
+<script src="/rmarkdown-libs/dt-ext-buttons/js/buttons.colVis.min.js"></script>
+<script src="/rmarkdown-libs/dt-ext-buttons/js/buttons.print.min.js"></script>
+<link href="/rmarkdown-libs/dt-ext-colreorder/css/colReorder.dataTables.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-ext-colreorder/js/dataTables.colReorder.min.js"></script>
+<link href="/rmarkdown-libs/dt-ext-keytable/css/keyTable.dataTables.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-ext-keytable/js/dataTables.keyTable.min.js"></script>
+<link href="/rmarkdown-libs/dt-ext-fixedheader/css/fixedHeader.dataTables.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-ext-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<link href="/rmarkdown-libs/dt-ext-responsive/css/responsive.dataTables.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-ext-responsive/js/dataTables.responsive.min.js"></script>
+<link href="/rmarkdown-libs/dt-plugin-searchhighlight/dataTables.searchHighlight.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-plugin-searchhighlight/dataTables.searchHighlight.min.js"></script>
+<script src="/rmarkdown-libs/dt-plugin-searchhighlight/jquery.highlight.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+
+
+<p>En agosto del 2018 <a href="https://www.osiptel.gob.pe/">OSIPTEL</a>, ente regulador de telecomunicaciones en Perú, lanzó los <a href="http://www.osiptel.gob.pe/repositorioaps/data/1/1/1/not/np-osiptel-ranking-distritos-calidad-internet/files/indicadores-calidad-lima.pdf">resultados</a> de la medición de velocidades 3G y 4G por distrito que realizó en la ciudad de Lima.</p>
+{{< tweet 1032400289133936641>}}
+<p><strong>EL RANKING DE CALIDAD MÓVIL DISTRITAL</strong></p>
+<p>El estudio fue realizado buscando crear conciencia en la importancia de la buena calidad de las telecomunicaciones y reflexionar sobre el tema de la conectividad y su impacto en la productividad y el bienestar de los ciudadanos. Las mediciones realizadas en los 43 distritos de la ciudad de Lima se realizaron entre los meses de mayo y junio del 2018, en las cuales se consideró a 4 empresas de telefonía móvil con red y cobertura en Lima (<a href="https://www.claro.com.pe/personas/">CLARO</a>, <a href="http://www.movistar.com.pe/">MOVISTAR</a>, <a href="https://www.entel.pe/">ENTEL</a>, <a href="https://bitel.com.pe/">BITEL</a>).</p>
+<div class="figure"><span id="fig:lolipop"></span>
+<img src="/post/el-servicio-de-internet-movil-en-lima_files/figure-html/lolipop-1.svg" alt="Indicador de Calidad Distrital - EMTincopa" width="1152" />
+<p class="caption">
+Figure 1: Indicador de Calidad Distrital - EMTincopa
+</p>
+</div>
+<p>Hay que tener en cuenta que distritos como San Bartolo, Chaclacayo, Punta Negra y Punta Hermosa, tienden a contar con un mejor <strong>Indicador de Calidad Móvil Distrital</strong>, en vista de la menor demanda experimentada (menor congestión) en el periodo de medición. Aunque en algunos distritos con población constante a lo largo del año (Barranco, La Molina y Santiago de Surco) los niveles de calidad móvil no son tan distintos.</p>
+<blockquote>
+<p><strong>Sub-Indicadores</strong><br />
+El indicador de Calidad Distrital se obtiene en base a información de contadores de red de los operadores y mediante mediciones en campo realizadas por el OSIPTEL. Se construye gracias a 6 sub-indicadores: Tasa de Intentos No Establecidos en redes 2G y 3G, Tasa de Llamadas Interrumpidas en redes 2G y 3G, Calidad de Cobertura de Señal en redes 3G, Calidad de Voz en redes 3G, Velocidad Promedio de descarga en redes 3G y la Velocidad Promedio de descarga en redes 4G.</p>
+</blockquote>
+<p>Por otro lado, se encuentra que distritos de menor nivel socioeconómico presentan niveles del Indicador Calidad Distrital menores (Villa El Salvador, San Juan de Miraflores, Ancón, Carabayllo, Pachacamac, Santa Rosa).</p>
+<p>A continuacion una tabla con el resumen de los indicadores de calidad por distrito y por operadora:</p>
+<div id="htmlwidget-1" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"filter":"none","extensions":["Buttons","ColReorder","KeyTable","FixedHeader","Responsive"],"caption":"<caption style=\"caption-side:bottom; text-align:left;\">\n  Nota:\n  <em>Tabla con el Ranking de Calidad por Operador y por Distrito.<\/em>\n<\/caption>","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43"],["SAN BARTOLO","CHACLACAYO","PUNTA NEGRA","BARRANCO","PUNTA HERMOSA","LA MOLINA","SANTIAGO DE SURCO","SAN ISIDRO","PUCUSANA","CIENEGUILLA","LURIGANCHO","EL AGUSTINO","SANTA ANITA","CHORRILLOS","LIMA","LURIN","ATE","SAN BORJA","LOS OLIVOS","INDEPENDENCIA","VILLA MARIA DEL TRIUNFO","LA VICTORIA","SAN JUAN DE LURIGANCHO","SANTA MARIA DEL MAR","LINCE","PUENTE PIEDRA","SAN MIGUEL","SAN LUIS","JESUS MARIA","BREÑA","PUEBLO LIBRE","SURQUILLO","RIMAC","MIRAFLORES","SAN MARTIN DE PORRES","MAGDALENA DEL MAR","COMAS","VILLA EL SALVADOR","ANCON","SAN JUAN DE MIRAFLORES","CARABAYLLO","SANTA ROSA","PACHACAMAC"],[0.7975,0.7705,0.7779,0.7322,0.7225,0.7886,0.8086,0.7651,0.6706,0.7269,0.7116,0.7096,0.699,0.6959,0.7329,0.6897,0.7211,0.7053,0.7014,0.6868,0.6762,0.705,0.716,0.8072,0.6592,0.6417,0.6399,0.6609,0.6457,0.63,0.6312,0.6275,0.6437,0.6206,0.6243,0.6208,0.6263,0.6072,0.6128,0.5972,0.5721,0.5312,0.4589],[0.8685,0.8664,0.812,0.7971,0.8086,0.7841,0.7389,0.7331,0.7512,0.7133,0.7287,0.6754,0.7225,0.7235,0.686,0.6599,0.7255,0.6252,0.6877,0.6211,0.6653,0.6578,0.6224,0.3516,0.5833,0.5895,0.5985,0.6108,0.6036,0.6102,0.599,0.6069,0.5795,0.603,0.5947,0.5406,0.5829,0.5778,0.4623,0.5219,0.502,0.2883,0.3292],[0.8769,0.7614,0.8141,0.9013,0.8332,0.7071,0.6918,0.6619,0.705,0.7279,0.7213,0.718,0.6144,0.583,0.6254,0.6885,0.5353,0.7057,0.5582,0.6873,0.6503,0.5751,0.6214,0.8498,0.6467,0.6909,0.6557,0.6109,0.6313,0.6288,0.6381,0.6258,0.6088,0.6008,0.5879,0.6292,0.4991,0.5279,0.6087,0.5225,0.5056,0.5702,0.6141],[0.7751,0.7258,0.7639,0.733,0.7289,0.7174,0.6894,0.7221,0.7325,0.652,0.6508,0.6972,0.6313,0.644,0.5672,0.6488,0.5827,0.6759,0.6469,0.6588,0.56,0.5917,0.4894,0.7416,0.6519,0.6195,0.6378,0.6054,0.6205,0.6349,0.6441,0.6216,0.6328,0.6198,0.6113,0.6315,0.584,0.5547,0.6027,0.5246,0.5503,0.646,0.5936]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>DISTRITO<\/th>\n      <th>CLARO<\/th>\n      <th>MOVISTAR<\/th>\n      <th>ENTEL<\/th>\n      <th>BITEL<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"search":{"regex":true,"caseInsensitive":false},"searchHighlight":true,"pageLenght":5,"autoWidth":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"colReorder":false,"keys":true,"fixedHeader":false,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5]},{"orderable":false,"targets":0}],"order":[],"orderClasses":false,"responsive":true}},"evals":[],"jsHooks":[]}</script>
+<p><strong>RESULTADOS DE LA VELOCIDAD 4G EN LIMA</strong></p>
+<p>Los mapas siguientes muestran la velocidad de descarga en 4G por operadora en la ciudad de Lima.</p>
+<p><img src="/post/el-servicio-de-internet-movil-en-lima_files/figure-html/unnamed-chunk-1-1.svg" width="672" /></p>
+<p><img src="/post/el-servicio-de-internet-movil-en-lima_files/figure-html/unnamed-chunk-2-1.svg" width="672" /></p>
+<p>En promedio, se realizaron entre 20 y 56 mediciones de velocidad 3G/4G (Carga y Descarga) en cada distrito. En los casos de Santa Rosa y Pachacamac, la operadora Movistar no declaró cobertura 3G y con Santa Rosa, la operadora Movistar no declaró cobertura 4G.</p>
+<p>La infografía siguiente muestra en los mapas la calidad del servicio de internet móvil en Lima, así como también la operadora líder por distrito a finales del 2018.</p>
+<div class="figure">
+<img src="\content\post\el-servicio-de-internet-movil-en-lima\Telefonía%20e%20Internet%20Móvil%20en%20Lima.png" alt="Figure 2: Resumen de la Calidad Distrital del Servicio de Telefonía Móvil" />
+<p class="caption">Figure 2: Resumen de la Calidad Distrital del Servicio de Telefonía Móvil</p>
+</div>
+<p><em>Gracias por visitar el blog. Este post ha sido realizado con datos compartidos por Osiptel en redes sociales y al lenguaje de programación R</em>.</p>
+<p><em>Nos vemos el 24 de Julio!</em></p>
+<p><strong>Aprende más en:</strong></p>
+<ul>
+<li><a href="http://www.osiptel.gob.pe/repositorioaps/data/1/1/1/not/np-osiptel-ranking-distritos-calidad-internet/files/indicadores-calidad-lima.pdf">Ranking de Calidad Distrital en el Servicio de Telefonía e Internet Móvil en Lima -2018</a></li>
+<li><a href="https://rpp.pe/economia/economia/conoce-el-ranking-de-distritos-con-mejor-calidad-de-internet-y-telefonia-movil-noticia-1145105">Conoce el ranking de distritos con mejor calidad de Internet y telefonía móvil</a></li>
+<li><a href="https://andina.pe/agencia/noticia-ranking-distritos-mejor-calidad-telefonia-e-internet-movil-722794.aspx">Ranking de distritos con mejor calidad en telefonía e internet móvil</a></li>
+<li><a href="https://twitter.com/OSIPTEL/status/923265922630078465/photo/1">Cuáles son las preferencias de los peruanos en telefonía móvil</a></li>
+</ul>

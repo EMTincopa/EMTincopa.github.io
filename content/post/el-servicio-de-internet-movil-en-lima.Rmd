@@ -1,0 +1,263 @@
+---
+title: "El servicio de internet móvil en Lima"
+author: "EMTincopa"
+date: '2019-07-09'
+image: /content/post/el-servicio-de-internet-movil-en-lima/phones.jpg
+description: Resultados del ranking de calidad distrital de internet y telefonía móvil
+  en Lima, datos obtenidos de un estudio elaborado por OSIPTEL en el 2018.
+published: yes
+showtoc: no
+subtitle: Ranking de calidad distrital
+tags:
+- Maps
+- Movil
+- Char
+- Plot
+- Internet
+- Osiptel
+- Calidad
+- Ranking
+- DataViz
+- R
+- Plot
+categories: Stories
+---
+
+En agosto del 2018 [OSIPTEL](https://www.osiptel.gob.pe/), ente regulador de telecomunicaciones en Perú, lanzó los [resultados](http://www.osiptel.gob.pe/repositorioaps/data/1/1/1/not/np-osiptel-ranking-distritos-calidad-internet/files/indicadores-calidad-lima.pdf) de la medición de velocidades 3G y 4G por distrito que realizó en la ciudad de Lima. 
+
+`r htmltools::HTML("{{< tweet 1032400289133936641>}}")`
+
+**EL RANKING DE CALIDAD MÓVIL DISTRITAL**
+
+El estudio fue realizado buscando crear conciencia en la importancia de la buena calidad de las telecomunicaciones y reflexionar sobre el tema de la conectividad y su impacto en la productividad y el bienestar de los ciudadanos. Las mediciones realizadas en los 43 distritos de la ciudad de Lima se realizaron entre los meses de mayo y junio del 2018, en las cuales se consideró a 4 empresas de telefonía móvil con red y cobertura en Lima ([CLARO](https://www.claro.com.pe/personas/), [MOVISTAR](http://www.movistar.com.pe/), [ENTEL](https://www.entel.pe/), [BITEL](https://bitel.com.pe/)).
+
+```{r setup, include = FALSE}
+
+library(ggplot2)
+library(sf)
+library(tidyverse)
+library(readxl)
+library(dplyr)
+library(extrafont)
+library(ggthemes)
+library(gridExtra)
+library(scales)
+library(RColorBrewer)
+library(viridisLite)
+library(viridis)
+library(readr)
+library(forcats)
+library(patchwork)
+library(ggExtra)
+library(lubridate)
+library(DT)
+
+##################
+
+### Leyendo el shapefile en R con "sf"
+Peru_depart <- "el-servicio-de-internet-movil-en-lima/PeruAdm/PER_adm3.shp"
+peru_locations<- st_read(Peru_depart)
+
+
+### Filtrando solo Provincia de Lima del shapefile 
+Lima <- filter(peru_locations, NAME_1=="Lima Province")
+ggplot(Lima) + geom_sf()
+
+### Archivo Excel con Datos de la Calidad de Internet - Operadora dominante
+calidadop<- read_excel("el-servicio-de-internet-movil-en-lima/Calidad_Internet_Distrital.xlsx", sheet=3)
+colnames(calidadop) <- make.names(colnames(calidadop))
+
+### Anexando Data del Excel de Calidad por Operadora con Shapefile de Lima
+Lima <- left_join(Lima, calidadop,
+                  by=c("NAME_3"="name"))
+
+
+### Loading the Papers Dataset
+matriz<- read_excel("el-servicio-de-internet-movil-en-lima/Calidad_Internet_Distrital.xlsx", sheet=4)
+
+
+### Archivo Excel con Datos de la Velocidad de Descarga 4G
+Descarga4G<- read_excel("el-servicio-de-internet-movil-en-lima/Velocidad_Descarga_4G.xlsx", sheet=2)
+colnames(Descarga4G) <- make.names(colnames(Descarga4G))
+
+### Anexando Data del Excel Descarga4G con Shapefile de Lima
+Lima <- left_join(Lima, Descarga4G,
+                  by=c("NAME_3"="name"))
+```
+
+```{r lolipop, fig.cap='Indicador de Calidad Distrital - EMTincopa', echo=FALSE, fig.width = 12, fig.height = 11, dev='svg'}
+
+###Datos de calidad gráficos lolipop
+Calidad<- read_excel("el-servicio-de-internet-movil-en-lima/Calidad_Internet_Distrital.xlsx", sheet=1)
+colnames(Calidad) <- make.names(colnames(Calidad))
+
+###Gráfico
+ggplot(Calidad,
+       aes(x=indicador_calidad, y=fct_reorder(distrito, indicador_calidad))) +
+  geom_segment(
+    aes(x=0,
+        y=fct_reorder(distrito, indicador_calidad),
+        xend= indicador_calidad,
+        yend= fct_reorder(distrito, indicador_calidad)),
+    color="gray50") +
+  geom_point() +
+  labs(title="Ranking de Calidad Distrital",
+       subtitle= "Resultados del indicador de calidad distrital al año 2018",
+       caption= "
+       
+       Información de: Indicadores de Calidad, Lima - Osiptel") +
+  theme_minimal()+
+  geom_text(aes(label=indicador_calidad), hjust= -.2) +
+  theme(panel.border = element_blank(),
+        panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        axis.line = element_blank(),
+        axis.text.x = element_blank(),
+        axis.title.y = element_blank(),
+        axis.title.x = element_blank())
+```
+
+Hay que tener en cuenta que distritos como San Bartolo, Chaclacayo, Punta Negra y Punta Hermosa, tienden a contar con un mejor **Indicador de Calidad Móvil Distrital**, en vista de la menor demanda experimentada (menor congestión) en el periodo de medición. Aunque en algunos distritos con población constante a lo largo del año (Barranco, La Molina y Santiago de Surco) los niveles de calidad móvil no son tan distintos.
+
+>**Sub-Indicadores**                                                           
+El indicador de Calidad Distrital se obtiene en base a información de contadores de red de los operadores y mediante mediciones en campo realizadas por el OSIPTEL. Se construye gracias a 6 sub-indicadores: Tasa de Intentos No Establecidos en redes 2G y 3G, Tasa de Llamadas Interrumpidas en redes 2G y 3G, Calidad de Cobertura de Señal en redes 3G, Calidad de Voz en redes 3G, Velocidad Promedio de descarga en redes 3G y la Velocidad Promedio de descarga en redes 4G.
+
+Por otro lado, se encuentra que distritos de menor nivel socioeconómico presentan niveles del Indicador Calidad Distrital menores (Villa El Salvador, San Juan de Miraflores, Ancón, Carabayllo, Pachacamac, Santa Rosa).
+
+A continuacion una tabla con el resumen de los indicadores de calidad por distrito y por operadora:
+
+```{r display_data, warning=F, echo=F, message=F}
+
+datatable(matriz,
+    escape = FALSE,
+    editable = FALSE, 
+    class = 'cell-border stripe',
+    extensions = list("Buttons" = NULL,
+                      "ColReorder" = NULL,
+                      'KeyTable'=NULL,
+                      "FixedHeader" = NULL,
+                      "Responsive" = NULL),
+    options = list(
+    search = list (regex = TRUE, caseInsensitive = FALSE),
+    searchHighlight = TRUE,
+    pageLenght = 5,
+    autoWidth= FALSE,
+    dom = "Bfrtip", "t",
+    buttons = list('copy','print',list(extend = "collection", 
+                                        buttons = c('csv', 'excel', 'pdf'),
+                                        text = "Download")), 
+    
+    colReorder = FALSE,
+    keys = TRUE,
+    fixedHeader = FALSE), 
+    caption = htmltools::tags$caption(style="caption-side:bottom; text-align:left;", "Nota:", htmltools::em("Tabla con el Ranking de Calidad por Operador y por Distrito.") 
+))
+
+```
+
+```{r cleaning_data, warning=F, echo=F}
+
+colnames(matriz) <- make.names(colnames(matriz))
+
+matriz$DISTRITO <- gsub("\\$", "", matriz$DISTRITO)
+matriz$DISTRITO <- gsub(",", "", matriz$DISTRITO)
+matriz$DISTRITO <- as.character(matriz$DISTRITO)
+matriz$CLARO <- gsub("\\$", "", matriz$CLARO)
+matriz$CLARO <- gsub(",", "", matriz$CLARO)
+matriz$CLARO <- as.character(matriz$CLARO)
+matriz$MOVISTAR<- gsub("\\$", "", matriz$MOVISTAR)
+matriz$MOVISTAR <- gsub(",", "", matriz$MOVISTAR)
+matriz$MOVISTAR <- as.character(matriz$MOVISTAR)
+matriz$ENTEL<- gsub("\\$", "", matriz$ENTEL)
+matriz$ENTEL <- gsub(",", "", matriz$ENTEL)
+matriz$ENTEL <- as.character(matriz$ENTEL)
+matriz$BITEL<- gsub("\\$", "", matriz$BITEL)
+matriz$BITEL <- gsub(",", "", matriz$BITEL)
+matriz$BITEL <- as.character(matriz$BITEL)
+
+```
+
+
+
+**RESULTADOS DE LA VELOCIDAD 4G EN LIMA**
+
+Los mapas siguientes muestran la velocidad de descarga en 4G por operadora en la ciudad de Lima.
+
+```{r, echo=FALSE, dev='svg'}
+
+#### BITEL 4G
+Bit<-ggplot(Lima) +
+  geom_sf(aes(fill=BITEL)) +
+  scale_color_viridis(direction=1) +
+  scale_fill_viridis(direction=-1, name="Descarga 4G (Mbps)", limits=range(0.5, 20.5)) +
+  theme_void() +
+  theme(text=element_text(family="Times", size=11))+
+  theme(panel.grid.major=element_line(color="transparent")) +
+  theme(legend.position = "bottom")+
+  labs(title="Velocidad de Descarga con Bitel
+en Lima Metropolitana")
+
+#### CLARO 4G
+Cla<-ggplot(Lima) +
+  geom_sf(aes(fill=CLARO)) +
+  scale_color_viridis(direction=1) +
+  scale_fill_viridis(direction=-1, name="Descarga 4G (Mbps)", limits=range(0.5, 20.5)) +
+  theme_void() +
+  theme(text=element_text(family="Times", size=11))+
+  theme(panel.grid.major=element_line(color="transparent")) +
+  theme(legend.position = "bottom")+
+  labs(title="Velocidad de Descarga con Claro
+en Lima Metropolitana")
+
+Bit+Cla
+
+```
+
+```{r, echo=FALSE, dev='svg'}
+
+#### ENTEL 4G
+Ent<-ggplot(Lima) +
+  geom_sf(aes(fill=ENTEL)) +
+  scale_color_viridis(direction=1) +
+  scale_fill_viridis(direction=-1, name="Descarga 4G (Mbps)", limits=range(0.5, 20.5)) +
+  theme_void() +
+  theme(text=element_text(family="Times", size=11))+
+  theme(panel.grid.major=element_line(color="transparent")) +
+  theme(legend.position = "bottom")+
+  labs(title="Velocidad de Descarga con Entel
+en Lima Metropolitana")
+
+#### MOVISTAR 4G
+Mov<-ggplot(Lima) +
+  geom_sf(aes(fill=TDP)) +
+  scale_color_viridis(direction=1) +
+  scale_fill_viridis(direction=-1, name="Descarga 4G (Mbps)", limits=range(0.5, 20.5)) +
+  theme_void() +
+  theme(text=element_text(family="Times", size=11))+
+  theme(panel.grid.major=element_line(color="transparent")) +
+  theme(legend.position = "bottom")+
+  labs(title="Velocidad de Descarga con Movistar (TDP)
+en Lima Metropolitana")
+
+Ent+Mov
+```
+
+En promedio, se realizaron entre 20 y 56 mediciones de velocidad 3G/4G (Carga y Descarga) en cada distrito. En los casos de Santa Rosa y Pachacamac, la operadora Movistar no declaró cobertura 3G y con Santa Rosa, la operadora Movistar no declaró cobertura 4G.
+
+La infografía siguiente muestra en los mapas la calidad del servicio de internet móvil en Lima, así como también la operadora líder por distrito a finales del 2018.
+
+![Figure 2: Resumen de la Calidad Distrital del Servicio de Telefonía Móvil](\content\post\el-servicio-de-internet-movil-en-lima\Telefonía e Internet Móvil en Lima.png)
+
+*Gracias por visitar el blog. Este post ha sido realizado con datos compartidos por Osiptel en redes sociales y al lenguaje de programación R*.
+
+*Nos vemos el 24 de Julio!*
+ 
+
+
+**Aprende más en:**
+
+* [Ranking de Calidad Distrital en el Servicio de Telefonía e Internet Móvil en Lima -2018](http://www.osiptel.gob.pe/repositorioaps/data/1/1/1/not/np-osiptel-ranking-distritos-calidad-internet/files/indicadores-calidad-lima.pdf)
+* [Conoce el ranking de distritos con mejor calidad de Internet y telefonía móvil](https://rpp.pe/economia/economia/conoce-el-ranking-de-distritos-con-mejor-calidad-de-internet-y-telefonia-movil-noticia-1145105)
+* [Ranking de distritos con mejor calidad en telefonía e internet móvil ](https://andina.pe/agencia/noticia-ranking-distritos-mejor-calidad-telefonia-e-internet-movil-722794.aspx)
+* [Cuáles son las preferencias de los peruanos en telefonía móvil](https://twitter.com/OSIPTEL/status/923265922630078465/photo/1)
+
