@@ -1,0 +1,94 @@
+baseurl: https://emtincopa.github.io/
+title: Dataviz Adventure
+theme: hugo-theme-cleanwhite
+languageCode: en-us
+enableEmoji: yes
+footnotereturnlinkcontents: '<sup>^<sup>'
+ignoreFiles: ['\\.Rmd$', '\\.Rmarkdown$', '_files$', '_caches$']
+disqusShortname: 'https-emtincopa-github-io'
+googleAnalytics: 'UA-131186631-1'
+preserveTaxonomyNames: yes
+paginate: 6
+hasCJKLanguage: yes
+publishDir: '../EMTincopa.github.io'
+outputs:
+  home:
+    - HTML
+    - RSS
+    - Algolia
+params:
+  SEOTitle: Data visualization & information design | E.Mendoza
+  about_me: yes
+  addtional_menus:
+    - href: /top/dashboards/
+      title: DASHBOARDS
+    - href: /top/about/
+      title: ABOUT
+  algolia:
+    params:
+      - categories
+      - tags
+    vars:
+      - title
+      - summary
+      - date
+      - publishdate
+      - expirydate
+      - permalink
+  algolia_apiKey: ''
+  algolia_appId: ''
+  algolia_indexName: ''
+  algolia_search: yes
+  ba_track_id: ''
+  bookmark_link:
+    - href: https://flourish.studio/
+      title: Flourish
+    - href: https://www.statmethods.net/
+      title: Quick-R
+    - href: https://learn.r-journalism.com/en/
+      title: R for Journalists
+    - href: https://pxhere.com
+      title: Pxhere
+    - href: https://unsplash.com
+      title: Unsplash
+  bookmarks: yes
+  description: Data visualization & information designer. Following the goal to save and change lives with graphics。
+  disqus_proxy: ''
+  disqus_site: ''
+  featured_condition_size: 1
+  featured_tags: yes
+  friend_link:
+    - href: https://zhaozhihan.com
+      title: Linda的博客
+  friends: no
+  header_image: img/headataviz.png
+  image_404: img/headupdating.gif
+  title_404: You are far from home :(
+  keyword: DataViz, Dataviz Adventure, Storytelling with data, Data Visualization, Data, Datos, Visualización de datos, Desig, Information design
+  leancloud_app_id: ''
+  leancloud_app_key: ''
+  omit_categories: no
+  page_view_conter: no
+  reward: yes
+  sidebar_about_description: E. Mendoza | Enthusiast of data & information design. I'm on my own adventure to become an expert in dataviz!
+  sidebar_avatar: img/me-emtincopa.png
+  slogan: Data visualization as an expressive medium to narrate what we discover.
+  social:
+    email: datavizadventure@gmail.com
+    twitter: https://twitter.com/DatavizAdventuR
+    github: https://github.com/DatavizAdventure
+    linkedin: https://www.linkedin.com/in/enrique-mendoza-tincopa-4b2a14173/
+    rss: no
+    instagram: https://www.instagram.com/datavizadventure/
+outputFormats:
+  Algolia:
+    baseName: algolia
+    isPlainText: yes
+    mediaType: application/json
+    notAlternative: yes
+markup:
+  highlight:
+    style: dracula
+  tableOfContents:
+    endLevel: 2
+    startLevel: 1

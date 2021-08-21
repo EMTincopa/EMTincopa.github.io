@@ -1,3 +1,0 @@
-"0","denunciasTasa%>%"
-"0","  hchart(type = ""column"","
-"0","         hcaes(x = Year, y = Tasa)) %>%"
