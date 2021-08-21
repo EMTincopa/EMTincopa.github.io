@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Dataviz Adventure">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="//img/headataviz.png">
+    <meta property="twitter:image" content="//img/headataviz.png" />
+    
+
+    
+    <meta name="title" content="Inseguridad en el Perú" />
+    <meta property="og:title" content="Inseguridad en el Perú" />
+    <meta property="twitter:title" content="Inseguridad en el Perú" />
+    
+
+    
+    <meta name="description" content="Análisis de la seguridad ciudadana en el Perú en base a los datos liberados por el Observatorio Nacional de Seguridad Ciudadana. El artículo se centra en mostrar la cantidad total de denuncias por distintos delitos, homicidios y accidentes de tránsito registrados en el País.">
+    <meta property="og:description" content="Análisis de la seguridad ciudadana en el Perú en base a los datos liberados por el Observatorio Nacional de Seguridad Ciudadana. El artículo se centra en mostrar la cantidad total de denuncias por distintos delitos, homicidios y accidentes de tránsito registrados en el País." />
+    <meta property="twitter:description" content="Análisis de la seguridad ciudadana en el Perú en base a los datos liberados por el Observatorio Nacional de Seguridad Ciudadana. El artículo se centra en mostrar la cantidad total de denuncias por distintos delitos, homicidios y accidentes de tránsito registrados en el País." />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="DataViz, Dataviz Adventure, Storytelling with data, Data Visualization, Datos, Visualización de datos, Data Stories">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>Inseguridad en el Perú-Storytelling &amp; adventures with data</title>
+
+    <link rel="canonical" href="/post/seguridad-ciudadana-en-peru/">
+
+    <link rel="stylesheet" href="/css/iDisqus.min.css"/>
+	
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="/css/syntax.css">
+    
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+    
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    
+    <script src="/js/jquery.min.js"></script>
+    
+    
+    <script src="/js/bootstrap.min.js"></script>
+    
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/styles/docco.min.css">
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.13.1/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+
+    
+    
+
+</head>
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Dataviz Adventure</a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/categories/stories">stories</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/categories/tips">tips</a>
+                    </li>
+                    
+                    
+		    
+                        <li><a href="/top/about/">ABOUT</a></li>
+                    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/content/post/Seguridad-en-peru/seguridad.jpg')
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/seguridad" title="Seguridad">
+                            Seguridad
+                        </a>
+                        
+                        <a class="tag" href="/tags/data" title="Data">
+                            Data
+                        </a>
+                        
+                        <a class="tag" href="/tags/dataviz" title="Dataviz">
+                            Dataviz
+                        </a>
+                        
+                        <a class="tag" href="/tags/r" title="R">
+                            R
+                        </a>
+                        
+                        <a class="tag" href="/tags/lima" title="Lima">
+                            Lima
+                        </a>
+                        
+                        <a class="tag" href="/tags/security" title="Security">
+                            Security
+                        </a>
+                        
+                        <a class="tag" href="/tags/per%C3%BA" title="Perú">
+                            Perú
+                        </a>
+                        
+                        <a class="tag" href="/tags/city" title="City">
+                            City
+                        </a>
+                        
+                        <a class="tag" href="/tags/plot" title="Plot">
+                            Plot
+                        </a>
+                        
+                    </div>
+                    <h1>Inseguridad en el Perú</h1>
+                    <h2 class="subheading">Estado de la seguridad ciudadana en el Perú</h2>
+                    <span class="meta">
+                        Posted by 
+                        
+                            EMTincopa
+                         
+                        on 
+                        Friday, October 25, 2019
+                        
+                        
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<script src="/rmarkdown-libs/proj4js/proj4.js"></script>
+<link href="/rmarkdown-libs/highcharts/css/motion.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/highcharts/css/htmlwdgtgrid.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/highcharts/highcharts.js"></script>
+<script src="/rmarkdown-libs/highcharts/highcharts-3d.js"></script>
+<script src="/rmarkdown-libs/highcharts/highcharts-more.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/stock.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/map.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/annotations.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/boost.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/data.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/drag-panes.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/drilldown.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/item-series.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/offline-exporting.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/overlapping-datalabels.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/exporting.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/export-data.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/funnel.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/heatmap.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/treemap.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/sankey.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/solid-gauge.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/streamgraph.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/sunburst.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/vector.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/wordcloud.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/xrange.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/tilemap.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/venn.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/gantt.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/timeline.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/parallel-coordinates.js"></script>
+<script src="/rmarkdown-libs/highcharts/plugins/grouped-categories.js"></script>
+<script src="/rmarkdown-libs/highcharts/plugins/motion.js"></script>
+<script src="/rmarkdown-libs/highcharts/plugins/multicolor_series.js"></script>
+<script src="/rmarkdown-libs/highcharts/custom/reset.js"></script>
+<script src="/rmarkdown-libs/highcharts/custom/symbols-extra.js"></script>
+<script src="/rmarkdown-libs/highcharts/custom/text-symbols.js"></script>
+<script src="/rmarkdown-libs/highchart-binding/highchart.js"></script>
+<link href="/rmarkdown-libs/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/datatables-binding/datatables.js"></script>
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="/rmarkdown-libs/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-core/js/jquery.dataTables.min.js"></script>
+<script src="/rmarkdown-libs/jszip/jszip.min.js"></script>
+<script src="/rmarkdown-libs/pdfmake/pdfmake.min.js"></script>
+<script src="/rmarkdown-libs/pdfmake/vfs_fonts.js"></script>
+<link href="/rmarkdown-libs/dt-ext-buttons/css/buttons.dataTables.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-ext-buttons/js/dataTables.buttons.min.js"></script>
+<script src="/rmarkdown-libs/dt-ext-buttons/js/buttons.flash.min.js"></script>
+<script src="/rmarkdown-libs/dt-ext-buttons/js/buttons.html5.min.js"></script>
+<script src="/rmarkdown-libs/dt-ext-buttons/js/buttons.colVis.min.js"></script>
+<script src="/rmarkdown-libs/dt-ext-buttons/js/buttons.print.min.js"></script>
+<link href="/rmarkdown-libs/dt-ext-colreorder/css/colReorder.dataTables.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-ext-colreorder/js/dataTables.colReorder.min.js"></script>
+<link href="/rmarkdown-libs/dt-ext-keytable/css/keyTable.dataTables.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-ext-keytable/js/dataTables.keyTable.min.js"></script>
+<link href="/rmarkdown-libs/dt-ext-fixedheader/css/fixedHeader.dataTables.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-ext-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+<link href="/rmarkdown-libs/dt-ext-responsive/css/responsive.dataTables.min.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-ext-responsive/js/dataTables.responsive.min.js"></script>
+<link href="/rmarkdown-libs/dt-plugin-searchhighlight/source.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/dt-plugin-searchhighlight/jquery.highlight.js"></script>
+<script src="/rmarkdown-libs/dt-plugin-searchhighlight/source.min.js"></script>
+<link href="/rmarkdown-libs/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/crosstalk/js/crosstalk.min.js"></script>
+<script src="/rmarkdown-libs/d3/./d3.min.js"></script>
+<link href="/rmarkdown-libs/d3heatmapcore/heatmapcore.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/d3heatmapcore/heatmapcore.js"></script>
+<script src="/rmarkdown-libs/d3-tip/index.js"></script>
+<script src="/rmarkdown-libs/d3heatmap-binding/d3heatmap.js"></script>
+
+
+<p>En el Perú nos encontramos en una época de mucha inseguridad y violencia que, en el sentir de la población, nos da la impresión de estar empeorando cada día. Por esto, gracias a los registros de la base de datos del <a href="https://observatorio.mininter.gob.pe/">Observatorio Nacional de Seguridad Ciudadana</a>, centro de generación de datos e investigación aplicados al conocimiento de fenómenos criminales y economías ilegales para la formulación de políticas públicas, se ha realizado el siguiente artículo sobre la inseguridad en el páis: información sobre denuncias por comisión de delitos, homicidios y accidentes de tránsito. Espero este artículo sea de ayuda para comprender la situación actual de la seguridad ciudadana en el Perú.</p>
+<div id="aumento-de-denuncias" class="section level2">
+<h2>Aumento de denuncias</h2>
+<p>Según la información conseguida del Observatorio Nacional de Seguridad Ciudadana:</p>
+<blockquote>
+<p>El número de denuncias por comisión de delitos ha crecido año tras año desde el 2011. Este fenómeno se debe varios factores como el incremento del número de comisarías a nivel nacional, la mejora en el registro de denuncias por parte del personal de la Policía Nacional del Perú, la ampliación de cobertura del Sistema de Denuncia Policial (SIDPOL), entre otros.</p>
+</blockquote>
+<p>Este resultado también podría, posiblemente, reflejar una mayor visibilización de problemas y concientización de las vicitmas en la importancia de denunciar a sus agresores.</p>
+<div id="htmlwidget-1" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"hc_opts":{"title":{"text":"Cantidad de denuncias por comisión de delitos al año en Perú"},"yAxis":{"title":{"text":""},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":true},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"Year":"2015","Suma":349323,"y":349323,"name":"2015"},{"Year":"2016","Suma":355394,"y":355394,"name":"2016"},{"Year":"2017","Suma":399138,"y":399138,"name":"2017"}],"type":"column"}],"xAxis":{"type":"category","title":{"text":""}},"subtitle":{"text":"Fuente: Observatorio Nacional de Seguridad Ciudadana"}},"theme":{"colors":["#d35400","#2980b9","#2ecc71","#f1c40f","#2c3e50","#7f8c8d"],"chart":{"style":{"fontFamily":"Roboto","color":"#666666"}},"title":{"align":"left","style":{"fontFamily":"Roboto Condensed","fontWeight":"bold"}},"subtitle":{"align":"left","style":{"fontFamily":"Roboto Condensed"}},"legend":{"align":"right","verticalAlign":"bottom"},"xAxis":{"gridLineWidth":1,"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"yAxis":{"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"plotOptions":{"line":{"marker":{"enabled":false}},"spline":{"marker":{"enabled":false}},"area":{"marker":{"enabled":false}},"areaspline":{"marker":{"enabled":false}},"arearange":{"marker":{"enabled":false}},"bubble":{"maxSize":"10%"}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":["Roboto","Roboto+Condensed"],"debug":false},"evals":[],"jsHooks":[]}</script>
+<p>Es importante precisar que la información presentada se basa en el lugar donde ocurrió el hecho delictivo que se denuncia y no donde se ubica la comisaría donde se realizó la denuncia.</p>
+<div id="htmlwidget-2" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"hc_opts":{"title":{"text":"Tasa de homicidios por comisión de delitos por cada 10 mil habitantes al año en Perú"},"yAxis":{"title":{"text":""},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":true},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"Year":2015,"denuncias":349323,"Poblacion":31151643,"Tasa":112.14,"x":2015,"y":112.14},{"Year":2016,"denuncias":355394,"Poblacion":31488625,"Tasa":112.86,"x":2016,"y":112.86},{"Year":2017,"denuncias":399138,"Poblacion":31826018,"Tasa":125.41,"x":2017,"y":125.41}],"type":"column"}],"xAxis":{"type":"linear","title":{"text":""}},"subtitle":{"text":"Fuente: Observatorio Nacional de Seguridad Ciudadana"}},"theme":{"colors":["#d35400","#2980b9","#2ecc71","#f1c40f","#2c3e50","#7f8c8d"],"chart":{"style":{"fontFamily":"Roboto","color":"#666666"}},"title":{"align":"left","style":{"fontFamily":"Roboto Condensed","fontWeight":"bold"}},"subtitle":{"align":"left","style":{"fontFamily":"Roboto Condensed"}},"legend":{"align":"right","verticalAlign":"bottom"},"xAxis":{"gridLineWidth":1,"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"yAxis":{"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"plotOptions":{"line":{"marker":{"enabled":false}},"spline":{"marker":{"enabled":false}},"area":{"marker":{"enabled":false}},"areaspline":{"marker":{"enabled":false}},"arearange":{"marker":{"enabled":false}},"bubble":{"maxSize":"10%"}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":["Roboto","Roboto+Condensed"],"debug":false},"evals":[],"jsHooks":[]}</script>
+<p>El siguiente gráfico muestra la diferencia de cantidad de denuncias entre departamentos en el Perú del año 2015 al 2017.</p>
+<div id="htmlwidget-3" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-3">{"x":{"hc_opts":{"title":{"text":"Cantidad de denuncias por comisión por delitos según departamento entre los años 2015 y 2017"},"yAxis":{"title":{"text":""},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":true},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"name":"2015","data":[{"nombdep":"LIMA","Year":"2015","Suma":180409,"y":180409,"name":"LIMA"},{"nombdep":"CALLAO","Year":"2015","Suma":19328,"y":19328,"name":"CALLAO"},{"nombdep":"AREQUIPA","Year":"2015","Suma":18017,"y":18017,"name":"AREQUIPA"},{"nombdep":"PIURA","Year":"2015","Suma":16099,"y":16099,"name":"PIURA"},{"nombdep":"LAMBAYEQUE","Year":"2015","Suma":15757,"y":15757,"name":"LAMBAYEQUE"},{"nombdep":"LA LIBERTAD","Year":"2015","Suma":15628,"y":15628,"name":"LA LIBERTAD"},{"nombdep":"ICA","Year":"2015","Suma":10869,"y":10869,"name":"ICA"},{"nombdep":"ANCASH","Year":"2015","Suma":9862,"y":9862,"name":"ANCASH"},{"nombdep":"CUSCO","Year":"2015","Suma":9271,"y":9271,"name":"CUSCO"},{"nombdep":"JUNIN","Year":"2015","Suma":7632,"y":7632,"name":"JUNIN"},{"nombdep":"UCAYALI","Year":"2015","Suma":6003,"y":6003,"name":"UCAYALI"},{"nombdep":"CAJAMARCA","Year":"2015","Suma":5847,"y":5847,"name":"CAJAMARCA"},{"nombdep":"SAN MARTIN","Year":"2015","Suma":5545,"y":5545,"name":"SAN MARTIN"},{"nombdep":"AYACUCHO","Year":"2015","Suma":4395,"y":4395,"name":"AYACUCHO"},{"nombdep":"PUNO","Year":"2015","Suma":3314,"y":3314,"name":"PUNO"},{"nombdep":"TUMBES","Year":"2015","Suma":3163,"y":3163,"name":"TUMBES"},{"nombdep":"HUANUCO","Year":"2015","Suma":3126,"y":3126,"name":"HUANUCO"},{"nombdep":"TACNA","Year":"2015","Suma":2975,"y":2975,"name":"TACNA"},{"nombdep":"LORETO","Year":"2015","Suma":2670,"y":2670,"name":"LORETO"},{"nombdep":"AMAZONAS","Year":"2015","Suma":2395,"y":2395,"name":"AMAZONAS"},{"nombdep":"MOQUEGUA","Year":"2015","Suma":1713,"y":1713,"name":"MOQUEGUA"},{"nombdep":"APURIMAC","Year":"2015","Suma":1601,"y":1601,"name":"APURIMAC"},{"nombdep":"MADRE DE DIOS","Year":"2015","Suma":1427,"y":1427,"name":"MADRE DE DIOS"},{"nombdep":"HUANCAVELICA","Year":"2015","Suma":1223,"y":1223,"name":"HUANCAVELICA"},{"nombdep":"PASCO","Year":"2015","Suma":1054,"y":1054,"name":"PASCO"}],"type":"column"},{"name":"2016","data":[{"nombdep":"LIMA","Year":"2016","Suma":170295,"y":170295,"name":"LIMA"},{"nombdep":"LAMBAYEQUE","Year":"2016","Suma":21406,"y":21406,"name":"LAMBAYEQUE"},{"nombdep":"AREQUIPA","Year":"2016","Suma":19666,"y":19666,"name":"AREQUIPA"},{"nombdep":"PIURA","Year":"2016","Suma":16866,"y":16866,"name":"PIURA"},{"nombdep":"LA LIBERTAD","Year":"2016","Suma":16782,"y":16782,"name":"LA LIBERTAD"},{"nombdep":"CALLAO","Year":"2016","Suma":15385,"y":15385,"name":"CALLAO"},{"nombdep":"ICA","Year":"2016","Suma":13178,"y":13178,"name":"ICA"},{"nombdep":"CUSCO","Year":"2016","Suma":11783,"y":11783,"name":"CUSCO"},{"nombdep":"ANCASH","Year":"2016","Suma":10446,"y":10446,"name":"ANCASH"},{"nombdep":"JUNIN","Year":"2016","Suma":8893,"y":8893,"name":"JUNIN"},{"nombdep":"CAJAMARCA","Year":"2016","Suma":6440,"y":6440,"name":"CAJAMARCA"},{"nombdep":"UCAYALI","Year":"2016","Suma":6122,"y":6122,"name":"UCAYALI"},{"nombdep":"LORETO","Year":"2016","Suma":5730,"y":5730,"name":"LORETO"},{"nombdep":"PUNO","Year":"2016","Suma":4741,"y":4741,"name":"PUNO"},{"nombdep":"SAN MARTIN","Year":"2016","Suma":3729,"y":3729,"name":"SAN MARTIN"},{"nombdep":"AMAZONAS","Year":"2016","Suma":3340,"y":3340,"name":"AMAZONAS"},{"nombdep":"TUMBES","Year":"2016","Suma":3275,"y":3275,"name":"TUMBES"},{"nombdep":"TACNA","Year":"2016","Suma":3229,"y":3229,"name":"TACNA"},{"nombdep":"HUANUCO","Year":"2016","Suma":3161,"y":3161,"name":"HUANUCO"},{"nombdep":"AYACUCHO","Year":"2016","Suma":3131,"y":3131,"name":"AYACUCHO"},{"nombdep":"APURIMAC","Year":"2016","Suma":2000,"y":2000,"name":"APURIMAC"},{"nombdep":"MOQUEGUA","Year":"2016","Suma":1872,"y":1872,"name":"MOQUEGUA"},{"nombdep":"MADRE DE DIOS","Year":"2016","Suma":1641,"y":1641,"name":"MADRE DE DIOS"},{"nombdep":"HUANCAVELICA","Year":"2016","Suma":1345,"y":1345,"name":"HUANCAVELICA"},{"nombdep":"PASCO","Year":"2016","Suma":938,"y":938,"name":"PASCO"}],"type":"column"},{"name":"2017","data":[{"nombdep":"LIMA","Year":"2017","Suma":177517,"y":177517,"name":"LIMA"},{"nombdep":"AREQUIPA","Year":"2017","Suma":25500,"y":25500,"name":"AREQUIPA"},{"nombdep":"LAMBAYEQUE","Year":"2017","Suma":25186,"y":25186,"name":"LAMBAYEQUE"},{"nombdep":"LA LIBERTAD","Year":"2017","Suma":21894,"y":21894,"name":"LA LIBERTAD"},{"nombdep":"PIURA","Year":"2017","Suma":20156,"y":20156,"name":"PIURA"},{"nombdep":"CALLAO","Year":"2017","Suma":14948,"y":14948,"name":"CALLAO"},{"nombdep":"ICA","Year":"2017","Suma":13772,"y":13772,"name":"ICA"},{"nombdep":"CUSCO","Year":"2017","Suma":13728,"y":13728,"name":"CUSCO"},{"nombdep":"ANCASH","Year":"2017","Suma":11798,"y":11798,"name":"ANCASH"},{"nombdep":"JUNIN","Year":"2017","Suma":10896,"y":10896,"name":"JUNIN"},{"nombdep":"CAJAMARCA","Year":"2017","Suma":9453,"y":9453,"name":"CAJAMARCA"},{"nombdep":"UCAYALI","Year":"2017","Suma":7016,"y":7016,"name":"UCAYALI"},{"nombdep":"AMAZONAS","Year":"2017","Suma":5696,"y":5696,"name":"AMAZONAS"},{"nombdep":"SAN MARTIN","Year":"2017","Suma":5177,"y":5177,"name":"SAN MARTIN"},{"nombdep":"LORETO","Year":"2017","Suma":4843,"y":4843,"name":"LORETO"},{"nombdep":"AYACUCHO","Year":"2017","Suma":4574,"y":4574,"name":"AYACUCHO"},{"nombdep":"TUMBES","Year":"2017","Suma":4404,"y":4404,"name":"TUMBES"},{"nombdep":"PUNO","Year":"2017","Suma":4206,"y":4206,"name":"PUNO"},{"nombdep":"TACNA","Year":"2017","Suma":4013,"y":4013,"name":"TACNA"},{"nombdep":"HUANUCO","Year":"2017","Suma":3895,"y":3895,"name":"HUANUCO"},{"nombdep":"APURIMAC","Year":"2017","Suma":2566,"y":2566,"name":"APURIMAC"},{"nombdep":"MADRE DE DIOS","Year":"2017","Suma":2401,"y":2401,"name":"MADRE DE DIOS"},{"nombdep":"MOQUEGUA","Year":"2017","Suma":2244,"y":2244,"name":"MOQUEGUA"},{"nombdep":"PASCO","Year":"2017","Suma":1772,"y":1772,"name":"PASCO"},{"nombdep":"HUANCAVELICA","Year":"2017","Suma":1483,"y":1483,"name":"HUANCAVELICA"}],"type":"column"}],"xAxis":{"type":"category","title":{"text":""}},"subtitle":{"text":"Fuente: Observatorio Nacional de Seguridad Ciudadana"}},"theme":{"colors":["#d35400","#2980b9","#2ecc71","#f1c40f","#2c3e50","#7f8c8d"],"chart":{"style":{"fontFamily":"Roboto","color":"#666666"}},"title":{"align":"left","style":{"fontFamily":"Roboto Condensed","fontWeight":"bold"}},"subtitle":{"align":"left","style":{"fontFamily":"Roboto Condensed"}},"legend":{"align":"right","verticalAlign":"bottom"},"xAxis":{"gridLineWidth":1,"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"yAxis":{"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"plotOptions":{"line":{"marker":{"enabled":false}},"spline":{"marker":{"enabled":false}},"area":{"marker":{"enabled":false}},"areaspline":{"marker":{"enabled":false}},"arearange":{"marker":{"enabled":false}},"bubble":{"maxSize":"10%"}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":["Roboto","Roboto+Condensed"],"debug":false},"evals":[],"jsHooks":[]}</script>
+<p>También se muestra la tasa de denuncias por comisión de delitos en cada departamento.</p>
+<div id="htmlwidget-4" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-4">{"x":{"hc_opts":{"title":{"text":"Tasa de denuncias por comisión de delitos por cada 10 mil habitantes según departamento en el 2017"},"yAxis":{"title":{"text":""},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":true},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"nombdep":"LIMA","Tasa":4679.09,"y":4679.09,"name":"LIMA"},{"nombdep":"AREQUIPA","Tasa":672.14,"y":672.14,"name":"AREQUIPA"},{"nombdep":"LAMBAYEQUE","Tasa":663.87,"y":663.87,"name":"LAMBAYEQUE"},{"nombdep":"LA LIBERTAD","Tasa":577.09,"y":577.09,"name":"LA LIBERTAD"},{"nombdep":"PIURA","Tasa":531.28,"y":531.28,"name":"PIURA"},{"nombdep":"CALLAO","Tasa":394.01,"y":394.01,"name":"CALLAO"},{"nombdep":"ICA","Tasa":363.01,"y":363.01,"name":"ICA"},{"nombdep":"CUSCO","Tasa":361.85,"y":361.85,"name":"CUSCO"},{"nombdep":"ANCASH","Tasa":310.98,"y":310.98,"name":"ANCASH"},{"nombdep":"JUNIN","Tasa":287.2,"y":287.2,"name":"JUNIN"},{"nombdep":"CAJAMARCA","Tasa":249.17,"y":249.17,"name":"CAJAMARCA"},{"nombdep":"UCAYALI","Tasa":184.93,"y":184.93,"name":"UCAYALI"},{"nombdep":"AMAZONAS","Tasa":150.14,"y":150.14,"name":"AMAZONAS"},{"nombdep":"SAN MARTIN","Tasa":136.46,"y":136.46,"name":"SAN MARTIN"},{"nombdep":"LORETO","Tasa":127.65,"y":127.65,"name":"LORETO"},{"nombdep":"AYACUCHO","Tasa":120.56,"y":120.56,"name":"AYACUCHO"},{"nombdep":"TUMBES","Tasa":116.08,"y":116.08,"name":"TUMBES"},{"nombdep":"PUNO","Tasa":110.86,"y":110.86,"name":"PUNO"},{"nombdep":"TACNA","Tasa":105.78,"y":105.78,"name":"TACNA"},{"nombdep":"HUANUCO","Tasa":102.67,"y":102.67,"name":"HUANUCO"},{"nombdep":"APURIMAC","Tasa":67.64,"y":67.64,"name":"APURIMAC"},{"nombdep":"MADRE DE DIOS","Tasa":63.29,"y":63.29,"name":"MADRE DE DIOS"},{"nombdep":"MOQUEGUA","Tasa":59.15,"y":59.15,"name":"MOQUEGUA"},{"nombdep":"PASCO","Tasa":46.71,"y":46.71,"name":"PASCO"},{"nombdep":"HUANCAVELICA","Tasa":39.09,"y":39.09,"name":"HUANCAVELICA"}],"type":"bar"}],"xAxis":{"type":"category","title":{"text":""}},"subtitle":{"text":"Fuente: Observatorio Nacional de Seguridad Ciudadana"}},"theme":{"colors":["#d35400","#2980b9","#2ecc71","#f1c40f","#2c3e50","#7f8c8d"],"chart":{"style":{"fontFamily":"Roboto","color":"#666666"}},"title":{"align":"left","style":{"fontFamily":"Roboto Condensed","fontWeight":"bold"}},"subtitle":{"align":"left","style":{"fontFamily":"Roboto Condensed"}},"legend":{"align":"right","verticalAlign":"bottom"},"xAxis":{"gridLineWidth":1,"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"yAxis":{"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"plotOptions":{"line":{"marker":{"enabled":false}},"spline":{"marker":{"enabled":false}},"area":{"marker":{"enabled":false}},"areaspline":{"marker":{"enabled":false}},"arearange":{"marker":{"enabled":false}},"bubble":{"maxSize":"10%"}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":["Roboto","Roboto+Condensed"],"debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="aumento-de-homicidios" class="section level2">
+<h2>Aumento de Homicidios</h2>
+<p>Por desgracia la cantidad de homicidios en el Perú ha ido aumentando en una gran cantidad entre los años 2016 y 2017, observándose una tendencia creciente en las muertes violentas asociadas a hechos delictivos dolosos por calificación preliminar de homicidio calificado (asesinato) de 1 043 a 1 347 casos; así como feminicidio de 106 en el año 2016 a 131 casos en el año 2017 (<a href="https://larepublica.pe/sociedad/1281608-ineitasa-feminicidio-homicidio-calificado-crecio-2016-2017/"><strong><em>INEI:Tasa de feminicidio y homicidio calificado creció entre el 2016 y 2017 - La República</em></strong></a>).</p>
+<p>En solo el año 2017, la venganza (33,8%) fue la principal presunta causa vinculada a muertes violentas asociadas a hechos delictivos, seguido de la delincuencia común (19,9%) y la delincuencia organizada (14,9%).</p>
+<div id="htmlwidget-5" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-5">{"x":{"hc_opts":{"title":{"text":"Cantidad de homicidios por año en Perú"},"yAxis":{"title":{"text":""},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":true},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"Year":"2015","Suma":2247,"y":2247,"name":"2015"},{"Year":"2016","Suma":2435,"y":2435,"name":"2016"},{"Year":"2017","Suma":2487,"y":2487,"name":"2017"}],"type":"line"}],"xAxis":{"type":"category","title":{"text":""}},"subtitle":{"text":"Fuente: Observatorio Nacional de Seguridad Ciudadana"}},"theme":{"colors":["#d35400","#2980b9","#2ecc71","#f1c40f","#2c3e50","#7f8c8d"],"chart":{"style":{"fontFamily":"Roboto","color":"#666666"}},"title":{"align":"left","style":{"fontFamily":"Roboto Condensed","fontWeight":"bold"}},"subtitle":{"align":"left","style":{"fontFamily":"Roboto Condensed"}},"legend":{"align":"right","verticalAlign":"bottom"},"xAxis":{"gridLineWidth":1,"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"yAxis":{"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"plotOptions":{"line":{"marker":{"enabled":false}},"spline":{"marker":{"enabled":false}},"area":{"marker":{"enabled":false}},"areaspline":{"marker":{"enabled":false}},"arearange":{"marker":{"enabled":false}},"bubble":{"maxSize":"10%"}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":["Roboto","Roboto+Condensed"],"debug":false},"evals":[],"jsHooks":[]}</script>
+<p>La tasa de homicidios entre el año 2011 y 2017 calculada en el <a href="https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1532/libro.pdf">Informe estadístico N°06 del CEIC-INEI, Homicidios en el Perú, contándolos uno a uno</a> nos muestra en el siguiente gráfico un incremento por año, es decir, de 5,4 muertes violentas asociadas a un hecho delictivo doloso en el año 2011 creció a 7,8 en el año 2017.</p>
+<div id="htmlwidget-6" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-6">{"x":{"hc_opts":{"title":{"text":"Tasa de homicidios por cada 100 mil habitantes al año en Perú"},"yAxis":{"title":{"text":""},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":true},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"Year":2011,"Homicidios":1617,"Poblacion":29797694,"Tasa":5.43,"x":2011,"y":5.43},{"Year":2012,"Homicidios":1968,"Poblacion":30135875,"Tasa":6.53,"x":2012,"y":6.53},{"Year":2013,"Homicidios":2013,"Poblacion":30475144,"Tasa":6.61,"x":2013,"y":6.61},{"Year":2014,"Homicidios":2076,"Poblacion":30814175,"Tasa":6.74,"x":2014,"y":6.74},{"Year":2015,"Homicidios":2247,"Poblacion":31151643,"Tasa":7.21,"x":2015,"y":7.21},{"Year":2016,"Homicidios":2435,"Poblacion":31488625,"Tasa":7.73,"x":2016,"y":7.73},{"Year":2017,"Homicidios":2487,"Poblacion":31826018,"Tasa":7.81,"x":2017,"y":7.81}],"type":"line"}],"xAxis":{"type":"linear","title":{"text":""}},"subtitle":{"text":"Fuente: Observatorio Nacional de Seguridad Ciudadana"}},"theme":{"colors":["#d35400","#2980b9","#2ecc71","#f1c40f","#2c3e50","#7f8c8d"],"chart":{"style":{"fontFamily":"Roboto","color":"#666666"}},"title":{"align":"left","style":{"fontFamily":"Roboto Condensed","fontWeight":"bold"}},"subtitle":{"align":"left","style":{"fontFamily":"Roboto Condensed"}},"legend":{"align":"right","verticalAlign":"bottom"},"xAxis":{"gridLineWidth":1,"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"yAxis":{"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"plotOptions":{"line":{"marker":{"enabled":false}},"spline":{"marker":{"enabled":false}},"area":{"marker":{"enabled":false}},"areaspline":{"marker":{"enabled":false}},"arearange":{"marker":{"enabled":false}},"bubble":{"maxSize":"10%"}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":["Roboto","Roboto+Condensed"],"debug":false},"evals":[],"jsHooks":[]}</script>
+<p>El siguiente gráfico muestra la diferencia de cantidad de homicidios entre departamentos en el Perú del año 2015 al 2017.</p>
+<div id="htmlwidget-7" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-7">{"x":{"hc_opts":{"title":{"text":"Cantidad de Homicidios por departamento entre 2015 y 2017"},"yAxis":{"title":{"text":""},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":true},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"name":"2015","data":[{"nombdep":"Lima","Year":"2015","Suma":569,"y":569,"name":"Lima"},{"nombdep":"La Libertad","Year":"2015","Suma":218,"y":218,"name":"La Libertad"},{"nombdep":"Callao","Year":"2015","Suma":154,"y":154,"name":"Callao"},{"nombdep":"Cusco","Year":"2015","Suma":115,"y":115,"name":"Cusco"},{"nombdep":"Piura","Year":"2015","Suma":113,"y":113,"name":"Piura"},{"nombdep":"Cajamarca","Year":"2015","Suma":104,"y":104,"name":"Cajamarca"},{"nombdep":"San Martín","Year":"2015","Suma":101,"y":101,"name":"San Martín"},{"nombdep":"Puno","Year":"2015","Suma":96,"y":96,"name":"Puno"},{"nombdep":"Ancash","Year":"2015","Suma":87,"y":87,"name":"Ancash"},{"nombdep":"Huánuco","Year":"2015","Suma":85,"y":85,"name":"Huánuco"},{"nombdep":"Arequipa","Year":"2015","Suma":72,"y":72,"name":"Arequipa"},{"nombdep":"Ica","Year":"2015","Suma":65,"y":65,"name":"Ica"},{"nombdep":"Junín","Year":"2015","Suma":61,"y":61,"name":"Junín"},{"nombdep":"Lambayeque","Year":"2015","Suma":54,"y":54,"name":"Lambayeque"},{"nombdep":"Ayacucho","Year":"2015","Suma":51,"y":51,"name":"Ayacucho"},{"nombdep":"Tumbes","Year":"2015","Suma":49,"y":49,"name":"Tumbes"},{"nombdep":"Ucayali","Year":"2015","Suma":47,"y":47,"name":"Ucayali"},{"nombdep":"Pasco","Year":"2015","Suma":39,"y":39,"name":"Pasco"},{"nombdep":"Loreto","Year":"2015","Suma":38,"y":38,"name":"Loreto"},{"nombdep":"Amazonas","Year":"2015","Suma":34,"y":34,"name":"Amazonas"},{"nombdep":"Madre de Dios","Year":"2015","Suma":26,"y":26,"name":"Madre de Dios"},{"nombdep":"Huancavelica","Year":"2015","Suma":24,"y":24,"name":"Huancavelica"},{"nombdep":"Tacna","Year":"2015","Suma":19,"y":19,"name":"Tacna"},{"nombdep":"Apurímac","Year":"2015","Suma":18,"y":18,"name":"Apurímac"},{"nombdep":"Moquegua","Year":"2015","Suma":8,"y":8,"name":"Moquegua"}],"type":"column"},{"name":"2016","data":[{"nombdep":"Lima","Year":"2016","Suma":784,"y":784,"name":"Lima"},{"nombdep":"La Libertad","Year":"2016","Suma":175,"y":175,"name":"La Libertad"},{"nombdep":"Callao","Year":"2016","Suma":131,"y":131,"name":"Callao"},{"nombdep":"Piura","Year":"2016","Suma":111,"y":111,"name":"Piura"},{"nombdep":"Junín","Year":"2016","Suma":108,"y":108,"name":"Junín"},{"nombdep":"Huánuco","Year":"2016","Suma":103,"y":103,"name":"Huánuco"},{"nombdep":"Puno","Year":"2016","Suma":96,"y":96,"name":"Puno"},{"nombdep":"Cajamarca","Year":"2016","Suma":94,"y":94,"name":"Cajamarca"},{"nombdep":"Cusco","Year":"2016","Suma":92,"y":92,"name":"Cusco"},{"nombdep":"Ancash","Year":"2016","Suma":85,"y":85,"name":"Ancash"},{"nombdep":"Ica","Year":"2016","Suma":76,"y":76,"name":"Ica"},{"nombdep":"San Martín","Year":"2016","Suma":71,"y":71,"name":"San Martín"},{"nombdep":"Ayacucho","Year":"2016","Suma":68,"y":68,"name":"Ayacucho"},{"nombdep":"Lambayeque","Year":"2016","Suma":60,"y":60,"name":"Lambayeque"},{"nombdep":"Arequipa","Year":"2016","Suma":59,"y":59,"name":"Arequipa"},{"nombdep":"Tumbes","Year":"2016","Suma":55,"y":55,"name":"Tumbes"},{"nombdep":"Ucayali","Year":"2016","Suma":48,"y":48,"name":"Ucayali"},{"nombdep":"Apurímac","Year":"2016","Suma":39,"y":39,"name":"Apurímac"},{"nombdep":"Loreto","Year":"2016","Suma":39,"y":39,"name":"Loreto"},{"nombdep":"Huancavelica","Year":"2016","Suma":35,"y":35,"name":"Huancavelica"},{"nombdep":"Madre de Dios","Year":"2016","Suma":32,"y":32,"name":"Madre de Dios"},{"nombdep":"Amazonas","Year":"2016","Suma":28,"y":28,"name":"Amazonas"},{"nombdep":"Tacna","Year":"2016","Suma":17,"y":17,"name":"Tacna"},{"nombdep":"Pasco","Year":"2016","Suma":16,"y":16,"name":"Pasco"},{"nombdep":"Moquegua","Year":"2016","Suma":13,"y":13,"name":"Moquegua"}],"type":"column"},{"name":"2017","data":[{"nombdep":"Lima","Year":"2017","Suma":813,"y":813,"name":"Lima"},{"nombdep":"Puno","Year":"2017","Suma":145,"y":145,"name":"Puno"},{"nombdep":"La Libertad","Year":"2017","Suma":140,"y":140,"name":"La Libertad"},{"nombdep":"Callao","Year":"2017","Suma":137,"y":137,"name":"Callao"},{"nombdep":"Cusco","Year":"2017","Suma":111,"y":111,"name":"Cusco"},{"nombdep":"Junín","Year":"2017","Suma":104,"y":104,"name":"Junín"},{"nombdep":"Piura","Year":"2017","Suma":100,"y":100,"name":"Piura"},{"nombdep":"Cajamarca","Year":"2017","Suma":84,"y":84,"name":"Cajamarca"},{"nombdep":"Arequipa","Year":"2017","Suma":79,"y":79,"name":"Arequipa"},{"nombdep":"Ayacucho","Year":"2017","Suma":73,"y":73,"name":"Ayacucho"},{"nombdep":"San Martín","Year":"2017","Suma":72,"y":72,"name":"San Martín"},{"nombdep":"Huánuco","Year":"2017","Suma":71,"y":71,"name":"Huánuco"},{"nombdep":"Tumbes","Year":"2017","Suma":70,"y":70,"name":"Tumbes"},{"nombdep":"Madre de Dios","Year":"2017","Suma":67,"y":67,"name":"Madre de Dios"},{"nombdep":"Lambayeque","Year":"2017","Suma":63,"y":63,"name":"Lambayeque"},{"nombdep":"Ucayali","Year":"2017","Suma":61,"y":61,"name":"Ucayali"},{"nombdep":"Ancash","Year":"2017","Suma":59,"y":59,"name":"Ancash"},{"nombdep":"Ica","Year":"2017","Suma":59,"y":59,"name":"Ica"},{"nombdep":"Amazonas","Year":"2017","Suma":42,"y":42,"name":"Amazonas"},{"nombdep":"Pasco","Year":"2017","Suma":41,"y":41,"name":"Pasco"},{"nombdep":"Loreto","Year":"2017","Suma":30,"y":30,"name":"Loreto"},{"nombdep":"Huancavelica","Year":"2017","Suma":23,"y":23,"name":"Huancavelica"},{"nombdep":"Apurímac","Year":"2017","Suma":17,"y":17,"name":"Apurímac"},{"nombdep":"Moquegua","Year":"2017","Suma":15,"y":15,"name":"Moquegua"},{"nombdep":"Tacna","Year":"2017","Suma":11,"y":11,"name":"Tacna"}],"type":"column"}],"xAxis":{"type":"category","title":{"text":""}},"subtitle":{"text":"Fuente: Observatorio Nacional de Seguridad Ciudadana"}},"theme":{"colors":["#d35400","#2980b9","#2ecc71","#f1c40f","#2c3e50","#7f8c8d"],"chart":{"style":{"fontFamily":"Roboto","color":"#666666"}},"title":{"align":"left","style":{"fontFamily":"Roboto Condensed","fontWeight":"bold"}},"subtitle":{"align":"left","style":{"fontFamily":"Roboto Condensed"}},"legend":{"align":"right","verticalAlign":"bottom"},"xAxis":{"gridLineWidth":1,"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"yAxis":{"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"plotOptions":{"line":{"marker":{"enabled":false}},"spline":{"marker":{"enabled":false}},"area":{"marker":{"enabled":false}},"areaspline":{"marker":{"enabled":false}},"arearange":{"marker":{"enabled":false}},"bubble":{"maxSize":"10%"}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":["Roboto","Roboto+Condensed"],"debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="accidentes-de-tránsito" class="section level2">
+<h2>Accidentes de tránsito</h2>
+<p>El gráfico siguiente muestra el total de accidentes de tránsito en el Perú entre los años 2010 y 2017.</p>
+<div id="htmlwidget-8" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-8">{"x":{"hc_opts":{"title":{"text":"Cantidad accidentes de tránsito desde el año 2010 al 2017 en el Perú"},"yAxis":{"title":{"text":""},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":true},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"Year":"2010","Suma":83653,"y":83653,"name":"2010"},{"Year":"2011","Suma":84871,"y":84871,"name":"2011"},{"Year":"2012","Suma":94923,"y":94923,"name":"2012"},{"Year":"2013","Suma":102762,"y":102762,"name":"2013"},{"Year":"2014","Suma":101104,"y":101104,"name":"2014"},{"Year":"2015","Suma":95532,"y":95532,"name":"2015"},{"Year":"2016","Suma":89304,"y":89304,"name":"2016"},{"Year":"2017","Suma":88168,"y":88168,"name":"2017"}],"type":"bar"}],"xAxis":{"type":"category","title":{"text":""}},"subtitle":{"text":"Fuente: Observatorio Nacional de Seguridad Ciudadana"}},"theme":{"colors":["#d35400","#2980b9","#2ecc71","#f1c40f","#2c3e50","#7f8c8d"],"chart":{"style":{"fontFamily":"Roboto","color":"#666666"}},"title":{"align":"left","style":{"fontFamily":"Roboto Condensed","fontWeight":"bold"}},"subtitle":{"align":"left","style":{"fontFamily":"Roboto Condensed"}},"legend":{"align":"right","verticalAlign":"bottom"},"xAxis":{"gridLineWidth":1,"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"yAxis":{"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"plotOptions":{"line":{"marker":{"enabled":false}},"spline":{"marker":{"enabled":false}},"area":{"marker":{"enabled":false}},"areaspline":{"marker":{"enabled":false}},"arearange":{"marker":{"enabled":false}},"bubble":{"maxSize":"10%"}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":["Roboto","Roboto+Condensed"],"debug":false},"evals":[],"jsHooks":[]}</script>
+<p>También podemos observar la cantidad de accidentes de tránsito por departamento.</p>
+<div id="htmlwidget-9" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-9">{"x":{"hc_opts":{"title":{"text":"Cantidad de accidentes de tránsito por departamento entre el 2015 y 2017"},"yAxis":{"title":{"text":""},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":true},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"name":"2015","data":[{"nombdep":"LIMA","Year":"2015","Suma":53305,"y":53305,"name":"LIMA"},{"nombdep":"AREQUIPA","Year":"2015","Suma":5182,"y":5182,"name":"AREQUIPA"},{"nombdep":"LA LIBERTAD","Year":"2015","Suma":4853,"y":4853,"name":"LA LIBERTAD"},{"nombdep":"CUSCO","Year":"2015","Suma":4604,"y":4604,"name":"CUSCO"},{"nombdep":"PIURA","Year":"2015","Suma":3867,"y":3867,"name":"PIURA"},{"nombdep":"CALLAO","Year":"2015","Suma":3554,"y":3554,"name":"CALLAO"},{"nombdep":"HUANUCO","Year":"2015","Suma":2708,"y":2708,"name":"HUANUCO"},{"nombdep":"JUNIN","Year":"2015","Suma":2367,"y":2367,"name":"JUNIN"},{"nombdep":"LAMBAYEQUE","Year":"2015","Suma":2340,"y":2340,"name":"LAMBAYEQUE"},{"nombdep":"ANCASH","Year":"2015","Suma":1697,"y":1697,"name":"ANCASH"},{"nombdep":"AYACUCHO","Year":"2015","Suma":1416,"y":1416,"name":"AYACUCHO"},{"nombdep":"CAJAMARCA","Year":"2015","Suma":1276,"y":1276,"name":"CAJAMARCA"},{"nombdep":"ICA","Year":"2015","Suma":1172,"y":1172,"name":"ICA"},{"nombdep":"SAN MARTIN","Year":"2015","Suma":1168,"y":1168,"name":"SAN MARTIN"},{"nombdep":"TACNA","Year":"2015","Suma":1142,"y":1142,"name":"TACNA"},{"nombdep":"PUNO","Year":"2015","Suma":922,"y":922,"name":"PUNO"},{"nombdep":"UCAYALI","Year":"2015","Suma":815,"y":815,"name":"UCAYALI"},{"nombdep":"MOQUEGUA","Year":"2015","Suma":573,"y":573,"name":"MOQUEGUA"},{"nombdep":"APURIMAC","Year":"2015","Suma":531,"y":531,"name":"APURIMAC"},{"nombdep":"MADRE DE DIOS","Year":"2015","Suma":488,"y":488,"name":"MADRE DE DIOS"},{"nombdep":"TUMBES","Year":"2015","Suma":433,"y":433,"name":"TUMBES"},{"nombdep":"LORETO","Year":"2015","Suma":394,"y":394,"name":"LORETO"},{"nombdep":"AMAZONAS","Year":"2015","Suma":381,"y":381,"name":"AMAZONAS"},{"nombdep":"HUANCAVELICA","Year":"2015","Suma":249,"y":249,"name":"HUANCAVELICA"},{"nombdep":"PASCO","Year":"2015","Suma":95,"y":95,"name":"PASCO"}],"type":"column"},{"name":"2016","data":[{"nombdep":"LIMA","Year":"2016","Suma":49304,"y":49304,"name":"LIMA"},{"nombdep":"AREQUIPA","Year":"2016","Suma":5410,"y":5410,"name":"AREQUIPA"},{"nombdep":"LA LIBERTAD","Year":"2016","Suma":4704,"y":4704,"name":"LA LIBERTAD"},{"nombdep":"PIURA","Year":"2016","Suma":3480,"y":3480,"name":"PIURA"},{"nombdep":"CALLAO","Year":"2016","Suma":3430,"y":3430,"name":"CALLAO"},{"nombdep":"CUSCO","Year":"2016","Suma":3366,"y":3366,"name":"CUSCO"},{"nombdep":"LAMBAYEQUE","Year":"2016","Suma":2804,"y":2804,"name":"LAMBAYEQUE"},{"nombdep":"JUNIN","Year":"2016","Suma":2378,"y":2378,"name":"JUNIN"},{"nombdep":"HUANUCO","Year":"2016","Suma":2067,"y":2067,"name":"HUANUCO"},{"nombdep":"SAN MARTIN","Year":"2016","Suma":2002,"y":2002,"name":"SAN MARTIN"},{"nombdep":"ANCASH","Year":"2016","Suma":1531,"y":1531,"name":"ANCASH"},{"nombdep":"CAJAMARCA","Year":"2016","Suma":1312,"y":1312,"name":"CAJAMARCA"},{"nombdep":"ICA","Year":"2016","Suma":1047,"y":1047,"name":"ICA"},{"nombdep":"AYACUCHO","Year":"2016","Suma":970,"y":970,"name":"AYACUCHO"},{"nombdep":"TACNA","Year":"2016","Suma":910,"y":910,"name":"TACNA"},{"nombdep":"PUNO","Year":"2016","Suma":765,"y":765,"name":"PUNO"},{"nombdep":"AMAZONAS","Year":"2016","Suma":628,"y":628,"name":"AMAZONAS"},{"nombdep":"MADRE DE DIOS","Year":"2016","Suma":608,"y":608,"name":"MADRE DE DIOS"},{"nombdep":"MOQUEGUA","Year":"2016","Suma":559,"y":559,"name":"MOQUEGUA"},{"nombdep":"TUMBES","Year":"2016","Suma":534,"y":534,"name":"TUMBES"},{"nombdep":"UCAYALI","Year":"2016","Suma":434,"y":434,"name":"UCAYALI"},{"nombdep":"APURIMAC","Year":"2016","Suma":363,"y":363,"name":"APURIMAC"},{"nombdep":"LORETO","Year":"2016","Suma":359,"y":359,"name":"LORETO"},{"nombdep":"HUANCAVELICA","Year":"2016","Suma":295,"y":295,"name":"HUANCAVELICA"},{"nombdep":"PASCO","Year":"2016","Suma":44,"y":44,"name":"PASCO"}],"type":"column"},{"name":"2017","data":[{"nombdep":"LIMA","Year":"2017","Suma":49208,"y":49208,"name":"LIMA"},{"nombdep":"AREQUIPA","Year":"2017","Suma":5157,"y":5157,"name":"AREQUIPA"},{"nombdep":"LA LIBERTAD","Year":"2017","Suma":4604,"y":4604,"name":"LA LIBERTAD"},{"nombdep":"CALLAO","Year":"2017","Suma":3402,"y":3402,"name":"CALLAO"},{"nombdep":"CUSCO","Year":"2017","Suma":3235,"y":3235,"name":"CUSCO"},{"nombdep":"LAMBAYEQUE","Year":"2017","Suma":3188,"y":3188,"name":"LAMBAYEQUE"},{"nombdep":"JUNIN","Year":"2017","Suma":2457,"y":2457,"name":"JUNIN"},{"nombdep":"PIURA","Year":"2017","Suma":2303,"y":2303,"name":"PIURA"},{"nombdep":"ANCASH","Year":"2017","Suma":1973,"y":1973,"name":"ANCASH"},{"nombdep":"CAJAMARCA","Year":"2017","Suma":1777,"y":1777,"name":"CAJAMARCA"},{"nombdep":"HUANUCO","Year":"2017","Suma":1724,"y":1724,"name":"HUANUCO"},{"nombdep":"SAN MARTIN","Year":"2017","Suma":1533,"y":1533,"name":"SAN MARTIN"},{"nombdep":"ICA","Year":"2017","Suma":1181,"y":1181,"name":"ICA"},{"nombdep":"PUNO","Year":"2017","Suma":968,"y":968,"name":"PUNO"},{"nombdep":"AYACUCHO","Year":"2017","Suma":846,"y":846,"name":"AYACUCHO"},{"nombdep":"TACNA","Year":"2017","Suma":781,"y":781,"name":"TACNA"},{"nombdep":"MADRE DE DIOS","Year":"2017","Suma":657,"y":657,"name":"MADRE DE DIOS"},{"nombdep":"MOQUEGUA","Year":"2017","Suma":583,"y":583,"name":"MOQUEGUA"},{"nombdep":"APURIMAC","Year":"2017","Suma":473,"y":473,"name":"APURIMAC"},{"nombdep":"TUMBES","Year":"2017","Suma":462,"y":462,"name":"TUMBES"},{"nombdep":"UCAYALI","Year":"2017","Suma":450,"y":450,"name":"UCAYALI"},{"nombdep":"LORETO","Year":"2017","Suma":442,"y":442,"name":"LORETO"},{"nombdep":"AMAZONAS","Year":"2017","Suma":423,"y":423,"name":"AMAZONAS"},{"nombdep":"HUANCAVELICA","Year":"2017","Suma":220,"y":220,"name":"HUANCAVELICA"},{"nombdep":"PASCO","Year":"2017","Suma":121,"y":121,"name":"PASCO"}],"type":"column"}],"xAxis":{"type":"category","title":{"text":""}},"subtitle":{"text":"Fuente: Observatorio Nacional de Seguridad Ciudadana"}},"theme":{"colors":["#d35400","#2980b9","#2ecc71","#f1c40f","#2c3e50","#7f8c8d"],"chart":{"style":{"fontFamily":"Roboto","color":"#666666"}},"title":{"align":"left","style":{"fontFamily":"Roboto Condensed","fontWeight":"bold"}},"subtitle":{"align":"left","style":{"fontFamily":"Roboto Condensed"}},"legend":{"align":"right","verticalAlign":"bottom"},"xAxis":{"gridLineWidth":1,"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"yAxis":{"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"plotOptions":{"line":{"marker":{"enabled":false}},"spline":{"marker":{"enabled":false}},"area":{"marker":{"enabled":false}},"areaspline":{"marker":{"enabled":false}},"arearange":{"marker":{"enabled":false}},"bubble":{"maxSize":"10%"}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":["Roboto","Roboto+Condensed"],"debug":false},"evals":[],"jsHooks":[]}</script>
+<p>Por último, logramos comparar la cantidad de muertes por accidentes de tránsito en cada departamento.</p>
+<div id="htmlwidget-10" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-10">{"x":{"hc_opts":{"title":{"text":"Cantidad de muertes por accidentes de tránsito por departamento entre el 2015 y 2017"},"yAxis":{"title":{"text":""},"type":"linear"},"credits":{"enabled":false},"exporting":{"enabled":true},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":true},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"name":"2015","data":[{"nombdep":"LIMA","Year":"2015","Suma":641,"y":641,"name":"LIMA"},{"nombdep":"AREQUIPA","Year":"2015","Suma":197,"y":197,"name":"AREQUIPA"},{"nombdep":"ANCASH","Year":"2015","Suma":195,"y":195,"name":"ANCASH"},{"nombdep":"PUNO","Year":"2015","Suma":187,"y":187,"name":"PUNO"},{"nombdep":"CUSCO","Year":"2015","Suma":177,"y":177,"name":"CUSCO"},{"nombdep":"JUNÍN","Year":"2015","Suma":168,"y":168,"name":"JUNÍN"},{"nombdep":"LA LIBERTAD","Year":"2015","Suma":159,"y":159,"name":"LA LIBERTAD"},{"nombdep":"PIURA","Year":"2015","Suma":140,"y":140,"name":"PIURA"},{"nombdep":"HUANUCO","Year":"2015","Suma":120,"y":120,"name":"HUANUCO"},{"nombdep":"AYACUCHO","Year":"2015","Suma":104,"y":104,"name":"AYACUCHO"},{"nombdep":"HUANCAVELICA","Year":"2015","Suma":104,"y":104,"name":"HUANCAVELICA"},{"nombdep":"ICA","Year":"2015","Suma":93,"y":93,"name":"ICA"},{"nombdep":"SAN MARTÍN","Year":"2015","Suma":82,"y":82,"name":"SAN MARTÍN"},{"nombdep":"CAJAMARCA","Year":"2015","Suma":77,"y":77,"name":"CAJAMARCA"},{"nombdep":"APURIMAC","Year":"2015","Suma":74,"y":74,"name":"APURIMAC"},{"nombdep":"CALLAO","Year":"2015","Suma":74,"y":74,"name":"CALLAO"},{"nombdep":"UCAYALI","Year":"2015","Suma":72,"y":72,"name":"UCAYALI"},{"nombdep":"LAMBAYEQUE","Year":"2015","Suma":57,"y":57,"name":"LAMBAYEQUE"},{"nombdep":"MADRE DE DIOS","Year":"2015","Suma":49,"y":49,"name":"MADRE DE DIOS"},{"nombdep":"AMAZONAS","Year":"2015","Suma":39,"y":39,"name":"AMAZONAS"},{"nombdep":"TACNA","Year":"2015","Suma":37,"y":37,"name":"TACNA"},{"nombdep":"MOQUEGUA","Year":"2015","Suma":35,"y":35,"name":"MOQUEGUA"},{"nombdep":"LORETO","Year":"2015","Suma":29,"y":29,"name":"LORETO"},{"nombdep":"PASCO","Year":"2015","Suma":29,"y":29,"name":"PASCO"},{"nombdep":"TUMBES","Year":"2015","Suma":26,"y":26,"name":"TUMBES"}],"type":"column"},{"name":"2016","data":[{"nombdep":"LIMA","Year":"2016","Suma":472,"y":472,"name":"LIMA"},{"nombdep":"PUNO","Year":"2016","Suma":239,"y":239,"name":"PUNO"},{"nombdep":"CUSCO","Year":"2016","Suma":231,"y":231,"name":"CUSCO"},{"nombdep":"LA LIBERTAD","Year":"2016","Suma":194,"y":194,"name":"LA LIBERTAD"},{"nombdep":"AREQUIPA","Year":"2016","Suma":189,"y":189,"name":"AREQUIPA"},{"nombdep":"PIURA","Year":"2016","Suma":147,"y":147,"name":"PIURA"},{"nombdep":"ANCASH","Year":"2016","Suma":137,"y":137,"name":"ANCASH"},{"nombdep":"CAJAMARCA","Year":"2016","Suma":118,"y":118,"name":"CAJAMARCA"},{"nombdep":"JUNÍN","Year":"2016","Suma":118,"y":118,"name":"JUNÍN"},{"nombdep":"AYACUCHO","Year":"2016","Suma":113,"y":113,"name":"AYACUCHO"},{"nombdep":"SAN MARTÍN","Year":"2016","Suma":111,"y":111,"name":"SAN MARTÍN"},{"nombdep":"ICA","Year":"2016","Suma":106,"y":106,"name":"ICA"},{"nombdep":"APURIMAC","Year":"2016","Suma":93,"y":93,"name":"APURIMAC"},{"nombdep":"LAMBAYEQUE","Year":"2016","Suma":64,"y":64,"name":"LAMBAYEQUE"},{"nombdep":"HUANUCO","Year":"2016","Suma":55,"y":55,"name":"HUANUCO"},{"nombdep":"UCAYALI","Year":"2016","Suma":51,"y":51,"name":"UCAYALI"},{"nombdep":"HUANCAVELICA","Year":"2016","Suma":39,"y":39,"name":"HUANCAVELICA"},{"nombdep":"MOQUEGUA","Year":"2016","Suma":36,"y":36,"name":"MOQUEGUA"},{"nombdep":"TACNA","Year":"2016","Suma":34,"y":34,"name":"TACNA"},{"nombdep":"AMAZONAS","Year":"2016","Suma":33,"y":33,"name":"AMAZONAS"},{"nombdep":"TUMBES","Year":"2016","Suma":28,"y":28,"name":"TUMBES"},{"nombdep":"LORETO","Year":"2016","Suma":27,"y":27,"name":"LORETO"},{"nombdep":"MADRE DE DIOS","Year":"2016","Suma":26,"y":26,"name":"MADRE DE DIOS"},{"nombdep":"CALLAO","Year":"2016","Suma":21,"y":21,"name":"CALLAO"},{"nombdep":"PASCO","Year":"2016","Suma":14,"y":14,"name":"PASCO"}],"type":"column"},{"name":"2017","data":[{"nombdep":"LIMA","Year":"2017","Suma":715,"y":715,"name":"LIMA"},{"nombdep":"PUNO","Year":"2017","Suma":235,"y":235,"name":"PUNO"},{"nombdep":"CUSCO","Year":"2017","Suma":233,"y":233,"name":"CUSCO"},{"nombdep":"LA LIBERTAD","Year":"2017","Suma":214,"y":214,"name":"LA LIBERTAD"},{"nombdep":"AREQUIPA","Year":"2017","Suma":174,"y":174,"name":"AREQUIPA"},{"nombdep":"JUNÍN","Year":"2017","Suma":165,"y":165,"name":"JUNÍN"},{"nombdep":"ANCASH","Year":"2017","Suma":102,"y":102,"name":"ANCASH"},{"nombdep":"CAJAMARCA","Year":"2017","Suma":102,"y":102,"name":"CAJAMARCA"},{"nombdep":"PIURA","Year":"2017","Suma":99,"y":99,"name":"PIURA"},{"nombdep":"LAMBAYEQUE","Year":"2017","Suma":89,"y":89,"name":"LAMBAYEQUE"},{"nombdep":"ICA","Year":"2017","Suma":85,"y":85,"name":"ICA"},{"nombdep":"SAN MARTÍN","Year":"2017","Suma":75,"y":75,"name":"SAN MARTÍN"},{"nombdep":"HUANCAVELICA","Year":"2017","Suma":69,"y":69,"name":"HUANCAVELICA"},{"nombdep":"AYACUCHO","Year":"2017","Suma":65,"y":65,"name":"AYACUCHO"},{"nombdep":"HUANUCO","Year":"2017","Suma":56,"y":56,"name":"HUANUCO"},{"nombdep":"MADRE DE DIOS","Year":"2017","Suma":49,"y":49,"name":"MADRE DE DIOS"},{"nombdep":"CALLAO","Year":"2017","Suma":46,"y":46,"name":"CALLAO"},{"nombdep":"TACNA","Year":"2017","Suma":46,"y":46,"name":"TACNA"},{"nombdep":"AMAZONAS","Year":"2017","Suma":44,"y":44,"name":"AMAZONAS"},{"nombdep":"APURIMAC","Year":"2017","Suma":44,"y":44,"name":"APURIMAC"},{"nombdep":"TUMBES","Year":"2017","Suma":31,"y":31,"name":"TUMBES"},{"nombdep":"MOQUEGUA","Year":"2017","Suma":27,"y":27,"name":"MOQUEGUA"},{"nombdep":"LORETO","Year":"2017","Suma":21,"y":21,"name":"LORETO"},{"nombdep":"UCAYALI","Year":"2017","Suma":21,"y":21,"name":"UCAYALI"},{"nombdep":"PASCO","Year":"2017","Suma":19,"y":19,"name":"PASCO"}],"type":"column"}],"xAxis":{"type":"category","title":{"text":""}},"subtitle":{"text":"Fuente: Observatorio Nacional de Seguridad Ciudadana"}},"theme":{"colors":["#d35400","#2980b9","#2ecc71","#f1c40f","#2c3e50","#7f8c8d"],"chart":{"style":{"fontFamily":"Roboto","color":"#666666"}},"title":{"align":"left","style":{"fontFamily":"Roboto Condensed","fontWeight":"bold"}},"subtitle":{"align":"left","style":{"fontFamily":"Roboto Condensed"}},"legend":{"align":"right","verticalAlign":"bottom"},"xAxis":{"gridLineWidth":1,"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"yAxis":{"gridLineColor":"#F3F3F3","lineColor":"#F3F3F3","minorGridLineColor":"#F3F3F3","tickColor":"#F3F3F3","tickWidth":1},"plotOptions":{"line":{"marker":{"enabled":false}},"spline":{"marker":{"enabled":false}},"area":{"marker":{"enabled":false}},"areaspline":{"marker":{"enabled":false}},"arearange":{"marker":{"enabled":false}},"bubble":{"maxSize":"10%"}}},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":["Roboto","Roboto+Condensed"],"debug":false},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="adicional-centros-de-emergencia-mujer-cem" class="section level2">
+<h2>Adicional: Centros de Emergencia Mujer (CEM)</h2>
+<p><em>El Ministerio de la Mujer y Poblaciones Vulnerables (MIMP) efectúa acciones de prevención y atención de la violencia familiar y sexual mediante los Centros Emergencia Mujer (CEM). Estos establecimientos brindan servicios públicos especializados y gratuitos, para víctimas de violencia contra la mujer e integrantes del grupo familiar, en los cuales se brinda orientación legal, defensa judicial y consejería psicológica.</em></p>
+<p>Estos establecimientos también son de importancia para generar indicadores sobre violencia contra la mujer y densidad de casos registrados.</p>
+<p>La siguiente tabla contiene la descripción de las variables creadas por los CEMs en cada periodo:</p>
+<div id="htmlwidget-11" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-11">{"x":{"filter":"none","extensions":["Buttons","ColReorder","KeyTable","FixedHeader","Responsive"],"caption":"<caption style=\"caption-side:bottom; text-align:left;\">\n  Nota:\n  <em>Tabla con variables registradas por los CEMs y organizado por periodo.<\/em>\n<\/caption>","data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37"],["VF1","VF2","VF3","VF4","VF5","VF6","VS1","VS2","VS3","VS4","VS5","VS6","@NE","VEP1","VEP2","VEP3","VEP4","VEP5","VEP6","VP1","VP2","VP3","VP4","VP5","VP6","VFIS1","VFIS2","VFIS3","VFIS4","VFIS5","VFIS6","VS1","VS2","VS3","VS4","VS5","VS6"],["Violencia Familiar - GE: 0-17 AÑOS - Femenino","Violencia Familiar - GE: 0-17 AÑOS - Masculino","Violencia Familiar - GE: 18-59 AÑOS - Femenino","Violencia Familiar - GE: 18-59 AÑOS - Masculino","Violencia Familiar - GE: 60 a + AÑOS - Femenino","Violencia Familiar - GE: 60 a + AÑOS - Masculino","Violencia Sexual - GE: 0-17 AÑOS - Femenino","Violencia Sexual - GE: 0-17 AÑOS - Masculino","Violencia Sexual - GE: 18-59 AÑOS - Femenino","Violencia Sexual - GE: 18-59 AÑOS - Masculino","Violencia Sexual - GE: 60 a + AÑOS - Femenino","Violencia Sexual - GE: 60 a + AÑOS - Masculino","N/E: Datos no especificados de tipo de violencia, edad o sexo de la víctima por no contar con el registro de algunos meses","Violencia Económica o Patrimonial - GE: 0-17 AÑOS - Masculino","Violencia Económica o Patrimonial - GE: 0-17 AÑOS - Femenino","Violencia Económica o Patrimonial - GE: 18-59 AÑOS - Masculino","Violencia Económica o Patrimonial - GE: 18-59 AÑOS - Femenino","Violencia Económica o Patrimonial - GE: 60 a + AÑOS - Masculino","Violencia Económica o Patrimonial - GE: 60 a + AÑOS - Femenino","Violencia Psicológica - GE: 0-17 AÑOS - Masculino","Violencia Psicológica - GE: 0-17 AÑOS - Femenino","Violencia Psicológica - GE: 18-59 AÑOS - Masculino","Violencia Psicológica - GE: 18-59 AÑOS - Femenino","Violencia Psicológica - GE: 60 a + AÑOS - Masculino","Violencia Psicológica - GE: 60 a + AÑOS - Femenino","Violencia Física - GE: 0-17 AÑOS - Masculino","Violencia Física - GE: 0-17 AÑOS - Femenino","Violencia Física - GE: 18-59 AÑOS - Masculino","Violencia Física - GE: 18-59 AÑOS - Femenino","Violencia Física - GE: 60 a + AÑOS - Masculino","Violencia Física - GE: 60 a + AÑOS - Femenino","Violencia Sexual - GE: 0-17 AÑOS - Masculino","Violencia Sexual - GE: 0-17 AÑOS - Femenino","Violencia Sexual - GE: 18-59 AÑOS - Masculino","Violencia Sexual - GE: 18-59 AÑOS - Femenino","Violencia Sexual - GE: 60 a + AÑOS - Masculino","Violencia Sexual - GE: 60 a + AÑOS - Femenino"],["CEM 2002 - 2016","CEM 2002 - 2016","CEM 2002 - 2016","CEM 2002 - 2016","CEM 2002 - 2016","CEM 2002 - 2016","CEM 2002 - 2016","CEM 2002 - 2016","CEM 2002 - 2016","CEM 2002 - 2016","CEM 2002 - 2016","CEM 2002 - 2016","CEM 2002 - 2016","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018","CEM 2017 2018"]],"container":"<table class=\"cell-border stripe\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>Variable<\/th>\n      <th>Descripción<\/th>\n      <th>Periodo<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"search":{"regex":true,"caseInsensitive":false},"searchHighlight":true,"pageLenght":5,"autoWidth":false,"dom":"Bfrtip","buttons":["copy","print",{"extend":"collection","buttons":["csv","excel","pdf"],"text":"Download"}],"colReorder":false,"keys":true,"fixedHeader":false,"order":[],"orderClasses":false,"columnDefs":[{"orderable":false,"targets":0}],"responsive":true}},"evals":[],"jsHooks":[]}</script>
+<p><em>La información presentada en las bases de datos comprende dos períodos de tiempo. En la primera base de datos se presentan los registros de personas víctimas de violencia familiar y violencia sexual atendidas en los CEM’s entre los años 2002 a 2016. En el gráfico siguiente tenemos un mapa de calor mostrando la cantidad de casos por cada 100 000 habitantes en cada departamento en el año 2016</em></p>
+<div id="htmlwidget-12" style="width:672px;height:768px;" class="d3heatmap html-widget"></div>
+<script type="application/json" data-for="htmlwidget-12">{"x":{"rows":null,"cols":null,"matrix":{"data":["32.039","18.237","136.288","3.943","7.147","2.957","25.877","1.725","4.683","0.246","0.739","48.361","33.317","207.472","12.183","16.613","4.338","16.52","1.938","3.876","0","0.646","31.203","20.802","188.324","8.409","9.516","1.549","13.942","0.664","3.098","0","0.885","35.509","22.058","158.165","4.99","11.427","2.025","17.068","1.229","9.474","0.217","0.289","42.683","28.563","209.518","7.79","16.067","5.193","17.69","0.487","5.842","0","0.487","20.358","14.392","119.089","4.4","8.203","2.088","14.392","0.969","2.61","0","0.075","29.864","30.267","74.51","1.307","6.234","1.307","17.094","2.212","3.218","0","0","54.748","36.333","392.194","14.848","21.567","5.558","22.148","1.41","7.051","0","0.83","55.23","46.025","230.699","12.081","10.356","3.74","27.04","1.438","14.67","0","1.438","21.08","13.037","182.374","7.489","11.788","3.467","25.241","0.971","9.708","0","0.693","55.362","43.608","145.046","5.76","11.637","3.291","23.273","3.879","5.172","0","0","53.449","33.707","197.105","8.025","14.526","3.371","33.787","2.889","9.55","0.241","0.241","27.052","18.897","84.192","2.306","3.881","0.9","15.016","0.9","5.343","0.056","0.169","6.264","3.759","39.423","0.835","2.589","0.334","4.343","0.501","0.752","0","0","36.825","28.56","93.017","3.595","10.026","3.226","17.975","2.309","4.628","0.158","0.137","19.694","11.318","141.708","3.509","5.659","1.132","27.73","3.396","4.641","0.113","0.113","81.52","60.254","262.281","5.671","3.544","3.544","72.305","2.835","9.924","0.709","0","44.034","23.447","245.335","7.434","12.009","8.006","7.434","0.572","4.575","0","0","35.818","19.68","221.99","7.085","9.053","1.181","25.978","0.787","5.51","0","0.394","17.126","10.771","98.556","2.908","4.632","1.077","9.532","0.754","2.908","0.215","0","18.504","10.062","187.943","4.605","13.985","2.729","9.892","0.512","2.132","0","0.171","52.005","28.523","225.11","8.483","8.852","2.09","30.613","0.615","5.41","0.123","0","31.883","24.292","137.855","3.34","10.324","3.34","15.182","3.036","8.502","0.304","0","52.476","39.135","175.218","3.113","3.558","0.889","12.452","1.779","3.113","0","0","15.51","8.46","127.303","3.827","2.619","0.806","20.143","2.82","6.446","0.201","0.201"],"dim":[25,11],"rows":["AMAZONAS","ANCASH","APURIMAC","AREQUIPA","AYACUCHO","CAJAMARCA","CALLAO","CUSCO","HUANCAVELICA","HUANUCO","ICA","JUNIN","LA LIBERTAD","LAMBAYEQUE","LIMA","LORETO","MADRE DE DIOS","MOQUEGUA","PASCO","PIURA","PUNO","SAN MARTIN","TACNA","TUMBES","UCAYALI"],"cols":["VF1","VF2","VF3","VF4","VF5","VF6","VS1","VS2","VS3","VS4","VS5"]},"image":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAALCAYAAACK9ybzAAADF0lEQVQ4jUWTT2gcdRTHP29mZ/ZPMvvPJG4Smz+tNY1bW3ooJYK0RVuFIoigIIgHFQQP6s2jB+8KRaiggohQiqgXNYLFWlChSumlVExsmsSmSbPJdndn/83szO95mIKHd3rf9/i+9z5PzMcnlGwKDJASiBTd7EAzgpKDlNOYizUGjQHudCbRpG1qizXSJQdvTwbr1Bi63kHmCmAJ5psNrNNjAOhmD4lfPaw86iETQzAwUHAhMhDEND78h8LLk+DaYBSxBV1pI3N5iBRSQnBhA3cqA1UPagE4FjQHoNC51gJA4nMnVGZK6PVtZGII/XMXOVmB0EBsoBtBEEPKSho4Fngu+CEo0I/QZR/rmf33ne8mmt0+er2BHK+QkrwL7T7mch3xWlw6H1D6tIElyvQjSvGFcfAc+LuFHCnjn1shm3fwtwOKB4aoXW0x+tI45uu/wLVg7zC/vn2HJ76Y5eJHHU49aSHm2zOqN+pQD/+/i2Mh1SK9z1bJvjZDfP5f1EDfHzD8yhTaHsDtLmRsyFisnN1k73szSCkNro35cg2puFB2oBEh4Zl5tR8bRm90CLsxAO6ogzz+AFJwk5VNliAMIeXAIIRaF3IpdLuHuDZYAseqSBCgmQzit8AYiGOIY8T88JzKyCi6vAauja770BwgxyrQ7KOrPvRiGM/CtQZytIyutpGHPRjJgmXBVhuGHLAtcAS9tMXuz3VG3ppFGyFiPn9Kr755CwUOLtikn30QqY6jizd5/wOfd08LUWD45LLwzlf70D9qsCeH/rSDzOUgNPxyts3J7w6AKmx1IJdKDN9uI56DxK8fVsbSMJZGpjz0Sg05OpIIRrPoUhNZeOj+6FGCuWOB0SQUsEC/30CenoCcC5aNXrmDTOYwi3dJMe8hM3nIJkk5VIJ6H/39HsyHsN5D15fhSBHJptDfdpDnp9A1HzoRsr8AtR5U8wnWRtGlRoK9LXR3AiR68aCG9ZDMG/swF9YxPYN9vIzM5qHoQdCHVh+95SNzxaTYtaGUB4Cte8nDTVfQVgtd2mXw4zbOQgnuBsihAv8BD61ivR4gDDkAAAAASUVORK5CYII=","theme":null,"options":{"xaxis_height":80,"yaxis_width":120,"xaxis_font_size":10,"yaxis_font_size":9,"brush_color":"#0000FF","show_grid":true,"anim_duration":500}},"evals":[],"jsHooks":[]}</script>
+<p><em>En la segunda base de datos, del año 2017 y hasta septiembre de 2018, la información presenta la cantidad de víctimas atendidas en los CEM’s detallando el tipo de violencia sufrida: violencia económica o patrimonial, violencia psicológica, violencia física y violencia sexual. En esta gráfica se muestra la cantidad de casos por cada 100 000 habitantes en cada departamento en el año 2018</em>. <a href="https://www.mimp.gob.pe/contigo/contenidos/pncontigo-articulos.php?codigo=36">Hacer click aquí para acceder a las versiones originales de las bases de datos</a></p>
+<div id="htmlwidget-13" style="width:672px;height:768px;" class="d3heatmap html-widget"></div>
+<script type="application/json" data-for="htmlwidget-13">{"x":{"rows":null,"cols":null,"matrix":{"data":["0.246","0.493","0","0","0","0","21.934","17.005","59.641","3.45","6.408","2.711","13.555","9.858","64.324","2.218","4.436","0.986","31.792","3.45","6.408","0.246","0.493","0","0.554","0","0","0.092","0.185","0.092","33.317","21.965","109.827","6.83","11.629","4.153","18.089","10.614","107.151","5.445","5.63","1.569","15.413","0.923","6.737","0.092","0.646","0","0.885","0.885","0","0","0.221","0","26.334","25.892","117.951","2.877","9.958","2.877","16.155","9.073","100.469","3.983","4.426","1.549","15.491","1.328","11.286","0","0.664","0","0.579","0.723","2.097","0.145","0.796","0.217","83.603","70.874","217.034","11.644","33.484","8.823","30.447","27.627","145.726","4.918","9.329","3.182","22.058","2.314","11.716","0.072","0.072","0","0.325","0.325","1.461","0","0.325","0.162","26.778","20.124","121.881","4.869","14.606","1.947","24.019","14.931","123.828","7.628","6.329","3.246","29.862","2.759","11.198","0","0.325","0","0.149","0.224","0.075","0","0","0","17.3","11.26","51.081","2.237","5.817","1.119","11.857","5.667","78.299","2.834","2.013","1.044","9.694","0.597","3.952","0","0.149","0","0.201","0.101","0.101","0","0.302","0.302","21.72","15.083","73.706","1.609","9.653","3.419","17.697","12.167","42.233","1.81","2.916","2.112","15.385","1.508","7.139","0","0","0","0.166","0","0.912","0","0.249","0.249","26.793","22.812","184.732","8.793","16.01","6.802","18.913","12.443","166.151","6.719","6.221","3.152","23.392","2.074","11.779","0.083","0.83","0","0.288","1.151","1.438","0","0","0","28.765","22.149","93.775","2.014","4.315","3.164","18.122","13.52","114.199","4.315","4.315","1.151","21.286","3.164","9.205","0","1.438","0","0.139","0.139","0.832","0","0","0.139","14.84","9.569","103.461","3.19","8.183","0.971","17.059","9.708","98.745","3.745","4.577","1.526","38.139","2.635","11.927","0","0.693","0.139","0","0.118","0.588","0.118","0","0.118","38.083","19.982","114.368","3.526","12.342","2.116","29.15","21.275","89.449","2.586","3.056","1.763","29.62","4.114","15.398","0.118","0","0","0.482","0.161","0.482","0.08","0.161","0.08","29.774","19.903","122.308","3.05","11.155","3.692","30.978","22.632","92.293","3.05","4.574","1.525","31.781","1.525","10.192","0.08","0.562","0","0.169","0.281","0.225","0","0.056","0.169","25.589","21.709","55.228","1.743","4.331","0.844","16.985","10.629","46.567","1.631","1.912","0.562","16.647","1.687","4.668","0","0.056","0","0","0","0","0","0","0","8.185","7.851","43.182","1.754","4.761","2.673","6.849","4.176","39.256","1.42","1.336","0.835","5.68","0.334","2.088","0.084","0.084","0","0.253","0.221","0.369","0.021","0.127","0.095","28.908","22.076","95.241","4.175","11.544","4.449","23.331","18.597","75.874","3.31","4.312","2.246","19.124","2.362","11.101","0.137","0.095","0","0.566","0.113","10.187","0.34","0","0.113","14.261","10.526","67.232","2.037","5.32","1.132","11.545","8.602","58.177","3.056","1.132","0.792","24.335","1.019","5.772","0","0.226","0","0.709","0.709","0.709","0","0","0","26.937","21.266","170.128","8.506","9.924","12.76","24.102","21.975","83.646","0","3.544","0.709","38.279","0","7.089","0","0","0","0","0","1.144","0","0","0","21.159","12.581","133.819","1.716","10.294","3.431","21.159","20.016","109.228","2.859","6.291","0.572","16.584","2.288","16.013","0","0","0","0.394","0.394","0","0","0","0","23.616","13.382","100.368","3.936","7.478","1.574","22.829","9.446","105.485","3.542","1.968","0","18.893","4.33","6.298","0","0","0","0","0","0.215","0.054","0","0","9.155","7.055","60.642","1.4","2.962","0.969","7.324","4.147","47.662","1.4","1.562","0.215","10.233","1.077","3.608","0.162","0.162","0","0.171","0","0.938","0","0","0","10.744","8.016","93.289","4.093","8.527","2.643","10.83","7.675","126.972","4.775","5.713","2.217","11.512","1.023","5.031","0","0.512","0","0.492","0.492","0.861","0","0.615","0.123","26.679","17.089","88.519","3.074","6.885","2.582","22.868","13.893","87.536","3.811","2.459","0.246","31.228","3.319","6.516","0","0.123","0","0","0","0.607","0.304","0","0","25.203","18.219","153.644","4.555","13.664","3.036","18.219","11.539","238.361","10.931","8.806","3.644","26.113","2.429","19.433","0.607","0.607","0","0","0","1.334","0","0","0","64.928","46.25","277.058","9.784","15.12","5.781","28.906","23.125","250.375","12.897","4.892","1.779","5.337","0.445","8.45","0","0","0","0.403","2.014","1.813","0","0","0","6.446","2.619","47.336","1.611","1.611","0.201","6.043","3.626","32.43","0.806","0.201","0","28.2","2.216","5.036","0.604","0.201","0"],"dim":[25,24],"rows":["AMAZONAS","ANCASH","APURIMAC","AREQUIPA","AYACUCHO","CAJAMARCA","CALLAO","CUSCO","HUANCAVELICA","HUANUCO","ICA","JUNIN","LA LIBERTAD","LAMBAYEQUE","LIMA","LORETO","MADRE DE DIOS","MOQUEGUA","PASCO","PIURA","PUNO","SAN MARTIN","TACNA","TUMBES","UCAYALI"],"cols":["VEP1","VEP2","VEP3","VEP4","VEP5","VEP6","VP1","VP2","VP3","VP4","VP5","VP6","VFIS1","VFIS2","VFIS3","VFIS4","VFIS5","VFIS6","VS1","VS2","VS3","VS4","VS5","VS6"]},"image":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAYCAYAAAAPtVbGAAAFyklEQVRIiV2VSYwcVxnHf19tXb339IzbM2OP1xgfvGCISRwOjKU4sTCLhBDiwi3kiBDihA9wQQIiuAABTpFYFbiBQFYUpCgEMEKOwoQkTpzYsmf1zLR7uqe71q6qj8NrPIJbqd7T+7//8v6f5D/8hNJNkCM1UMASKNloP4G8QDoVdDtCKg4aZkjTgyQHz4ZC0fUQ2edTvLRJERU4n59HX92G/R4sVNHXHuBI24eai94cQMUG14IwN99lG/3jGhyvoAAtD8IM3Umgl0JYwEEfPAvrCwtYw9SsASxUWfvObeYfb2KR5oaBgJxsQdmGXMEWpOHBh5vQLiGzFaRVQkdjc5GWBwtlZK4CuaLXt40Kbwzg/BT6520OfGoaOV5Gsi+e1hu/jznzhMXrrynDTLhwPqN3L+e97RIXPjKm1HAYbSR0FqdgzmfzV+vUD/pUPt2BIINuCh+qIW0f7acwHINvFJG5CpJ/6YwimBurQlwYJvdj5GPT6I0e7C9BklO8FWA1bYK7EdUTFagaeeVMC+0lULKR2sS7kg0iYAlS/OayEmeGasOD0diAuTY4FngWbIVG0lYJBgnM1yEvzL5ebAIQ5YhrGSlVQQT9W5eVaz0s7ScmLSKQFmg3QrdjdDtCNwIoFCouOBb69y0o2bA2hPuBAai6BqBsmwDtpgbgzR36bw5Z+PphHLox43/0SUc5lQWfYjfDWmyDKvrKA2j1QSFajig/OYNuhLAcwYka6bUtvM/MQpozfHGN2if3mSBYgjy+j9asD3GO5D+5qNLwzE03AhO/cQFxbqQCI2Ocof/sI+caSKfM61+5y0e/exCpuzAu0HCM1DywBL3xALkwA4D2EiwR0EECqDFxAkjDhbGCJQx/uQIrEdJykE6Z4qVN/hTYyKEaZAWa5PDO0AC8OzCH3w8Na0uQ/OpjKkdrJL9bw/FtrMv7EN8GBV0z0uy+NcStOpSfmkGON9CtCP49QB6dQnOF9RB82zBPCyhZEBdIx0e3YhzqDqOfL+NWbKynZhBb0I0IShb69hDrUofGAR/aHtweoXUXKdvoqYZ5wCUbDlQo/tJFHpuCcYEcaUBWgAjSKiH5jxdVXAumfUhzI1WhEGRolCH7KzBMwbPRncRINBzzsCkmXUfZgTiDqgvB2CixE2OdOogU1z6nJKnZUHGhFyPH5tAwRDyPYmkVmfbRQWrAHTFsCyDMIMrAnlxsyoMoh1FmwjPMIMxxWB0Y40ZjuBfB6Qb68i3DpOEiR2voIEVf6WJd2c8PvrzKxUrOo88fRVcC5NSUaQhHDLOmgjV5xGFmOrD46UXlUBO6AXpnaEoyL0wsowwKGP12jdqpGpxuIBV3bxysB2bfG7sk3RT/Sofr39jkiWeqZPdi3M/OwpGpiSetErvP36b5vY+jN1dNNVRddCt66IFuBEjb3/NgkBifPthFzrbRlZFZG4zR9wPkbAOZLqF/7SLFi5eVIENXAkYvd6k/c/ghAOshNF2kU/7fgdaNkLKDxhlkilQc8G10aQc53UK3YyjbJjTNqnnxvZ/dZfprj5hi+z8G/x1S0ikbBiXbxFMBW0wakwzptNEkhlFsPCrZZh2Q4tdPK3UPvb6JHKuj8aTsfMeM3Ya3J5Ej5oB+goaZ+Scg81WIcnSpZybqVgIKcmkO4hwL24JuBKmicQ5LfXQ5MJI0PNa++R76dh9dD9D7IUxaVpoT8A9G6Lt9dCeGWR85Vkeenkd7Y4pf3IUoQ4oXnlQADbI9k/sJt751j5Pff8R4sBmCADeHcLgMWykcrUABuBbL376D64HXNHU0fWUGHIvlFzbYCVwkf/accra5B7AyMvpPJNq4+g6ltsPabZg/orTPN0FhvBaTZ8rKUkKc2pz56gxYgnXpJLo7QG/1DNuqi+Q/WlRWQ159bsDi1RZyrL7nQc01wyyfVH/Dh3SMzMygQQDjFNIMmZlGwxD9wx2YKyEnmvzr2fc599whNFP+A21d+bkvJnQ8AAAAAElFTkSuQmCC","theme":null,"options":{"xaxis_height":80,"yaxis_width":120,"xaxis_font_size":10,"yaxis_font_size":9,"brush_color":"#0000FF","show_grid":true,"anim_duration":500}},"evals":[],"jsHooks":[]}</script>
+<p><em>Gracias por visitar el blog. La información mostrada en este post ha sido obtenida de los datos compartidos por el <a href="https://observatorio.mininter.gob.pe/">Observatorio Nacional de Seguridad Ciudadana</a> y construido con el lenguaje de programación R</em>.</p>
+<p><strong>Aprende más en:</strong></p>
+<ul>
+<li><a href="https://observatorio.mininter.gob.pe/">Observatorio Nacional de Seguridad Ciudadana</a></li>
+<li><a href="https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1532/libro.pdf">Informe estadístico N°06 del CEIC-INEI, Homicidios en el Perú, contándolos uno a uno</a></li>
+<li><a href="https://www.inei.gob.pe/media/MenuRecursivo/publicaciones_digitales/Est/Lib1534/libro.pdf">Anuario Estadístico de la Criminalidad y Seguridad Ciudadana 2001-2017</a></li>
+<li><a href="https://larepublica.pe/sociedad/1281608-ineitasa-feminicidio-homicidio-calificado-crecio-2016-2017/">INEI:Tasa de feminicidio y homicidio calificado creció entre el 2016 y 2017 - La República</a></li>
+<li><a href="https://portal.mpfn.gob.pe/descargas/imageninstitucional/criminalidad_organizada/01_Mapas_del_Delito.pdf">Mapas del delito 2013 y 2017 - La República</a></li>
+</ul>
+</div>
+
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/el-servicio-de-internet-movil-en-lima/" data-toggle="tooltip" data-placement="top" title="El servicio de internet móvil en Lima">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                    <li class="next">
+                        <a href="/post/carreras-y-sueldos-en-peru/" data-toggle="tooltip" data-placement="top" title="¿Cuáles son las profesiones mejor pagadas en el Perú?">Next
+                            Post &rarr;</a>
+                    </li>
+                    
+                </ul>
+
+                
+<div id="disqus-comment"></div>
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-emtincopa-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+            </div>
+            
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/data" title="data">
+                            data
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/dataviz" title="dataviz">
+                            dataviz
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/per%C3%BA" title="perú">
+                            perú
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/plot" title="plot">
+                            plot
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/r" title="r">
+                            r
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                    
+                    <li>
+                        <a href="mailto:emtincopa@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    
+                    <li>
+                        <a href="https://twitter.com/EMTincopa">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+
+                    
+
+		    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/EMTincopa">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/enrique-mendoza-tincopa-4b2a14173/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    
+                    
+                    
+                    
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Dataviz Adventure 2020
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        async("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    async("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-131186631-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>

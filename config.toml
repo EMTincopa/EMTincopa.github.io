@@ -1,7 +1,7 @@
 baseURL = "https://emtincopa.github.io/"
 languageCode = "en-us"
-title = "Dataviz Adventure "
-copyright = "&copy; 2020 Dataviz Adventure"
+title = "Dataviz Adventure"
+copyright = "&copy; 2018 Dataviz Adventure"
 enableEmoji = true
 footnotereturnlinkcontents = "<sup>^<sup>"
 ignoreFiles = ["\\.Rmd$", "\\.Rmarkdown$", "_files$", "_caches$"]
@@ -22,7 +22,7 @@ home = ["HTML", "RSS", "Algolia"]
 
 [params]
   header_image = "img/headataviz.png"
-  SEOTitle = " Storytelling & adventures with data"
+  SEOTitle = "Storytelling & adventures with data"
   description = "El blog de un entusiasta de los datos | Storytelling and Data Visualization"
   keyword = "DataViz, Dataviz Adventure, Storytelling with data, Data Visualization, Datos, Visualización de datos, Data Stories"
   slogan = "La visualización de datos como medio expresivo para narrar lo que descubrimos."
@@ -44,7 +44,7 @@ home = ["HTML", "RSS", "Algolia"]
   
   
   # Sidebar settings
-  sidebar_about_description = "Aficionado al diseño de datos e información. ¡Estoy en mi propia aventura para convertirme en un experto en Dataviz!"
+  sidebar_about_description = "Entusiasta de los datos, el DataViz, la Investigación Operativa y de cada cosa que lo emociona."
   sidebar_avatar = "img/me-emtincopa.png"      # use absolute URL, seeing it's used in both `/` and `/about/`
 
   featured_tags = true
@@ -56,16 +56,16 @@ home = ["HTML", "RSS", "Algolia"]
   
   # Highlight.js theme
   # demo: https://highlightjs.org/static/demo/
-  #highlightjs = "docco"
+  highlightjs = "docco"
   
   [params.social]
   rss           = false 
-  email        = "datavizadventure@gmail.com"
+  email        = "emtincopa@gmail.com"
   #facebook      = "https://www.facebook.com/enrique.tincopa"
-  twitter       = "https://twitter.com/DatavizAdventuR"
+  twitter       = "https://twitter.com/EMTincopa"
   linkedin      = "https://www.linkedin.com/in/enrique-mendoza-tincopa-4b2a14173/"
-  github        = "https://github.com/DatavizAdventure"
-  instagram     = "https://www.instagram.com/datavizadventure/"
+  github        = "https://github.com/EMTincopa"
+  #instagram     = "https://www.instagram.com/emtincopa/"
 
   
   [[params.bookmark_link]]
@@ -113,11 +113,4 @@ notAlternative = true
 
 [params.algolia]
 vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
-params = ["categories", "tags"]
-
-[markup]
-  [markup.tableOfContents]
-    endLevel = 2
-    startLevel = 1
-  [markup.highlight]
-    style = "dracula"
+params = ["categories", "tags"] 
