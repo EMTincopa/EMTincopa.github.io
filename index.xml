@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dataviz Adventure </title>
+    <link>https://emtincopa.github.io/</link>
+    <description>Recent content on Dataviz Adventure </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://emtincopa.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TEST POST</title>
+      <link>https://emtincopa.github.io/post/2021-08-21-test-post/</link>
+      <pubDate>Sat, 21 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://emtincopa.github.io/post/2021-08-21-test-post/</guid>
+      <description>#Un día más en la ciudadEste es un test de prueba.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://emtincopa.github.io/search/placeholder/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://emtincopa.github.io/search/placeholder/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://emtincopa.github.io/top/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://emtincopa.github.io/top/about/</guid>
+      <description>Hello, my name is Enrique Mendoza and I am passionate about data visualization and information design. Nice to meet you all! I studied management in health and biology, but in the last two years I have developed a strong interest in science and data visualization.
+It is not my goal to become a data scientist, but to be able to search the area and use several of its tools in the health sector especially.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://emtincopa.github.io/top/dashboards/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://emtincopa.github.io/top/dashboards/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
