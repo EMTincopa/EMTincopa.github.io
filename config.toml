@@ -90,13 +90,12 @@ home = ["HTML", "RSS", "Algolia"]
   title = "Unsplash"
   href = "https://unsplash.com"
   
-  
-  [[params.addtional_menus]]
-  title =  "ABOUT"
-  href = "/top/about/"
   [[params.addtional_menus]]
   title =  "DASHBOARDS"
   href = "/top/dashboards/"
+  [[params.addtional_menus]]
+  title =  "ABOUT"
+  href = "/top/about/"
 
 [outputFormats.Algolia]
   baseName = "algolia"
