@@ -99,9 +99,9 @@ home = ["HTML", "RSS", "Algolia"]
 
 [outputFormats.Algolia]
   baseName = "algolia"
-  isPlainText = true
+  isPlainText = false
   mediaType = "application/json"
-  notAlternative = true
+  notAlternative = false
 
   [params.algolia]
   vars = ["title", "summary", "date", "publishdate", "expirydate", "permalink"]
