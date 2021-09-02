@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Dataviz Adventure </title>
+    <link>https://emtincopa.github.io/post/</link>
+    <description>Recent content in Posts on Dataviz Adventure </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 21 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://emtincopa.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TEST POST</title>
+      <link>https://emtincopa.github.io/post/2021-08-21-test-post/</link>
+      <pubDate>Sat, 21 Aug 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://emtincopa.github.io/post/2021-08-21-test-post/</guid>
+      <description>#Un día más en la ciudadEste es un test de prueba.</description>
+    </item>
+    
+  </channel>
+</rss>
