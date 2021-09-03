@@ -40,7 +40,7 @@ library(tidyverse)
 library(dplyr)
 library(highcharter)
 #load data
-hiring_data<-read_excel("D:/MyNewPersonalBlog/EMTincopa.github.io/content/post/2021-08-30-entry-level-jobs-on-linkedin-require-3-years-of-experience/Data/Entry-Level LinkedIn Jobs.xlsx", sheet = 1)
+hiring_data<-read_excel("D:/MyNewPersonalBlog/EMTincopa.github.io/content/post/2021-08-30-entry-level-jobs-on-linkedin-require-3-years-of-experience/Entry-Level LinkedIn Jobs.xlsx", sheet = 1)
 ```
 
 ## Using Highcharter
@@ -50,6 +50,7 @@ hiring_data<-read_excel("D:/MyNewPersonalBlog/EMTincopa.github.io/content/post/2
 The next bar chart was made with the [Highcharter](https://www.highcharts.com) package for R. This option is incredible because also allow us to easily export the charts we create in R as responsively designed web pages, which can be embedded in other projects through simple iframes.
 
 ```{r bars2, echo=FALSE}
+
 hiring_data %>%
   mutate(Experience_percent = Experience * 100) %>%
   hchart(type = "bar",
@@ -105,6 +106,7 @@ hiring_data %>%
     )
   )) %>%
   hc_exporting(enabled = TRUE)
+
 ```
 
 ## Tableau
