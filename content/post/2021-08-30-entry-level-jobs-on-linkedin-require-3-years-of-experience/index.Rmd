@@ -45,11 +45,11 @@ hiring_data<-read_excel("D:/MyNewPersonalBlog/EMTincopa.github.io/content/post/2
 
 ## Using Highcharter
 
-[Highcharter](https://www.highcharts.com) is a R package for create dynamic graphics from Highcharts Javascript library and its modules. It is very flexible and customizable. It is really useful because coding online graphics from scratching using JavaScript libraries such as D3 is a pain in the bum :grin:.
+[Highcharter](https://jkunst.com/highcharter/) is a R package for create dynamic graphics from Highcharts Javascript library and its modules. It is very flexible and customizable. It is really useful because coding online graphics from scratching using JavaScript libraries such as D3 is a pain in the bum :grin:.
 
-The next bar chart was made with the [Highcharter](https://www.highcharts.com) package for R. This option is incredible because also allow us to easily export the charts we create in R as responsively designed web pages, which can be embedded in other projects through simple iframes.
+The next bar chart was made with the [Highcharter](https://jkunst.com/highcharter/) package for R. This option is incredible because also allow us to easily export the charts we create in R as responsively designed web pages, which can be embedded in other projects through simple iframes.
 
-```{r bars2, echo=FALSE}
+```{r bars2, echo=FALSE, fig.width = 6, fig.height = 14, dev='svg', fig.cap='1ra. Bar chart made with Highcharter'}
 
 hiring_data %>%
   mutate(Experience_percent = Experience * 100) %>%
@@ -115,11 +115,9 @@ Tableau is a data analytics and visualization tool used widely in the industry t
 
 The following bar chart was very easy to make, thanks to the fact that it has a drag and drop interface. In many other cases (like dashboards), adding interactivity to a visualization, let you empower others to freely explore the data and form a deeper understanding. 
 
-
 <iframe src="https://public.tableau.com/views/MakeOverMondayweek342021-Entry-leveljobsonLinkedInrequire3yearsofexperience/Dashboard1?:showVizHome=no&:embed=true"
  width="955" height="800"></iframe>
  
-
 Well, thank you very much for reading this little post, possibly I will continue experimenting with both tools, so just wait for my future posts. By the way, which one did you like the most?, should I do a more detailed tutorial?, Do you have any suggestion?, feel free to answer me on [Instagram](instagram.com/datavizadventure/) or [Twitter](https://twitter.com/DatavizAdventuR).
 
  
