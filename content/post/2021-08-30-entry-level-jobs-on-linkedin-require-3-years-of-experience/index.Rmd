@@ -21,7 +21,7 @@ showtoc: no
 
 
 ```{r setup, include=FALSE, warning=FALSE, message=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 
 #libraries
 library(readxl)
@@ -51,62 +51,14 @@ My below graphs show the results of this study with two different tools.
 
 The next bar chart was made with the [Highcharter](https://jkunst.com/highcharter/) package for R. This option is incredible because also allow us to easily export the charts we create in R as responsively designed web pages, which can be embedded in other projects through simple iframes.
 
-```{r bars2, echo=FALSE, warning=FALSE, message=FALSE, fig.width = 6, fig.height = 14, dev='svg', fig.cap='1ra. Bar chart made with Highcharter'}
+```{r bars2, warning=FALSE, message=FALSE, fig.width = 6, fig.height = 7, dev='svg', fig.cap='Bar chart made with Highcharter'}
 
 hiring_data %>%
   mutate(Experience_percent = Experience * 100) %>%
   hchart(type = "bar",
          hcaes(x = Job, y = Experience_percent),
          color = c("#0D3C38"),
-         name = "Entry-level job") %>%
-  hc_title(
-    text = "<b>Are Entry-Level jobs really Entry-Level?</b>",
-    margin = 20,
-    align = "left",
-    style = list(
-      color = "#333333",
-      useHTML = TRUE,
-      fontSize = "21px",
-      fontFamily = "Roboto condensed"
-    )
-  ) %>%
-  hc_subtitle(
-    text = "Original article: Entry-level jobs on LinkedIn require 3+ years of experience",
-    margin = 20,
-    align = "left",
-    style = list(
-      fontFamily = "Roboto",
-      fontSize = "14px",
-      color = "#666666"
-    )
-  ) %>%
-  hc_caption(text = "Design: Enrique Mendoza | Source: LinkedIn, #MakeOverMonday week 34, 2021",
-             style = list(fontFamily = "Roboto", fontSize = "10px")) %>%
-  hc_chart(backgroundColor = "#F6F3EC") %>%
-  hc_tooltip(
-    crosshairs = TRUE,
-    backgroundColor = "#FFC876",
-    shared = TRUE,
-    borderWidth = 1,
-    valueSuffix = " %",
-    style = list(fontFamily = "Roboto condensed", fontSize = "14")
-  ) %>%
-  hc_yAxis(title = list(text = ""),
-           labels = list(
-             format = "{value}%",
-             style = list(
-               fontFamily = "Roboto",
-               fontSize = "12px",
-               color = "#666666"
-             )
-           )) %>%
-  hc_xAxis(title = list(text = ""), labels = list(
-    style = list(
-      fontFamily = "Roboto",
-      fontSize = "12px",
-      color = "#333333"
-    )
-  ))
+         name = "Entry-level job")
 
 ```
 
