@@ -37,6 +37,8 @@ hiring_data<-read_excel("D:/MyNewPersonalBlog/EMTincopa.github.io/content/post/2
 
 Well, if you are here maybe you already saw my last post on instagram or twitter.
 
+![Simple bar chart vs Radial column/bar chart](D:/MyNewPersonalBlog/EMTincopa.github.io/content/post/2021-08-30-entry-level-jobs-on-linkedin-require-3-years-of-experience/Images/RadialBarChart.png)
+
 This time I wanted to try two different tools for the same dataset _*"Entry-level" jobs require 3+ years of experience*_ from the #MakeOverMonday challenge, week 34.
 
 According to [LinkedIn Economic Graph research](https://www.linkedin.com/pulse/hirings-new-red-line-why-newcomers-cant-land-35-jobs-george-anders/), an analysis of more than 3.8 million new LinkedIn job postings from December 2017 through August 2021, shows that entry level jobs often demand years of prior experience. As you know, these **entry-level jobs** are normally designed or designated for recent graduates of a given discipline and tipically does not require prior experience in the field or profession.
