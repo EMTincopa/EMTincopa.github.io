@@ -1,7 +1,0 @@
-"0",""
-"0","hiring_data %>%"
-"0","  mutate(Experience_percent = Experience * 100) %>%"
-"0","  hchart(type = ""bar"","
-"0","         hcaes(x = Job, y = Experience_percent),"
-"0","         color = c(""#0D3C38""),"
-"0","         name = ""Entry-level job"")"
