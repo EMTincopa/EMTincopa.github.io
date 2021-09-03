@@ -15,6 +15,7 @@ description: 'I have created a simple bar chart with two tools: Tableau public a
   Highcharter package for R using the recent dataset from #MakeOverMonday challenge
   about “Entry-level” jobs on LinkedIn'
 image: ''
+published: yes
 showtoc: no
 ---
 
@@ -105,8 +106,7 @@ hiring_data %>%
       fontSize = "12px",
       color = "#333333"
     )
-  )) %>%
-  hc_exporting(enabled = TRUE)
+  ))
 
 ```
 
