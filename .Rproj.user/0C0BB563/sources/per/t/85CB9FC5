@@ -3,7 +3,7 @@
     "path": "D:/MyNewPersonalBlog/EMTincopa.github.io/config.toml",
     "project_path": "config.toml",
     "type": "toml",
-    "hash": "0",
+    "hash": "1555566662",
     "contents": "",
     "dirty": false,
     "created": 1629585367258.0,
@@ -16,11 +16,11 @@
         "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1630376271,
+    "lastKnownWriteTime": 1630633723,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1630376271089,
+    "last_content_update": 1630633723,
     "read_only": false,
     "read_only_alternatives": []
 }
