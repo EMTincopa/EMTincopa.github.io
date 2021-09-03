@@ -3,7 +3,7 @@
     "path": "D:/MyNewPersonalBlog/EMTincopa.github.io/content/post/2021-08-30-entry-level-jobs-on-linkedin-require-3-years-of-experience.Rmd",
     "project_path": "content/post/2021-08-30-entry-level-jobs-on-linkedin-require-3-years-of-experience.Rmd",
     "type": "r_markdown",
-    "hash": "338470115",
+    "hash": "0",
     "contents": "",
     "dirty": false,
     "created": 1630634413152.0,
@@ -12,15 +12,16 @@
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "39,178",
-        "scrollLine": "25"
+        "cursorPosition": "7,9",
+        "scrollLine": "0",
+        "last_setup_crc32": "51DF58BCc3864146"
     },
     "folds": "",
     "lastKnownWriteTime": 1630634424,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1630634424570,
+    "last_content_update": 1630634663487,
     "read_only": false,
     "read_only_alternatives": []
 }
