@@ -13,7 +13,7 @@
       
       <guid>https://emtincopa.github.io/top/about/</guid>
       <description>Hello, my name is Enrique Mendoza and I am passionate about data visualization and information design. Nice to meet you all! I studied management in health and biology, but in the last two years I have developed a strong interest in science and data visualization.
-It is not my goal to become a data scientist, but to be able to search the area and use several of its tools in the health sector especially.</description>
+I work primarily in two niches. The first one is creating static dataviz and storytelling (using more design tools like Adobe Illustrator and Adobe Photoshop) for individuals or small business.</description>
     </item>
     
     <item>
@@ -22,7 +22,9 @@ It is not my goal to become a data scientist, but to be able to search the area 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://emtincopa.github.io/top/dashboards/</guid>
-      <description></description>
+      <description>2021   22/10 — Dark Web - Price Index 2021. This dashboard was created with R&amp;rsquo;s flexdashboard library.
+  28/01 — The big picture of female CEOs. This dashboard was created with Google Data Studio.
+  </description>
     </item>
     
   </channel>

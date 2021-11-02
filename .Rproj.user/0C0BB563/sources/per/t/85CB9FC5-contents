@@ -23,7 +23,7 @@ home = ["HTML", "RSS", "Algolia"]
   header_image = "img/headataviz.png"
   SEOTitle = "Data visualization & information design | E.Mendoza"
   description = "Data visualization & information designer. Following the goal to save and change lives with graphics."
-  keyword = "DataViz, Dataviz Adventure, Storytelling with data, Data Visualization, Data, Datos, Visualización de datos, Desig, Information design"
+  keyword = "DataViz, Dataviz Adventure, Storytelling with data, Data Visualization, Data, Datos, Visualización de datos, Design, Information design"
   slogan = "Data visualization as an expressive medium to narrate what we discover."
 
   image_404 = "img/headupdating.gif"
