@@ -26,7 +26,7 @@ library(highcharter)
 thanksgiving<-read_excel("D:/Dataviz & Information Design - Projects/Back2VizBasics/Week 01/Data/01 - Preview - Build Your Best Bar Chart.xlsx", sheet =1)
 ```
 
-For so long I wanted to have an excuse for use Tableau, I'm a Power BI user (just for work, I still not feeling comfortable with this software), so this [Back 2 Viz Basics](https://www.thetableaustudentguide.com/vizbasics) challenge (**#B2VB** on Twitter) created by [Eric Balash](https://twitter.com/ReadySetData) is that perfect excuse to deploy my little knowledge about Tableau solving some problems.
+For so long I wanted to have an excuse for use Tableau, I’m a Power BI user (just for work), so this [Back 2 Viz Basics](https://www.thetableaustudentguide.com/vizbasics) challenge (**#B2VB** on Twitter) created by [Eric Balash](https://twitter.com/ReadySetData) is that perfect excuse.
 
 But I didn't plan just to create one single [bar chart for this week challenge](https://data.world/back2vizbasics/2021teaser-build-your-best-bar-chart), I have planned to make the same bar chart in 3 different ways, using: R + Adobe Illustrator, Highcharts and Tableau. Let's go.
 
@@ -40,7 +40,7 @@ These are my everyday tools, I start making the chart in R as much seemed as my 
 
 # Highcharts
 
-In this case I use the R package Highcharter (created for dynamic graphics and based on Highcharts Javascript library and its modules). My challenge here was to replicate my previous chart made with R + Adobe illustrator with this library.
+In this case I used the R's package Highcharter (created for dynamic graphics and based on Highcharts Javascript library and its modules). My challenge here was to replicate my previous chart made with *R + Adobe illustrator* with this library.
 
 ````{r bar dynamic, echo=FALSE, warning=FALSE, message=FALSE}
 
@@ -101,11 +101,11 @@ thanksgiving%>%
 
 ```
 
-I don't need to add more dynamic elements to this simple bar chart but, achieve to post it on web without lossing image quality. 
+I didn't need to add more dynamic elements to this simple bar chart and the same time I achieved to post it on web without losing image quality.
 
 # Tableau
 
-With a similar interactivity like highcharts graphics but with this drag and drop interface, the bar chart was easy to make. I just added the same background that I made for my R + Adobe Illustrator bar chart (I like granulate backgrounds :smiley:).
+With a similar interactivity to the highcharts graphics but with this drag and drop interface, the bar chart was easy to make. I added the same background that I made for my *R + Adobe Illustrator* bar chart (I like granulate backgrounds :smiley:).
 
 <iframe src="https://public.tableau.com/views/B2VBchallenge-Week01/Dashboard1??:showVizHome=no&:embed=true" width="1080" height="1080"></iframe>
 

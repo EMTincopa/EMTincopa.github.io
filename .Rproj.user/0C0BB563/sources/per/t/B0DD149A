@@ -3,24 +3,24 @@
     "path": "D:/MyNewPersonalBlog/EMTincopa.github.io/content/post/2021-04-12-B2VB-week01-thanksgiving-bar-chart.Rmd",
     "project_path": "content/post/2021-04-12-B2VB-week01-thanksgiving-bar-chart.Rmd",
     "type": "r_markdown",
-    "hash": "671095210",
+    "hash": "1741219671",
     "contents": "",
-    "dirty": true,
+    "dirty": false,
     "created": 1638649864573.0,
     "source_on_save": false,
     "relative_order": 4,
     "properties": {
         "source_window_id": "",
         "Source": "Source",
-        "cursorPosition": "38,152",
-        "scrollLine": "31"
+        "cursorPosition": "10,11",
+        "scrollLine": "0"
     },
     "folds": "",
-    "lastKnownWriteTime": 1638688847,
+    "lastKnownWriteTime": 1638691716,
     "encoding": "UTF-8",
     "collab_server": "",
     "source_window": "",
-    "last_content_update": 1638689115623,
+    "last_content_update": 1638691716403,
     "read_only": false,
     "read_only_alternatives": []
 }
