@@ -3,7 +3,7 @@
 
 I studied management in health and biology, but in the last two years I have developed a strong interest in science and data visualization.
 
-I work primarily in two niches. The first one is creating static dataviz and storytelling (using more design tools like Adobe Illustrator and Adobe Photoshop) for individuals or small business. The second is creating dashboards (usually with Power BI, and sometimes with Tableau).
+I work mainly in two niches as a freelance. The first creating static data visualization and storytelling (using design tools like Adobe Illustrator and Adobe Photoshop) for individuals or small businesses. The second is creating business dashboards (usually with Power BI and sometimes with Tableau).
 
 It is not my goal to become a data scientist, but to be able to search the area and use several of its tools in different fields. So at the moment my immediate objective is to improve on my **Data Visualization** skills, which I understand is a necessary tool in different fields to better manage information and make optimal decisions. Personally, I believe that this field can save, change and improve lives through graphics.
 
@@ -19,3 +19,6 @@ So, feel free to connect with me on [**Instagram**](https://www.instagram.com/da
 Many thanks!!! :grin:
 
 *E. Mendoza*
+
+
+

@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:site_name" content="Dataviz Adventure ">
+    <meta property="og:type" content="article">
+
+    
+    <meta property="og:image" content="https://emtincopa.github.io//img/headataviz.png">
+    <meta property="twitter:image" content="https://emtincopa.github.io//img/headataviz.png" />
+    
+
+    
+    <meta name="title" content="B2VB challenge, making my Best Bar Chart" />
+    <meta property="og:title" content="B2VB challenge, making my Best Bar Chart" />
+    <meta property="twitter:title" content="B2VB challenge, making my Best Bar Chart" />
+    
+
+    
+    <meta name="description" content="This time I participated in the Back 2 Viz Basics challenge making my Best Bar Chart for the week 01, using  the Statista Thanksgiving &amp; Holiday Survey 2016 data.">
+    <meta property="og:description" content="This time I participated in the Back 2 Viz Basics challenge making my Best Bar Chart for the week 01, using  the Statista Thanksgiving &amp; Holiday Survey 2016 data." />
+    <meta property="twitter:description" content="This time I participated in the Back 2 Viz Basics challenge making my Best Bar Chart for the week 01, using  the Statista Thanksgiving &amp; Holiday Survey 2016 data." />
+    
+
+    
+    <meta property="twitter:card" content="summary" />
+    
+    
+
+    <meta name="keyword"  content="DataViz, Dataviz Adventure, Storytelling with data, Data Visualization, Data, Datos, Visualización de datos, Design, Information design">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>B2VB challenge, making my Best Bar Chart-Data visualization &amp; information design | E.Mendoza</title>
+
+    <link rel="canonical" href="/post/2021-04-12-b2vb-week01-thanksgiving-bar-chart/">
+
+    <link rel="stylesheet" href="/css/iDisqus.min.css"/>
+
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    
+    <link rel="stylesheet" href="/css/zanshang.css">
+
+    
+    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" type="text/css">
+
+    
+    
+
+    
+    
+    <script src="/js/jquery.min.js"></script>
+
+    
+    <script src="/js/bootstrap.min.js"></script>
+
+    
+    <script src="/js/hux-blog.min.js"></script>
+
+    
+    
+
+</head>
+
+
+
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Dataviz Adventure </a>
+        </div>
+
+        
+        
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+                    
+                        
+                        <li>
+                            <a href="/categories/learning">learning</a>
+                        </li>
+                        
+                    
+                    
+		    
+                        <li><a href="/top/dashboards/">DASHBOARDS</a></li>
+                    
+                        <li><a href="/top/about/">ABOUT</a></li>
+                    
+
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+    
+</nav>
+<script>
+    
+    
+    
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        
+            $navbar.className = " ";
+            
+            setTimeout(function(){
+                
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+
+
+<style type="text/css">
+    header.intro-header {
+        background-image: url('/img/headataviz.png')
+    }
+</style>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                        <a class="tag" href="/tags/dataviz" title="Dataviz">
+                            Dataviz
+                        </a>
+                        
+                        <a class="tag" href="/tags/learning" title="Learning">
+                            Learning
+                        </a>
+                        
+                        <a class="tag" href="/tags/examples" title="Examples">
+                            Examples
+                        </a>
+                        
+                        <a class="tag" href="/tags/highcharter" title="Highcharter">
+                            Highcharter
+                        </a>
+                        
+                        <a class="tag" href="/tags/r" title="R">
+                            R
+                        </a>
+                        
+                        <a class="tag" href="/tags/adobe-illustrator" title="Adobe Illustrator">
+                            Adobe Illustrator
+                        </a>
+                        
+                        <a class="tag" href="/tags/challenge" title="Challenge">
+                            Challenge
+                        </a>
+                        
+                        <a class="tag" href="/tags/b2vb" title="B2VB">
+                            B2VB
+                        </a>
+                        
+                    </div>
+                    <h1>B2VB challenge, making my Best Bar Chart</h1>
+                    <h2 class="subheading"></h2>
+                    <span class="meta">
+                        Posted by 
+                        
+                            E. Mendoza.
+                         
+                        on 
+                        Thursday, November 4, 2021
+                        
+                        
+                        
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+
+<article>
+    <div class="container">
+        <div class="row">
+
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                post-container">
+
+                
+                
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="/rmarkdown-libs/htmlwidgets/htmlwidgets.js"></script>
+<script src="/rmarkdown-libs/jquery/jquery.min.js"></script>
+<script src="/rmarkdown-libs/proj4js/proj4.js"></script>
+<link href="/rmarkdown-libs/highcharts/css/motion.css" rel="stylesheet" />
+<script src="/rmarkdown-libs/highcharts/highcharts.js"></script>
+<script src="/rmarkdown-libs/highcharts/highcharts-3d.js"></script>
+<script src="/rmarkdown-libs/highcharts/highcharts-more.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/stock.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/map.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/annotations.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/data.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/drilldown.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/item-series.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/offline-exporting.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/overlapping-datalabels.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/exporting.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/export-data.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/funnel.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/heatmap.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/treemap.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/sankey.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/dependency-wheel.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/organization.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/solid-gauge.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/streamgraph.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/sunburst.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/vector.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/wordcloud.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/xrange.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/tilemap.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/venn.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/gantt.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/timeline.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/parallel-coordinates.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/bullet.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/coloraxis.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/dumbbell.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/lollipop.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/series-label.js"></script>
+<script src="/rmarkdown-libs/highcharts/plugins/motion.js"></script>
+<script src="/rmarkdown-libs/highcharts/custom/reset.js"></script>
+<script src="/rmarkdown-libs/highcharts/modules/boost.js"></script>
+<script src="/rmarkdown-libs/highchart-binding/highchart.js"></script>
+
+
+<p>For so long I wanted to have an excuse for use Tableau, I’m a Power BI user (just for work, I still not feeling comfortable with this software), so this <a href="https://www.thetableaustudentguide.com/vizbasics">Back 2 Viz Basics</a> challenge (<strong>#B2VB</strong> on Twitter) created by <a href="https://twitter.com/ReadySetData">Eric Balash</a> is that perfect excuse to deploy my little knowledge about Tableau solving some problems.</p>
+<p>But I didn’t plan just to create one single <a href="https://data.world/back2vizbasics/2021teaser-build-your-best-bar-chart">bar chart for this week challenge</a>, I have planned to make the same bar chart in 3 different ways, using: R + Adobe Illustrator, Highcharts and Tableau. Let’s go.</p>
+<p>The <strong>#B2VB</strong> challenge used the <a href="https://www.statista.com/study/24944/thanksgiving-in-the-us-statista-dossier/">Statista Thanksgiving &amp; Holiday Survey 2016 data</a>, where 1,199 individuals were surveyed in U.S. and for each food item, asked if it would be on their Thanksgiving dinner table or not.</p>
+<div id="r-adobe-illustrator" class="section level1">
+<h1>R + Adobe Illustrator</h1>
+<p>These are my everyday tools, I start making the chart in R as much seemed as my initial sketches. When the chart is done, I save it as PDF and inmediatly imported on Adobe Illustrator. I usually change things like color palette, axis, fonts for titles and annotations, and sometimes I add images or granular effect for backgrounds.</p>
+</div>
+<div id="highcharts" class="section level1">
+<h1>Highcharts</h1>
+<p>In this case I use the R package Highcharter (created for dynamic graphics and based on Highcharts Javascript library and its modules). My challenge here was to replicate my previous chart made with R + Adobe illustrator with this library.</p>
+<div id="htmlwidget-1" style="width:100%;height:500px;" class="highchart html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"hc_opts":{"chart":{"reflow":true,"backgroundColor":"#FCECC9"},"title":{"text":"<b>What Americans wants on their Dinner Tables this Year?<\/b>","margin":20,"align":"left","style":{"color":"#333333","useHTML":true,"fontSize":"24px","fontFamily":"Roboto slab"}},"yAxis":{"title":{"text":""},"type":"linear","labels":{"format":"{value}%","style":{"fontFamily":"Roboto","fontSize":"11px","color":"#808080"}}},"credits":{"enabled":false},"exporting":{"enabled":false},"boost":{"enabled":false},"plotOptions":{"series":{"label":{"enabled":false},"turboThreshold":0,"showInLegend":false},"treemap":{"layoutAlgorithm":"squarified"},"scatter":{"marker":{"symbol":"circle"}}},"series":[{"group":"group","data":[{"Food":"Turkey","Value":1067,"Percent":0.89,"Percent_final":89,"y":89,"name":"Turkey"},{"Food":"Bread Rolls/Biscuits/Cornbread","Value":1055,"Percent":0.88,"Percent_final":88,"y":88,"name":"Bread Rolls/Biscuits/Cornbread"},{"Food":"Mashed Potatoes","Value":1019,"Percent":0.85,"Percent_final":85,"y":85,"name":"Mashed Potatoes"},{"Food":"Gravy","Value":1007,"Percent":0.84,"Percent_final":84,"y":84,"name":"Gravy"},{"Food":"Pie","Value":971,"Percent":0.81,"Percent_final":81,"y":81,"name":"Pie"},{"Food":"Stuffing/Dressing","Value":959,"Percent":0.8,"Percent_final":80,"y":80,"name":"Stuffing/Dressing"},{"Food":"Cranberry Sauce","Value":851,"Percent":0.71,"Percent_final":71,"y":71,"name":"Cranberry Sauce"},{"Food":"Green Beans","Value":851,"Percent":0.71,"Percent_final":71,"y":71,"name":"Green Beans"},{"Food":"Corn","Value":707,"Percent":0.59,"Percent_final":59,"y":59,"name":"Corn"},{"Food":"Sweet Potatoes","Value":659,"Percent":0.55,"Percent_final":55,"y":55,"name":"Sweet Potatoes"},{"Food":"Pasta","Value":275,"Percent":0.23,"Percent_final":23,"y":23,"name":"Pasta"},{"Food":"Sweet Potato Pie","Value":239,"Percent":0.2,"Percent_final":20,"y":20,"name":"Sweet Potato Pie"},{"Food":"Collard Greens","Value":167,"Percent":0.14,"Percent_final":14,"y":14,"name":"Collard Greens"},{"Food":"Winter Squash","Value":119,"Percent":0.1,"Percent_final":10,"y":10,"name":"Winter Squash"},{"Food":"Vegetarian/Vegan Alternatives to Turkey","Value":95,"Percent":0.08,"Percent_final":8,"y":8,"name":"Vegetarian/Vegan Alternatives to Turkey"},{"Food":"Sauerkraut","Value":36,"Percent":0.03,"Percent_final":3,"y":3,"name":"Sauerkraut"},{"Food":"Chitterlings","Value":24,"Percent":0.02,"Percent_final":2,"y":2,"name":"Chitterlings"}],"type":"bar","color":"#BF542C","name":"Percent"}],"xAxis":{"type":"category","title":{"text":""},"labels":{"style":{"fontFamily":"Roboto medium","fontSize":"12px","color":"#4D4D4D"}}},"subtitle":{"text":"<b>1, 199<\/b> individuals were surveyed in U.S. <i>(Statista Thanksgiving & Holiday Survey 2016)<\/i> and for each food item, asked if it would be on  their <b>Thanksgiving<\/b> dinner table or not.","margin":20,"align":"left","style":{"fontFamily":"Roboto","fontSize":"14px","color":"#4D4D4D"}},"caption":{"text":"Design: Enrique Mendoza | IG: datavizadventure | Source: Statista (2016) | #B2VB, Week 01 - Bar Chart","style":{"fontFamily":"Roboto","fontSize":"11px","color":"666666"}},"tooltip":{"crosshairs":true,"backgroundColor":"#C7CDA9","shared":true,"borderWidth":1,"valueSuffix":" %","style":{"fontFamily":"Roboto slab","fontSize":"14"}}},"theme":{"chart":{"backgroundColor":"transparent"},"colors":["#7cb5ec","#434348","#90ed7d","#f7a35c","#8085e9","#f15c80","#e4d354","#2b908f","#f45b5b","#91e8e1"]},"conf_opts":{"global":{"Date":null,"VMLRadialGradientURL":"http =//code.highcharts.com/list(version)/gfx/vml-radial-gradient.png","canvasToolsURL":"http =//code.highcharts.com/list(version)/modules/canvas-tools.js","getTimezoneOffset":null,"timezoneOffset":0,"useUTC":true},"lang":{"contextButtonTitle":"Chart context menu","decimalPoint":".","downloadJPEG":"Download JPEG image","downloadPDF":"Download PDF document","downloadPNG":"Download PNG image","downloadSVG":"Download SVG vector image","drillUpText":"Back to {series.name}","invalidDate":null,"loading":"Loading...","months":["January","February","March","April","May","June","July","August","September","October","November","December"],"noData":"No data to display","numericSymbols":["k","M","G","T","P","E"],"printChart":"Print chart","resetZoom":"Reset zoom","resetZoomTitle":"Reset zoom level 1:1","shortMonths":["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],"thousandsSep":" ","weekdays":["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"]}},"type":"chart","fonts":["Roboto+slab","Roboto","Roboto+medium"],"debug":false},"evals":[],"jsHooks":[]}</script>
+<p>I don’t need to add more dynamic elements to this simple bar chart but, achieve to post it on web without lossing image quality.</p>
+</div>
+<div id="tableau" class="section level1">
+<h1>Tableau</h1>
+<p>With a similar interactivity like highcharts graphics but with this drag and drop interface, the bar chart was easy to make. I just added the same background that I made for my R + Adobe Illustrator bar chart (I like granulate backgrounds 😃).</p>
+<iframe src="https://public.tableau.com/views/B2VBchallenge-Week01/Dashboard1??:showVizHome=no&amp;:embed=true" width="1080" height="1080">
+</iframe>
+<p>Thank you very much for reading this summary of the #B2VB challenge and, as always, you can write to me on <a href="https://www.instagram.com/datavizadventure/">Instagram</a> or <a href="https://twitter.com/DatavizAdventuR">Twitter</a>.</p>
+<p><em>E. Mendoza</em></p>
+</div>
+
+
+                
+
+                <hr>
+                <ul class="pager">
+                    
+                    <li class="previous">
+                        <a href="/post/2021-05-09-entry-level-jobs-on-linkedin-require-3-years-of-experience/" data-toggle="tooltip" data-placement="top" title="Are Entry-Level jobs really Entry-Level?">&larr;
+                            Previous Post</a>
+                    </li>
+                    
+                    
+                </ul>
+
+                
+<div id="disqus-comment"></div>
+
+<div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "https-emtincopa-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+
+            </div>
+            
+            <div class="
+                col-lg-11 col-lg-offset-1
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                
+                
+                <section>
+                    <hr class="hidden-sm hidden-xs">
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/dataviz" title="dataviz">
+                            dataviz
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/examples" title="examples">
+                            examples
+                        </a>
+                        
+                        
+                        
+                        
+                        
+                        <a href="/tags/learning" title="learning">
+                            learning
+                        </a>
+                        
+                        
+                        
+                        <a href="/tags/r" title="r">
+                            r
+                        </a>
+                        
+                        
+                        
+                        
+                    </div>
+                </section>
+                
+
+                
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+
+
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                   
+                    
+                    <li>
+                        <a href="mailto:datavizadventure@gmail.com">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+
+                    
+                    <li>
+                        <a href="https://twitter.com/DatavizAdventuR">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    
+                    
+
+                    
+
+		    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://github.com/DatavizAdventure">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    
+                    
+                    <li>
+                        <a target="_blank" href="https://www.linkedin.com/in/enrique-mendoza-tincopa-4b2a14173/">
+                            <span class="fa-stack fa-lg">
+                                <i class="fas fa-circle fa-stack-2x"></i>
+                                <i class="fab fa-linkedin fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+		    
+                    
+                    
+                    
+                    
+                    
+            
+            
+            <li>
+                <a target="_blank" href="https://www.instagram.com/datavizadventure/">
+                    <span class="fa-stack fa-lg">
+                        <i class="fas fa-circle fa-stack-2x"></i>
+                        <i class="fab fa-instagram fa-stack-1x fa-inverse"></i>
+                    </span>
+                </a>
+            </li>
+            
+            
+                </ul>
+		<p class="copyright text-muted">
+                    Copyright &copy; Dataviz Adventure  2021
+                    <br>
+                    <a href="https://themes.gohugo.io/hugo-theme-cleanwhite">CleanWhite Hugo Theme</a> by <a href="https://zhaohuabing.com">Huabing</a> |
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="100px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=zhaohuabing&repo=hugo-theme-cleanwhite&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+
+<script>
+    function loadAsync(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+
+
+
+
+
+<script>
+    
+    if($('#tag_cloud').length !== 0){
+        loadAsync("/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+
+<script>
+    loadAsync("https://cdnjs.cloudflare.com/ajax/libs/fastclick/1.0.6/fastclick.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+
+
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-131186631-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+</body>
+</html>

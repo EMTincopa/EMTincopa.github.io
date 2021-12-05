@@ -6,7 +6,16 @@
     <description>Recent content on Dataviz Adventure </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://emtincopa.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://emtincopa.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>B2VB challenge, making my Best Bar Chart</title>
+      <link>https://emtincopa.github.io/post/2021-04-12-b2vb-week01-thanksgiving-bar-chart/</link>
+      <pubDate>Thu, 04 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://emtincopa.github.io/post/2021-04-12-b2vb-week01-thanksgiving-bar-chart/</guid>
+      <description>For so long I wanted to have an excuse for use Tableau, I’m a Power BI user (just for work, I still not feeling comfortable with this software), so this Back 2 Viz Basics challenge (#B2VB on Twitter) created by Eric Balash is that perfect excuse to deploy my little knowledge about Tableau solving some problems.</description>
+    </item>
+    
     <item>
       <title>Are Entry-Level jobs really Entry-Level?</title>
       <link>https://emtincopa.github.io/post/2021-05-09-entry-level-jobs-on-linkedin-require-3-years-of-experience/</link>
@@ -33,7 +42,7 @@ Dataviz AdventureHi guys! here my #Makeovermonday submission for week 34, 2021.
       
       <guid>https://emtincopa.github.io/top/about/</guid>
       <description>Hello, my name is Enrique Mendoza and I am passionate about data visualization and information design. Nice to meet you all! I studied management in health and biology, but in the last two years I have developed a strong interest in science and data visualization.
-I work primarily in two niches. The first one is creating static dataviz and storytelling (using more design tools like Adobe Illustrator and Adobe Photoshop) for individuals or small business.</description>
+I work mainly in two niches as a freelance. The first creating static data visualization and storytelling (using design tools like Adobe Illustrator and Adobe Photoshop) for individuals or small businesses.</description>
     </item>
     
     <item>

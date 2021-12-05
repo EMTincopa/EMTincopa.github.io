@@ -6,7 +6,16 @@
     <description>Recent content in Examples on Dataviz Adventure </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 05 Sep 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://emtincopa.github.io/tags/examples/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 04 Nov 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://emtincopa.github.io/tags/examples/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>B2VB challenge, making my Best Bar Chart</title>
+      <link>https://emtincopa.github.io/post/2021-04-12-b2vb-week01-thanksgiving-bar-chart/</link>
+      <pubDate>Thu, 04 Nov 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://emtincopa.github.io/post/2021-04-12-b2vb-week01-thanksgiving-bar-chart/</guid>
+      <description>For so long I wanted to have an excuse for use Tableau, I’m a Power BI user (just for work, I still not feeling comfortable with this software), so this Back 2 Viz Basics challenge (#B2VB on Twitter) created by Eric Balash is that perfect excuse to deploy my little knowledge about Tableau solving some problems.</description>
+    </item>
+    
     <item>
       <title>Are Entry-Level jobs really Entry-Level?</title>
       <link>https://emtincopa.github.io/post/2021-05-09-entry-level-jobs-on-linkedin-require-3-years-of-experience/</link>

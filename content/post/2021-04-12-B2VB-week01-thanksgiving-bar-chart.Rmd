@@ -1,0 +1,112 @@
+---
+title: "B2VB challenge, making my Best Bar Chart"
+author: "E. Mendoza."
+description: "This time I participated in the Back 2 Viz Basics challenge making my Best Bar Chart for the week 01, using  the Statista Thanksgiving & Holiday Survey 2016 data."
+date: 2021-11-04
+tags: ["Dataviz", "Learning", "Examples", "Highcharter", "R", "Adobe Illustrator", "Challenge", "B2VB"]
+categories:  ["Learning"]
+subtitle: ''
+image: ''
+published: yes
+showtoc: no
+---
+
+
+```{r setup, include=FALSE, warning=FALSE, message=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+#libraries
+library(readxl)
+library(tidyverse)
+library(knitr)
+library(highcharter)
+
+
+#load data
+thanksgiving<-read_excel("D:/Dataviz & Information Design - Projects/Back2VizBasics/Week 01/Data/01 - Preview - Build Your Best Bar Chart.xlsx", sheet =1)
+```
+
+For so long I wanted to have an excuse for use Tableau, I'm a Power BI user (just for work, I still not feeling comfortable with this software), so this [Back 2 Viz Basics](https://www.thetableaustudentguide.com/vizbasics) challenge (**#B2VB** on Twitter) created by [Eric Balash](https://twitter.com/ReadySetData) is that perfect excuse to deploy my little knowledge about Tableau solving some problems.
+
+But I didn't plan just to create one single [bar chart for this week challenge](https://data.world/back2vizbasics/2021teaser-build-your-best-bar-chart), I have planned to make the same bar chart in 3 different ways, using: R + Adobe Illustrator, Highcharts and Tableau. Let's go.
+
+The **#B2VB** challenge used the [Statista Thanksgiving & Holiday Survey 2016 data](https://www.statista.com/study/24944/thanksgiving-in-the-us-statista-dossier/), where 1,199 individuals were surveyed in U.S. and for each food item, asked if it would be on their Thanksgiving dinner table or not.
+
+# R + Adobe Illustrator
+
+These are my everyday tools, I start making the chart in R as much seemed as my initial sketches. When the chart is done, I save it as PDF and inmediatly imported on Adobe Illustrator. I usually change things like color palette, axis, fonts for titles and annotations, and sometimes I add images or granular effect for backgrounds.
+
+# Highcharts
+
+In this case I use the R package Highcharter (created for dynamic graphics and based on Highcharts Javascript library and its modules). My challenge here was to replicate my previous chart made with R + Adobe illustrator with this library.
+
+````{r bar dynamic, echo=FALSE, warning=FALSE, message=FALSE}
+
+thanksgiving%>%
+  mutate(Percent_final = Percent*100)%>%
+  hchart(type = "bar",
+         hcaes(x = Food, y = Percent_final),
+         color = c("#BF542C"),
+         name = "Percent")%>%
+  hc_title(
+    text = "<b>What Americans wants on their Dinner Tables this Year?</b>",
+    margin = 20,
+    align = "left",
+    style = list(
+      color = "#333333",
+      useHTML = TRUE,
+      fontSize = "24px",
+      fontFamily = "Roboto slab"
+    )
+  ) %>%
+  hc_subtitle(
+    text = "<b>1, 199</b> individuals were surveyed in U.S. <i>(Statista Thanksgiving & Holiday Survey 2016)</i> and for each food item, asked if it would be on  their <b>Thanksgiving</b> dinner table or not.",
+    margin = 20,
+    align = "left",
+    style = list(
+      fontFamily = "Roboto",
+      fontSize = "14px",
+      color = "#4D4D4D"
+    )
+  ) %>%
+  hc_caption(text = "Design: Enrique Mendoza | IG: datavizadventure | Source: Statista (2016) | #B2VB, Week 01 - Bar Chart",
+             style = list(fontFamily = "Roboto", fontSize = "11px", color = "666666")) %>%
+  hc_chart(backgroundColor = "#FCECC9") %>%
+  hc_tooltip(
+    crosshairs = TRUE,
+    backgroundColor = "#C7CDA9",
+    shared = TRUE,
+    borderWidth = 1,
+    valueSuffix = " %",
+    style = list(fontFamily = "Roboto slab", fontSize = "14")
+  ) %>%
+  hc_yAxis(title = list(text = ""),
+           labels = list(
+             format = "{value}%",
+             style = list(
+               fontFamily = "Roboto",
+               fontSize = "11px",
+               color = "#808080"
+             )
+           )) %>%
+  hc_xAxis(title = list(text = ""), labels = list(
+    style = list(
+      fontFamily = "Roboto medium",
+      fontSize = "12px",
+      color = "#4D4D4D"
+    ) 
+  ))
+
+```
+
+I don't need to add more dynamic elements to this simple bar chart but, achieve to post it on web without lossing image quality. 
+
+# Tableau
+
+With a similar interactivity like highcharts graphics but with this drag and drop interface, the bar chart was easy to make. I just added the same background that I made for my R + Adobe Illustrator bar chart (I like granulate backgrounds :smiley:).
+
+<iframe src="https://public.tableau.com/views/B2VBchallenge-Week01/Dashboard1??:showVizHome=no&:embed=true" width="1080" height="1080"></iframe>
+
+Thank you very much for reading this summary of the #B2VB challenge and, as always, you can write to me on [Instagram](https://www.instagram.com/datavizadventure/) or [Twitter](https://twitter.com/DatavizAdventuR).
+
+*E. Mendoza*
