@@ -28,7 +28,7 @@ thanksgiving<-read_excel("D:/Dataviz & Information Design - Projects/Back2VizBas
 
 For so long I wanted to have an excuse for use Tableau, I’m a Power BI user (just for work), so this [Back 2 Viz Basics](https://www.thetableaustudentguide.com/vizbasics) challenge (**#B2VB** on Twitter) created by [Eric Balash](https://twitter.com/ReadySetData) is that perfect excuse.
 
-But I didn't plan just to create one single [bar chart for this week challenge](https://data.world/back2vizbasics/2021teaser-build-your-best-bar-chart), I have planned to make the same bar chart in 3 different ways, using: R + Adobe Illustrator, Highcharts and Tableau. Let's go.
+But I didn't plan just to create one single [bar chart for this week challenge](https://data.world/back2vizbasics/2021teaser-build-your-best-bar-chart), I have planned to make the same bar chart in 3 different ways, using: R + Adobe Illustrator, Highcharts and Tableau.
 
 The **#B2VB** challenge used the [Statista Thanksgiving & Holiday Survey 2016 data](https://www.statista.com/study/24944/thanksgiving-in-the-us-statista-dossier/), where 1,199 individuals were surveyed in U.S. and for each food item, asked if it would be on their Thanksgiving dinner table or not.
 
